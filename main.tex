@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[T1]{fontenc}                                      
+\usepackage[utf8]{inputenc}                               
+\usepackage[italian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{braket}
+\usepackage{blindtext}
+\usepackage{calc}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{epsfig}
+\usepackage{eucal}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{
+			colorlinks=true,
+			linkcolor=black,
+			anchorcolor=black,
+			citecolor=black,
+			urlcolor=black,
+			pdftitle={Appunti di Meccanica Quantistica},
+			pdfauthor={Vittorio Lubicz}
+}
+
+\usepackage{latexsym}
+\usepackage{listings} 
+\usepackage{longtable}
+\usepackage{makeidx}
+\usepackage{mathrsfs}
+\usepackage{mathdots}
+\usepackage{multirow}
+\usepackage{nicefrac}
+\usepackage{pdfpages}
+\usepackage{physics}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{textcomp}
+\usepackage{titlesec,color}
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{35mm}{30mm}{35mm}{30mm}%
+             {0mm}{10mm}{0mm}{10mm}
+
+
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\chapter}[hang]{\huge\bfseries}{\myfont{\textit{\large{\chaptername\hspace{1pt} \thechapter\hspace{3pt}}}}\textcolor{gray75}{$\mid$}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\titleformat{\section}[hang]{\large\bfseries}{\myfont{\textit{\normalsize{\thesection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\Huge\bfseries}}
+
+\titleformat{\subsection}[hang]{\large\bfseries}{\myfont{\textit{\small{\thesubsection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\newcommand*{\myfont}{\fontfamily{ppl}\selectfont}
+
+\newcommand{\facciatabianca}{\newpage\shipout\null}
+
+\newcommand\Sfondo[1]{\AddToShipoutPicture*{\AtPageCenter{\makebox (0,0){\includegraphics[width=\paperwidth, height=\paperheight]{#1}}}}}
+\begin{document}
+
+%*****************LAYOUT PAGINE**************************
+\fancypagestyle{plain}{%
+\fancyhf{} % cancella tutti i campi di  intestazione e pi\`e di pagina
+\fancyfoot[C]{\bfseries \myfont{\thepage}} % tranne il centro
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{VS}{
+\headheight = 15pt
+\lhead[\myfont{\textit{\textbf{\thechapter\nouppercase{\leftmark}}}}]{\myfont{\textit{\textbf{\nouppercase{\leftmark}}}}}
+\chead[]{}
+\rhead[\myfont{\textbf{\thepage}}]{\myfont{\textbf{\thepage}}}
+
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+}
+%*******************************************************
+
+
+
+\pagestyle{VS}
+
+\input{copertina/copertina.tex}
+\frontmatter
+\tableofcontents
+\mainmatter
+\input{Capitolo_1_(Valerio)/capitolo1.tex}%DEFINITIVO
+\input{Capitolo_2_(Valerio)/capitolo2.tex}%DEFINITIVO
+\input{Capitolo_3_(Paolo)/capitolo3.tex}%DEFINITIVO
+\input{Capitolo_4_(Valerio)/capitolo4.tex}%DEFINITIVO
+\input{Capitolo_5_(Matteo)/capitolo5.tex}%DEFINITIVO
+\input{Capitolo_6_(Ilaria-Matteo-Valerio)/capitolo6.tex}%DEFINITIVO 
+\input{Capitolo_7_(Giulio)/capitolo7.tex} %DEFINITIVO
+\input{Capitolo_8_(Valerio)/capitolo8.tex} %DEFINITIVO
+\input{Capitolo_9_(Matteo)/capitolo9.tex} %DEFINITIVO
+\input{Capitolo_10_(Valerio)/capitolo10.tex} %DEFINITIVO
+\input{Capitolo_11_(Carlotta)/capitolo11.tex} %DEFINITIVO
+\input{Capitolo_12_(Carlotta)/capitolo12.tex} %DEFINITIVO
+\input{Capitolo_13_(Giulio)/capitolo13_.tex} %DEFINITIVO
+\input{Capitolo_14_(Valerio)/capitolo14.tex} %DEFINITIVO
+\input{Capitolo_15_(Valerio)/capitolo15.tex} %DEFINITIVO
+\input{Capitolo_16_(Valerio)/capitolo16.tex} %DEFINITIVO
+\input{Capitolo_17_(Valerio)/capitolo17.tex} %DEFINITIVO
+\input{Capitolo_18_(Marco)/capitolo18.tex}%DEFINITIVO
+\input{Capitolo_19_(Carmen&Giulio)/Capitolo19.tex}%DEFINITIVO
+\input{Capitolo_20_(Emilia)/capitolo20.tex}%DEFINITIVO
+\input{capitolo_21_(Antonio)/capitolo21}%DEFINITIVO
+\input{capitolo_22_(Marco)/capitolo22.tex}%DEFINITIVO
+\input{Capitolo_23_(Fuego&Irene)/Capitolo23.tex} %DEFINITIVO
+\input{Capitolo_24_(Fuego&Irene)/Capitolo24.tex} %DEFINITIVO
+\input{Capitolo_25_(Fuego&Irene)/Capitolo25.tex} %DEFINITIVO
+\end{document}
