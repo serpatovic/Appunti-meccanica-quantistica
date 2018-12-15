@@ -1,0 +1,227 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[T1]{fontenc}                                      
+\usepackage[utf8]{inputenc}                               
+\usepackage[italian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{braket}
+\usepackage{blindtext}
+\usepackage{calc}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{epsfig}
+\usepackage{eucal}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{
+			colorlinks=true,
+			linkcolor=black,
+			anchorcolor=black,
+			citecolor=black,
+			urlcolor=black,
+			pdftitle={Appunti di Meccanica Quantistica},
+			pdfauthor={Vittorio Lubicz}
+}
+
+\usepackage{latexsym}
+\usepackage{listings} 
+\usepackage{longtable}
+\usepackage{makeidx}
+\usepackage{mathrsfs}
+\usepackage{mathdots}
+\usepackage{multirow}
+\usepackage{nicefrac}
+\usepackage{pdfpages}
+\usepackage{physics}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{textcomp}
+\usepackage{titlesec,color}
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{35mm}{30mm}{35mm}{30mm}%
+             {0mm}{10mm}{0mm}{10mm}
+
+
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\chapter}[hang]{\huge\bfseries}{\myfont{\textit{\large{\chaptername\hspace{1pt} \thechapter\hspace{3pt}}}}\textcolor{gray75}{$\mid$}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\titleformat{\section}[hang]{\large\bfseries}{\myfont{\textit{\normalsize{\thesection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\Huge\bfseries}}
+
+\titleformat{\subsection}[hang]{\large\bfseries}{\myfont{\textit{\small{\thesubsection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\newcommand*{\myfont}{\fontfamily{ppl}\selectfont}
+
+\begin{document}
+
+%*****************LAYOUT PAGINE**************************
+\fancypagestyle{plain}{%
+\fancyhf{} % cancella tutti i campi di  intestazione e pi\`e di pagina
+\fancyfoot[C]{\bfseries \myfont{\thepage}} % tranne il centro
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{VS}{
+\headheight = 15pt
+\lhead[\myfont{\textit{\textbf{\thechapter\nouppercase{\leftmark}}}}]{\myfont{\textit{\textbf{\nouppercase{\leftmark}}}}}
+\chead[]{}
+\rhead[\myfont{\textbf{\thepage}}]{\myfont{\textbf{\thepage}}}
+
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+}
+%*******************************************************
+
+
+
+\pagestyle{VS}
+\setcounter{chapter}{17}
+\setcounter{page}{186}
+\chapter{Spin}
+Nella meccanica quantistica si deve assegnare ad ogni particella un \textbf{momento angolare intrinseco} non legato con il suo moto nello spazio. Questa \textbf{proprietà} della materia è \textbf{squisitamente quantistica} (essa scompare nel passaggio al limite $\hbar\rightarrow0$) e, di conseguenza, non ammette un'interpretazione classica.\\ Il momento angolare intrinseco di una particella è chiamato \textbf{spin} della particella, a differenza del momento angolare legato al moto della particella nello spazio, che è detto momento angolare orbitale.\\ Lo spin di una particella, misurato in unità $\hbar$, sarà indicato con s. Gli operatori delle componenti del momento angolare di spin, trattandosi di operatori di momento angolare, soddisfano le regole di commutazione
+\begin{equation}
+[s_{i},s_{j}]=i\varepsilon_{ijk}\hbar s_{k} ,
+\label{18.1}
+\end{equation}
+con tutte le conseguenze fisiche che ne derivano.\\
+In particolare gli \textbf{autovalori del quadrato dello spin}, $s^{2}$. sono uguali a:
+\begin{equation}
+\hbar^{2}s(s+1) ,
+\end{equation}
+dove \textbf{s può essere o un numero intero(compreso lo zero) o semintero}.\\ \textbf{Per un dato s la componente $s_{z}$ dello spin può prendere i valori}
+\begin{equation}
+-s, -s+1,.....,s-1,s ,
+\end{equation}
+\textbf{in unità $\hbar$}, in totale 2s+1 valori.\\ \textbf{Poichè s è per ogni tipo di particella un numero dato, nel passaggio al limite classico ($\hbar\rightarrow0$) il momento angolare di spin $\hbar s$ si annulla}. Per il momento angolare orbitale questo ragionamento non ha senso, poichè \textit{l} può avere valori arbitrari. Il passaggio alla meccanica classica significa che, contemporaneamente $\hbar$ tende a zero ed \textit{l} all'infinito, cosicchè il prodotto $\hbar l$ resta finito.\\ \textbf{Per le particelle aventi uno spin, la descrizione dello stato mediante la funzione d'onda deve determinare non soltanto la probabilità delle sue diverse posizioni nello spazio, ma anche la probabilità delle diverse orientazioni possibili del suo spin}.
+In altre parole, la funzione d'onda deve dipendere non soltanto da tre variabili continue, cioè dalle coordinate della particella,ma anche da una variabile di spin discreta che determina il valore della proiezione dello spin su una direzione scelta nello spazio(asse z) e suscettibile di un valore limitato di valori discreti(che indicheremo con la lettera $\sigma$). Tale funzione d'onda si scrive
+\begin{equation}
+\psi_{\sigma}(\vec{x'})=\langle\vec{x'}, \sigma|\alpha\rangle .
+\end{equation} 
+Essa rappresenta sostanzialmente un insieme di funzioni delle coordinate, che corrispondono a diversi valori di $\sigma$. Queste funzioni sono dette \textbf{componenti di spin della funzione d'onda}.\\ Frequentemente, le diverse componenti di spin della funzione d'onda sono arrangiate in un vettore colonna:
+\[
+\begin{pmatrix}
+\psi_{\sigma_1}(\vec{x'})\\ \psi_{\sigma_2}(\vec{x'})\\ \vdots \\\psi_{2s+1}(\vec{x'})
+\end{pmatrix}
+\] 
+Il modulo quadro 
+\begin{equation}
+\vert\psi_{\sigma}(\vec{x'})\vert^{2}  , 
+\end{equation}
+rappresenta la \textbf{densità di probabilità di trovare la particella nella posizione $\vec{x'}$ con un determinato valore di $\sigma$}. Pertanto la probabilità che la particella abbia un determinato valore di $\sigma$ è determinata dall'integrale
+\begin{equation}
+\int_{-\infty}^{+\infty} \vert\psi_{\sigma}(\vec{x'})\vert^{2}\,\vec{dx'} .
+\end{equation}
+Quanto alla probabilità della particella di trovarsi nell'elemento di volume $\vec{dx'}$, ma con un valore arbitrario di $\sigma$, essa è:
+\begin{equation}
+\sum_{\sigma} \vert\psi_{\sigma}(\vec{x'})\vert^{2}\vec{dx'}  .
+\end{equation}
+È evidente come, per una particella dotata di spin, la condizione di normalizzazione della funzione d'onda si scrive nella forma:
+\begin{equation}
+\sum_{\sigma} \int_{-\infty}^{+\infty}\vec{dx'}\vert\psi_{\sigma}(\vec{x'})\vert^{2}=\sum_{\sigma} \int_{-\infty}^{+\infty}\vec{dx'}\langle\alpha|\vec{x'}, \sigma\rangle\langle\vec{x'}, \sigma|\alpha\rangle=1 .
+\end{equation}
+Questo risultato segue anche dalla relazione di completezza
+\begin{equation}
+\sum_{\sigma} \int \vec{dx'}|\vec{x'}, \sigma\rangle\langle\vec{x'}, \sigma|=1 ,
+\end{equation}
+valida per i vettori di stato rappresentativi di particelle con spin.
+\section{Operatori di spin e formalismo di Pauli per spin 1/2}
+In questo capitolo non ci interesseremo, e non indicheremo pertanto esplicitamente, la dipendenza dalle coordinate spaziali dei vettori di stato.\\
+Gli operatori di spin agiscono appunto sulla varietà di spin $\sigma$ e si possono rappresentare in forma di \textbf{matrici di dimensione (2s+1)}.\\
+Consideriamo gli elementi di matrice degli operatori di spin nella base in cui il quadrato dello spin $s^{2}$ e la sua componente lungo l'asse z, $s_{z}$, sono diagonali. Questa base è definita dagli autovettori $|s,\sigma\rangle$ che soddisfano:
+\begin{eqnarray}
+& &s^{2} |s, \sigma\rangle =\hbar^{2}s(s+1)|s, \sigma\rangle ,\\
+& &s_{z} |s, \sigma\rangle =\hbar \sigma |s, \sigma\rangle . 
+\end{eqnarray}
+Gli elementi di matrice degli operatori $s_{x}$ e $s_{y}$ in questa base sono espressi dalle relazioni derivate  nella discussione generale della teoria del momento angolare:
+\begin{eqnarray}
+& &\langle s, \sigma -1\vert s_{x}\vert s, \sigma\rangle = \langle s, \sigma\vert s_{x}\vert s, \sigma -1\rangle =\frac{\hbar}{2}\sqrt{s(s+1)-\sigma(\sigma-1)} , \nonumber \\
+\\
+& &\langle s, \sigma -1\vert s_{y}\vert s, \sigma\rangle =- \langle s, \sigma\vert s_{y}\vert s, \sigma -1\rangle =\frac{i\hbar}{2}\sqrt{s(s+1)-\sigma(\sigma-1)} . \nonumber \\
+\end{eqnarray}
+Nel caso più importante in cui lo \textbf{spin} è uguale a \textbf{1/2} le matrici rappresentative degli operatori di spin hanno dimensione 2 e sono della forma
+\begin{equation}
+\vec{s}\doteq\frac{\hbar}{2}\vec{\sigma} ,
+\end{equation}
+dove
+\begin{equation}
+\sigma_{x}=\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}, \qquad \sigma_{y}=\begin{pmatrix}
+0 & -i \\
+i & 0
+\end{pmatrix},\qquad \sigma_{z}=\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix},
+\end{equation}
+le matrici $\vec{\sigma}$ si chiamano \textbf{matrici di Pauli}.\\
+In accordo con le regole (\ref{18.1}), le matrici di Pauli soddisfano le \textbf{relazioni di commutazione}
+\begin{equation}
+[\sigma_{i}, \sigma_{j}]=2i\varepsilon_{ijk}\sigma_{k} .
+\end{equation}
+Possiamo inoltre derivare con un calcolo diretto, le seguenti proprietà specifiche delle matrici di Pauli
+\begin{equation}
+\sigma_{i}^{2}=1, \quad \sigma_{i}\sigma_{j}+\sigma_{j}\sigma_{i}=0 \quad per \; i \neq j .
+\end{equation}
+Queste relazioni sono ovviamente equivalenti alle \textbf{relazioni di anticommutazione}\footnote{Tutte queste proprietà sono riassunte dall'unica relazione $\sigma_{i}\sigma_{j}=\delta_{ij}+i\varepsilon_{ijk}$}:
+\begin{equation}
+\lbrace\sigma_{i}, \sigma_{j}\rbrace=2\delta_{ij}
+\end{equation}
+Quanto all'operatore $s^{2}$, la sua rappresentazione in questa base risulta:
+\begin{equation}
+s^{2}=s_{x}^{2}+s_{y}^{2}+s_{z}^{2}=\frac{\hbar^{2}}{4}(\sigma_{x}^{2}+\sigma_{y}^{2}+\sigma_{z}^{2})=
+\frac{3}{4}\hbar^{2}\doteq\frac{3}{4}\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix} ,
+\end{equation} 
+in accordo con il fatto che per una particella di spin 1/2 gli autostati $\vert s, \sigma\rangle$ sono autostati  dell'operatore $s^{2}$ con autovalore $\hbar^{2}s(s+1)=\frac{3}{4}\hbar^{2}$.\\
+Gli autostati $\vert s, \sigma\rangle$ per una particella di spin 1/2 corrispondenti agli autovalori $\sigma=\pm\hbar/2$ vengono frequentemente indicati con i simboli $\vert +\rangle$ e $\vert -\rangle$ (o anche $\vert \uparrow \rangle$ e $\vert \downarrow \rangle$). Quanto alla loro rappresentazione matriciale nella base da essi stessi costituita questa è ovviamente
+\begin{equation}
+\vert +\rangle\doteq\begin{pmatrix}
+1 \\
+0
+\end{pmatrix}\equiv \chi_{+}\;, \qquad \vert - \rangle\doteq\begin{pmatrix}
+0 \\
+1
+\end{pmatrix}\equiv \chi_{-} ,
+\end{equation}
+e per i corrispondenti vettori bra:
+\begin{equation}
+\langle + \vert \doteq \begin{pmatrix}
+1 & 0
+\end{pmatrix} \equiv \chi_{+}^{+} \; , \qquad \langle - \vert \doteq \begin{pmatrix}
+0 & 1
+\end{pmatrix} \equiv \chi_{-}^{+} .
+\end{equation}
+Un generico vettore di stato $\vert \alpha \rangle$ è esprimibile come combinazione lineare dei due stati di base $\vert + \rangle$ e $\vert - \rangle$ nella forma:
+\begin{equation}
+\alpha = c_{+}\vert + \rangle + c_{-}\vert - \rangle\doteq \begin{pmatrix}
+c_{+}\\
+c_{-}
+\end{pmatrix}= c_{+}\chi_{+}+c_{-}\chi_{-} ,
+\end{equation}
+dove i coefficienti complessi corrispondono alle ampiezze di probabilità
+\[
+c_{+}=\langle + \vert \alpha \rangle \; , \qquad c_{-}=\langle - \vert \alpha \rangle .
+\]
+Il vettore colonna $\begin{pmatrix}
+c_{+}\\
+c_{-}
+\end{pmatrix}$ è chiamato \textbf{spinore} a due componenti.
+\end{document}
