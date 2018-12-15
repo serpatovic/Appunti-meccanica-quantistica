@@ -1,0 +1,99 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{\numberline {1}Crisi della fisica classica}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Lo spettro di corpo nero}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}L'effetto fotoelettrico}{7}{section.1.2}
+\contentsline {section}{\numberline {1.3}L'effetto Compton}{8}{section.1.3}
+\contentsline {section}{\numberline {1.4}Diffrazione degli elettroni}{11}{section.1.4}
+\contentsline {section}{\numberline {1.5}L'esperimento di Rutherford e gli spettri atomici}{12}{section.1.5}
+\contentsline {chapter}{\numberline {2}Principi fondamentali della M.Q.}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Probabilit\IeC {\`a} e ampiezza di probabilit\IeC {\`a}}{20}{section.2.1}
+\contentsline {section}{\numberline {2.2}Il principio di indeterminazione}{20}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Il principio di indeterminazione e l'esperimento delle due fenditure}{21}{subsection.2.2.1}
+\contentsline {chapter}{\numberline {3}Formalismo Generale della M.Q.}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}L'esperimento di Stern e Gerlach}{24}{section.3.1}
+\contentsline {section}{\numberline {3.2}Esperimenti di Stern e Gerlach Ripetuti}{26}{section.3.2}
+\contentsline {section}{\numberline {3.3}Principio di sovrapposizione}{31}{section.3.3}
+\contentsline {section}{\numberline {3.4}Operatori}{34}{section.3.4}
+\contentsline {section}{\numberline {3.5}Prodotto di Operatori}{38}{section.3.5}
+\contentsline {section}{\numberline {3.6}Cambiamenti di Base e Trasformazioni Unitarie}{38}{section.3.6}
+\contentsline {section}{\numberline {3.7}Esempio:Particelle di Spin 1/2}{42}{section.3.7}
+\contentsline {paragraph}{Esercizio}{45}{equation.3.7.115}
+\contentsline {subparagraph}{Cambiamento di Base}{45}{equation.3.7.116}
+\contentsline {chapter}{\numberline {4}Misure e osservabili}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}Autovalori ed autovettori di osservabili}{50}{section.4.1}
+\contentsline {section}{\numberline {4.2}Autovettori di osservabili come vettori di base}{52}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Misura selettiva}{54}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Osservabili compatibili ed operatori commutanti}{54}{section.4.3}
+\contentsline {section}{\numberline {4.4}Osservabili incompatibili e relazione di indeterminazione}{56}{section.4.4}
+\contentsline {section}{\numberline {4.5}Esempio: autovalori ed autovettori dello spin per particelle di spin 1/2 e relazioni di indeterminazione}{58}{section.4.5}
+\contentsline {chapter}{\numberline {5}Autostati dell'operatore di posizione}{64}{chapter.5}
+\contentsline {section}{\numberline {5.1}Normalizzazione degli autostati dell'operatore di posizione e funzione Delta di Dirac}{66}{section.5.1}
+\contentsline {section}{\numberline {5.2}Operatori nella rappresentazione delle coordinate}{68}{section.5.2}
+\contentsline {section}{\numberline {5.3}Regole di commutazione per gli operatori di posizione}{69}{section.5.3}
+\contentsline {chapter}{\numberline {6}Richiami di Meccanica Classica}{70}{chapter.6}
+\contentsline {section}{\numberline {6.1}Parentesi di Poisson}{70}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trasformazioni Canoniche}{71}{section.6.2}
+\contentsline {section}{\numberline {6.3}Trasformazioni infinitesime e corrispondenti generatori}{74}{section.6.3}
+\contentsline {chapter}{\numberline {7}Traslazioni e impulso}{78}{chapter.7}
+\contentsline {section}{\numberline {7.1}Le regole di commutazione canoniche e la relazione di indeterminazione di Heisenberg}{80}{section.7.1}
+\contentsline {section}{\numberline {7.2}L'operatore impulso nella rappresentazione delle coordinate. Autofunzioni dell'impulso}{83}{section.7.2}
+\contentsline {section}{\numberline {7.3}Funzioni d'onda nella rappresentazione degli impulsi}{86}{section.7.3}
+\contentsline {section}{\numberline {7.4}Pacchetti d'onda gaussiani}{87}{section.7.4}
+\contentsline {section}{\numberline {7.5}Operatore posizione nella rappresentazione degli impulsi}{89}{section.7.5}
+\contentsline {chapter}{\numberline {8}Dinamica Quantistica}{91}{chapter.8}
+\contentsline {section}{\numberline {8.1}Evoluzione temporale degli stati}{91}{section.8.1}
+\contentsline {section}{\numberline {8.2}Stati stazionari}{93}{section.8.2}
+\contentsline {section}{\numberline {8.3} Equazione d'onda di Schr\IeC {\"o}dinger}{95}{section.8.3}
+\contentsline {section}{\numberline {8.4}Densit\IeC {\`a} di corrente ed equazione di continuit\IeC {\`a}}{98}{section.8.4}
+\contentsline {chapter}{\numberline {9}Operatore di parit\IeC {\`a}}{100}{chapter.9}
+\contentsline {chapter}{\numberline {10}Problemi Unidimensionali}{104}{chapter.10}
+\contentsline {section}{\numberline {10.1}Propriet\IeC {\`a} generali dell'equazione di Schr\"{o}dinger}{104}{section.10.1}
+\contentsline {section}{\numberline {10.2}Particella su un segmento (buca di potenziale infinita)}{105}{section.10.2}
+\contentsline {section}{\numberline {10.3}Buca di potenziale: stati legati}{109}{section.10.3}
+\contentsline {section}{\numberline {10.4}Gradino di potenziale}{112}{section.10.4}
+\contentsline {section}{\numberline {10.5}Barriera di potenziale - effetto tunnel}{117}{section.10.5}
+\contentsline {subsection}{\numberline {10.5.1}Emissione fredda}{121}{subsection.10.5.1}
+\contentsline {subsection}{\numberline {10.5.2}Decadimento alfa}{123}{subsection.10.5.2}
+\contentsline {section}{\numberline {10.6}Risoluzione dell'eq. di Schr\"{o}dinger per la barriera di potenziale in termini di f.d.o. simmetriche e anti-simmetriche}{124}{section.10.6}
+\contentsline {section}{\numberline {10.7}Risoluzione dell'eq. di Schr\"{o}dinger per la barriera di potenziale nel limite $\mathbf {\lambda a \gg 1}$}{126}{section.10.7}
+\contentsline {chapter}{\numberline {11}Oscillatore Armonico}{128}{chapter.11}
+\contentsline {chapter}{\numberline {12}Simmetrie e Leggi di Conservazione}{137}{chapter.12}
+\contentsline {section}{\numberline {12.1}Derivata di un operatore rispetto al tempo}{137}{section.12.1}
+\contentsline {section}{\numberline {12.2}Simmetrie e leggi di conservazione in meccanica quantistica}{139}{section.12.2}
+\contentsline {section}{\numberline {12.3}Teorema di Ehrenfest}{142}{section.12.3}
+\contentsline {chapter}{\numberline {13}Rappresentazioni di Schr\IeC {\"o}dinger e di Heisenberg}{144}{chapter.13}
+\contentsline {chapter}{\numberline {14}T.d.P. indipendenti dal tempo}{147}{chapter.14}
+\contentsline {section}{\numberline {14.1}Caso non degenere}{147}{section.14.1}
+\contentsline {section}{\numberline {14.2}Caso degenere}{151}{section.14.2}
+\contentsline {chapter}{\numberline {15}T.d.P. dipendenti dal tempo}{153}{chapter.15}
+\contentsline {section}{\numberline {15.1}Transizione per effetto di una perturbazione costante e relazione di indeterminazione tempo-energia}{155}{section.15.1}
+\contentsline {section}{\numberline {15.2}Transizioni per effetto di una perturbazione periodica}{159}{section.15.2}
+\contentsline {chapter}{\numberline {16}Momento angolare}{164}{chapter.16}
+\contentsline {section}{\numberline {16.1}Rotazioni, momento angolare e regole di commutazione}{164}{section.16.1}
+\contentsline {section}{\numberline {16.2}Autovalori ed elementi di matrice degli operatori di momento angolare}{169}{section.16.2}
+\contentsline {chapter}{\numberline {17}Momento angolare orbitale}{174}{chapter.17}
+\contentsline {section}{\numberline {17.1}Autovalori del momento angolare orbitale e armoniche sferiche}{179}{section.17.1}
+\contentsline {chapter}{\numberline {18}Spin}{186}{chapter.18}
+\contentsline {section}{\numberline {18.1}Operatori di spin e formalismo di Pauli per spin 1/2}{188}{section.18.1}
+\contentsline {chapter}{\numberline {19}Composizione di momenti angolari}{190}{chapter.19}
+\contentsline {section}{\numberline {19.1}Coefficienti di Clebsh-Gordan}{193}{section.19.1}
+\contentsline {section}{\numberline {19.2}Composizione di due momenti angolari di spin 1/2. Stati di tripletto e di singoletto}{194}{section.19.2}
+\contentsline {section}{\numberline {19.3}Composizione dei momenti angolari orbitale e di spin per una particella di spin 1/2}{196}{section.19.3}
+\contentsline {chapter}{\numberline {20}Particelle identiche}{199}{chapter.20}
+\contentsline {section}{\numberline {20.1}Funzioni d'onda per un sistema\\ composto da due particelle identiche\\ ed interazione di scambio}{203}{section.20.1}
+\contentsline {chapter}{\numberline {21}Atomo di idrogeno}{206}{chapter.21}
+\contentsline {section}{\numberline {21.1}Il problema dei due corpi e il moto in un campo centrale }{206}{section.21.1}
+\contentsline {section}{\numberline {21.2}Campo Coulombiano}{211}{section.21.2}
+\contentsline {section}{\numberline {21.3}Modello di Bohr dell'atomo di idrogeno (1913)}{216}{section.21.3}
+\contentsline {section}{\numberline {21.4}Trucchi con le costanti fondamentali}{217}{section.21.4}
+\contentsline {section}{\numberline {21.5}Raggio classico dell'elettrone}{218}{section.21.5}
+\contentsline {chapter}{\numberline {22}Particella in campo elettromagnetico}{224}{chapter.22}
+\contentsline {chapter}{\numberline {23}Effetto Stark}{227}{chapter.23}
+\contentsline {chapter}{\numberline {24}Atomo in un campo magnetico}{234}{chapter.24}
+\contentsline {section}{\numberline {24.1}Effetto Zeeman}{234}{section.24.1}
+\contentsline {section}{\numberline {24.2}Effetto Paschen-Back}{236}{section.24.2}
+\contentsline {chapter}{\numberline {25}Correzioni relativistiche all'atomo di idrogeno}{238}{chapter.25}
+\contentsline {section}{\numberline {25.1}Termine cinetico}{238}{section.25.1}
+\contentsline {section}{\numberline {25.2}Accoppiamento spin-orbita}{239}{section.25.2}
+\contentsline {section}{\numberline {25.3}Calcolo perturbativo delle correzioni}{240}{section.25.3}
