@@ -1,0 +1,250 @@
+\chapter[Simmetrie e Leggi di Conservazione]{Simmetrie e Leggi di\\ Conservazione} 
+\section{Derivata di un operatore rispetto al tempo} 
+
+\textbf{Il concetto di derivata di una grandezza fisica rispetto al tempo non può essere definito in meccanica quantistica nel senso che esso ha in meccanica classica. Infatti, la definizione della derivata in meccanica classica è legata alla considerazione dei valori della grandezza in due istanti vicini ma differenti. Nella meccanica quantistica, invece, una grandezza avente un valore determinato in un certo istante non ha, in generale, valore determinato negli istanti successivi.} 
+
+In altri termini, se il vettore di stato del sistema considerato è un autostato di una determinata osservabile ad un certo istante, negli istanti successivi il vettore di stato non sarà più, in generale, autoscatto della stessa osservabile.
+
+Dunque, il concetto di derivata rispetto al tempo deve essere definito in meccanica quantistica in modo diverso.
+\textbf{\'E naturale definire la derivata $\mathbf{dA/dt}$ di A come grandezza il cui valore medio è uguale alla derivata rispetto al tempo del valor medio $\mathbf{\langle A \rangle} $.
+Si ha dunque, per definizione}:
+
+\begin{equation}
+\langle \frac{dA}{dt} \rangle = \frac{d}{dt} \langle A \rangle .
+\end{equation}
+
+Partendo da questa definizione non è difficile ottenere l'espressione dell'operatore quantistico $dA/dt$
+
+\begin{eqnarray}
+\label{eq:cap12_1}
+\langle \frac{dA}{dt} \rangle &=& \langle \alpha,t| \frac{dA}{dt}| \alpha,t \rangle = \frac{d}{dt} \langle A \rangle = \frac{d}{dt} \langle \alpha ,t |A| \alpha ,t\rangle= \nonumber\\
+&=&(\frac{\partial }{\partial{t}}\langle \alpha,t|) A|\alpha,t \rangle + \langle \alpha,t| \frac{\partial A}{\partial{t}}|\alpha,t \rangle + \\
+& &+\langle\alpha,t|A (\frac{\partial }{\partial{t}}|\alpha,t\rangle).\nonumber
+\end{eqnarray} 
+
+In questa espressione $\frac{\partial A}{\partial{t}}$ è un operatore dedotto per derivazione dell'operatore A rispetto al tempo, dal quale quest'ultimo può dipendere come da un parametro.
+
+Utilizzando l'equazione di Schr\"{o}dinger per il ket $|\alpha,t\rangle$ e per il bra corrispondente,   $\langle\alpha,t|$ :
+
+\begin{equation}
+\begin{cases}
+\displaystyle{i\hbar\frac{\partial }{\partial{t}}|\alpha,t\rangle= H|\alpha,t\rangle }\\
+\\
+\displaystyle{-i\hbar\frac{\partial }{\partial{t}}\langle\alpha,t|= \langle\alpha,t|H } 
+\end{cases}
+\end{equation}
+
+otteniamo dall'eq. (\ref{eq:cap12_1})
+
+\begin{eqnarray}
+\langle\frac{dA}{dt} \rangle &=& \frac{i}{\hbar} \langle\alpha,t|HA|\alpha,t\rangle + \langle \alpha,t|\frac{\partial A}{\partial{t}}|\alpha,t \rangle + \nonumber \\
+& &-\frac{i}{\hbar} \langle \alpha,t|AH|\alpha,t\rangle=  \nonumber\\
+&=& \langle \alpha,t| (\frac{\partial A}{\partial{t}} + \frac{i}{\hbar}[H,A] ) |\alpha,t\rangle .
+\end{eqnarray}
+
+
+Per definizione di valore medio, l'espressione tra parentesi rappresenta l'operatore cercato $dA/dt$ :
+
+\begin{equation} \label{eq:cap12_2}
+\frac{dA}{dt}= \frac{\partial A}{\partial{t}}+ \frac{i}{\hbar}[H,A].
+\end{equation}
+
+È istruttivo confrontare questo risultato con l'equazione del moto classico nella forma di parentesi di Poisson. \textbf{In meccanica classica}, per la derivata totale rispetto al tempo di una grandezza $f$, che è funzione delle coordinate e dei momenti generalizzati $q_i$ e $p_i$ del sistema, si ha:
+
+ \begin{equation}
+\frac{df}{dt}= \frac{\partial f}{\partial{t}} + \sum_{i}^{}{(\frac{\partial H}{\partial{p_i}}\frac{\partial f}{\partial{q_i}} - \frac{\partial H}{\partial{q_i}}\frac{\partial f}{\partial{p_i}}} )=
+\frac{\partial f}{\partial{t}}+ \{H,f\}.
+\end{equation}
+
+Nuovamente riscontriamo che la regola di corrispondenza di Dirac 
+
+\begin{equation}
+\{ \quad,\quad   \}_{classica}  \leftrightarrow \frac{i}{\hbar} [ \quad, \quad]
+\end{equation}
+
+porta all'equazione corretta in meccanica quantistica.
+È bene sottolineare, tuttavia, come l'eq (\ref{eq:cap12_2})risulti valida anche quando la grandezza A non ha analogo classico.\\
+Una classe molto importante di grandezze fisiche è costituita da \textbf{quelle grandezze i cui operatori non dipendono esplicitamente dal tempo e che, inoltre, commutano con l'hamiltoniano} in modo tale che 
+
+\begin{equation}
+\frac{dA}{dt}= \frac{\partial A}{\partial{t}} + \frac{i}{\hbar}[H,A]=0.
+\end{equation}
+
+Tali grandezze si chiamano \textbf{conservative}.
+
+Per le grandezze conservative 
+\begin{equation} 
+\langle \frac{dA}{dt}\rangle= \frac{d}{dt}\langle A \rangle =0,
+\end{equation}
+cioè 
+\begin{equation}
+\langle A \rangle= costante.
+\end{equation}
+
+In altri termini \textbf{il valore medio della grandezza resta costante nel tempo}. Si può ugualmente affermare che \textbf{se, nello stato dato, la grandezza A ha un valore determinato (cioè se lo stato è un autostato dell'operatore A) essa avrà anche negli istanti successivi un valore determinato ed esattamente lo stesso.}
+
+\textbf{L'hamiltoniano di un sistema isolato (nonchè di un sistema che si trova in un campo esteso costante e non variabile) non può contenere il tempo esplicitamente.} Ciò risulta dal fatto che tutti gli istanti sono equivalenti relativamente a tale sistema fisico. Pertanto, per un tale sistema  
+\begin{equation}
+\frac{\partial H}{\partial{t}}=0.
+\end{equation}
+
+D'altra parte, poiché ogni operatore, come è ovvio, commuta con se stesso possiamo calcolare che \textbf{l'energia di un sistema che non si trova in un campo esteso variabile si conserva}:
+\begin{equation}
+\frac{dH}{dt}=0.
+\end{equation}
+
+Pertanto \textbf{in meccanica quantistica la legge di conservazione dell'energia significa che, se nello stato dato l'energia ha un valore determinato, questo valore resterà nel tempo}.
+
+\section[Simmetrie e leggi di conservazione  in meccanica quantistica]{Simmetrie e leggi di conservazione  in meccanica quantistica\footnote{S22, 4.1 }} 
+
+La legge di conservazione dell'energia, discussa nel paragrafo precedente, rappresenta un esempio specifico di \textbf{connessione tra simmetrie e leggi di conservazione}. Questa legge può essere infatti enunciata dicendo che,se un sistema fisico è invariante rispetto a traslazioni temporali, allora il corrispondente generatore della trasformazione, ossia l'hamiltoniano $H$, è una quantità conservata.
+
+\textbf{Così come in meccanica classica, anche in meccanica quantistica la connessione tra simmetria e leggi di conservazione può essere stabilita in forma del tutto generale}.
+
+Per discutere questa connessione consideriamo una generica trasformazione che Ãš rappresentata, in meccanica quantistica, da un operatore unitario agente sui vettori di stato:
+
+\begin{equation}\label{eq:cap12_3}
+|\alpha \rangle \rightarrow\textbf{U}|\alpha \rangle.
+\end{equation}
+
+Possiamo pensare che $\textbf{U}$ rappresenti l'operatore di traslazione spaziale $T(d\vec{x})$ oppure l'operatore di evoluzione temporale, $\textbf{U}(t,t_0)$.
+
+Consideriamo come cambia, per effetto della trasformazione, un generico elemento di matrice di un operatore \textbf{X} tra due stati $|\alpha \rangle$ e $|\beta\rangle$ :
+
+\begin{equation}
+\langle \beta|\textbf{X}|\alpha \rangle   \mapsto    \langle \beta |\textbf{U}^+\textbf{X}\textbf{U}|\alpha \rangle.
+\end{equation}
+
+Vediamo allora che la trasformazione può essere pensata o come una trasformazione (\ref{eq:cap12_3})  sui vettori di stato, che lascia gli operatori invariati, o come trasformazione sugli operatori:
+
+\begin{equation}
+\label{eq:cap12_4}
+\textbf{X}\mapsto \textbf{U}^+ \textbf{X}\textbf{U},
+\end{equation}
+lasciando invariati i vettori di stato. Formalmente i due approcci sono completamente equivalenti.
+
+Come esempio discutiamo il caso di una traslazione spaziale infinitesima operata dall'operatore $T(d\vec{x}^{'})$.
+Nell'approccio utilizzato in precedenza, la trasformazione era pensata come una trasformazione sui vettori di stato che lascia invariati gli operatori.
+
+Così ad esempio:
+
+\begin{eqnarray}
+  &|\alpha \rangle \rightarrow (1- \frac{i}{\hbar}\vec{p}\cdot d\vec{x}^{'}) |\alpha \rangle &  \\
+	\nonumber \\
+ & \vec{X}\rightarrow \vec{X}  & 
+\end{eqnarray}
+
+Tuttavia possiamo considerare la trasformazione come una trasformazione degli operatori, che lascia invariati i vettori di stato:
+
+\begin{eqnarray}
+	|\alpha \rangle &\rightarrow & |\alpha \rangle \\
+	\vec{X} &\rightarrow& (1+ \frac{i}{\hbar} \vec{p} d\vec{x}^{'}) \vec{X} (1-\frac{i}{\hbar} \vec{p} d\vec{X}) \approx \nonumber\\
+	& &\approx \vec{X}+ \frac{i}{\hbar}[\vec{p} d\vec{x}^{'},\vec{x}]= \nonumber  \\
+	&=&\vec{X}+ d\vec{X}^{'}
+\end{eqnarray}
+
+È immediato mostrare come entrambi gli approcci portano allo stesso risultato per il valore di aspettazione di $\vec{x}$:
+
+\begin{equation}
+\langle \vec{x} \rangle  \mapsto \langle \vec{x}\rangle + \langle d\vec{x}^{'} \rangle.
+\end{equation}
+Nel discutere la connessione tra simmetrie e leggi di conservazione è conveniente considerare le trasformazioni come agenti sugli operatori.
+
+\textbf{Consideriamo allora una generica trasformazione operata dall'operatore unitario $\textbf{U}$ e supponiamo che il sistema fisico considerato sia invariate rispetto a tale trasformazione, ossia che la trasformazione rappresenti una simmetria del sistema.
+In particolare, allora, dovrà risultare invariate per tale trasformazione l'hamiltoniano H del sistema, che ne descrive la dinamica}. Per quanto discusso questo comporta
+
+\begin{equation}
+\textbf{U}^+H\textbf{U}= H,
+\end{equation}
+
+o, equivalentemente 
+
+\begin{equation}\label{eq:cap12_5}
+[H,\textbf{U}]=0.
+\end{equation}
+
+Se consideriamo una \textbf{trasformazione infinitesima}, sappiamo che l'operatore unitario $\textbf{U}$ può essere scritto nella forma 
+
+\begin{equation}
+\textbf{U}= 1- \frac{i\epsilon}{\hbar}G
+\end{equation}
+
+dove G è il generatore hamiltoniano della trasformazione considerata. In questo caso l'equazione (\ref{eq:cap12_5}) equivale a 
+
+\begin{equation} 
+[H,G]=0.
+\end{equation}
+
+Per l'eq. (\ref{eq:cap12_4}) si ha allora
+
+\begin{equation}
+\frac{dG}{dt}=0,
+\end{equation}
+
+e quindi \textbf{G è una costante del moto}. Questo risultato stabilisce la connessione tra simmetrie e leggi di conservazione nella meccanica quantistica.
+
+Considero ad esempio un \textbf{sistema isolato soggetto a campi esterni}. Poichè tutte le posizioni di tale sistema in blocco sono equivalenti nello spazio, si può affermare che l'hamiltoniano del sistema non cambia in uno spostamento arbitrario del sistema. In altri termini l'hamiltoniano commuta con l'operazione di traslazione
+
+\begin{equation}
+[H,T (d\vec{x}^{'})]=0.
+\end{equation}
+
+Ma questo equivale a dire che \textbf{l'hamiltoniano commuta con l'operatore impulso $\vec{p}$} del sistema è una quantità conservata:
+
+\begin{equation}
+\frac{d\vec{p}}{dt}=0.
+\end{equation}
+
+Possiamo quindi affermare che \textbf{in meccanica quantistica,come in meccanica classica, la legge di conservazione dell'impulso di un sistema isolato è una diretta conseguenza dell'omogeneità dello spazio.}
+
+In seguito mostreremo che, \textbf{come conseguenza dell'invariata rispetto a rotazioni spaziali di un sistema isolato non soggetto a campi esterni, si conserva in meccanica quantistica, come in meccanica classica, il momento angolare del sistema. La legge di conservazione del momento angolare è dunque una conseguenza dell'isotropia dello spazio.}
+
+\textbf{L'invarianza di un sistema isolato, o di un sistema soggetto a campi esterni variabili nel tempo, rispetto a traslazioni temporali è conseguenza dell'omogeneità del tempo. La conservazione dell'energia è dunque una diretta conseguenza di tale simmetria}.
+
+Sin qui abbiamo discusso in particolare il caso delle \textbf{simmetrie continue}, ossia delle simmetrie associate a trasformazioni che possano essere ottenute applicando successivamente trasformazioni infinitesime.
+Esistono tuttavia trasformazioni che non godono di questa proprietà, e che sono associate a cosiddette \textbf{simmetrie discrete}. In questo caso non esiste alcun generatore hamiltoniano associato alla trasformazione e dunque potrebbe non esistere alcuna osservabile corrispondente ad una quantità conservata.
+
+Per alcune simmetrie discrete, tuttavia, lo stesso operatore unitario \textbf{U} che opera la trasformazione può essere al tempo stesso, un operatore hermitiano. In vista dell'eq (\ref{eq:cap12_5}), allora l'operatore \textbf{U} corrisponde ad una quantità osservabile conservata. Questo è il caso, ad esempio, della \textbf{trasformazione di inversione spaziale o parità}. Abbiamo già discusso come la parità sia infatti una quantità conservata per sistemi in cui il campo di forze estese è descritto da un potenziale simmetrico rispetto ad inversione degli assi.
+
+\section[Teorema di Ehrenfest]{Teorema di Ehrenfest\footnote{S2.2, LL19}}
+
+Consideriamo l'operatore di Hamilton per una particella:
+
+\begin{equation}
+H= \frac{\vec{p}^2}{2m} + \textbf{V}(\vec{x}).
+\end{equation}
+
+Calcoliamo l'operatore $d\vec{x}/dt$. Poichè l'operatore di posizione $\vec{x}$ non dipende esplicitamente dal tempo, in virtù dell'eq (\ref{eq:cap12_4}) si ha:
+
+\begin{equation}
+\frac{d\vec{x}}{dt}= \frac{i}{\hbar}[H,\vec{x}].
+\end{equation}
+
+L'unico operatore tra i componenti di H che non commuta con l'operatore di posizione è $\vec{p}^2$. Si ha allora 
+
+\begin{equation}
+\frac{dx_i}{dt}=\frac{i}{\hbar} \left[ \frac{p_i^2}{2m},x_i \right]=\frac{i}{2m\hbar}(p_i^2x_i-x_ip_i^2)=\frac{p_i}{m},
+\end{equation}
+con $[p^2,x]=p[p,x]+[p,x]p=-2i\hbar$. Si ha:
+\begin{equation}
+   	\label{eq:cap12_6}
+	\frac{d\vec{x}}{dt}=\frac{\vec{p}}{m}.
+\end{equation}
+Calcoliamo ora l'operatore $\displaystyle{\frac{d\vec{p}}{dt}}$. Otteniamo facilmente il risultato cercato utilizzando per gli operatori la loro espressione nella rappresentazione delle coordinate:\\
+\begin{eqnarray}
+	\frac{d\vec{p}}{dt}&=&\frac{i}{\hbar}[\vec{H},\vec{p}]=\frac{i}{\hbar}[V(\vec{x}),\vec{p}]= \nonumber\\
+	&=&\frac{i}{\hbar}[V(\vec{x}),-i\hbar\vec{\nabla}]=(V(\vec{x})\vec{\nabla}-\vec{\nabla}V(\vec{x}))= \nonumber \\
+	&=&V(\vec{x})\vec{\nabla}-(\vec{\nabla}V(\vec{x}))-V	\vec{x}\vec{\nabla},
+\end{eqnarray}
+ossia:
+
+\begin{equation}
+\label{eq:cap12_7}
+\frac{d\vec{p}}{dt}=-\vec{\nabla}V(\vec{x}).
+\end{equation}
+Le due equazioni, (\ref{eq:cap12_6}) e (\ref{eq:cap12_7}), possono essere combinate insieme per ottenere:\\
+\begin{equation}
+m\frac{d^2\vec{x}}{dt^2}=\frac{d\vec{p}}{dt}=-\vec{\nabla}V(\vec{x}),
+\end{equation}
+
+che esprimono, in forma operatoriale, la legge di Newton. Questo risultato è noto come \textbf{Teorema di Ehrenfest}. 

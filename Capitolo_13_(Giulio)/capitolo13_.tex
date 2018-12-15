@@ -1,0 +1,58 @@
+\chapter[Rappresentazioni di Schrödinger e di Heisenberg]{Rappresentazioni\\ di Schrödinger e di\\ Heisenberg ed equazioni\\ del moto di Heisenberg\footnote{S22, LL13}}
+
+Nel discutere la dinamica in meccanica quantistica, abbiamo considerato come i vettori di stato evolvono nel tempo secondo l'equazione di Schrödinger. Questo significa che abbiamo considerato la trasformazione di evoluzione temporale come una trasformazione applicata ai vettori di stato, che lascia invariati gli operatori. Questo approccio è noto come \textbf{rappresentazione~di~Schr\"{o}dinger}.\\
+In accordo con la precedente discussione generale, possiamo considerare la trasformazione di evoluzione temporale nell'approccio alternativo, e completamente equivalente, secondo cui la trasformazione è applicata agli operatori, mentre i vettori di stato restano invariati nel tempo. Questo approccio è noto come $\textbf{rappresentazione~di~Heisenberg}$.\\
+\\
+\noindent Consideriamo allora l'operatore di evoluzione temporale $U(t, t_0)$ e poniamo per semplicità $t_0 = 0$ :
+ 
+\begin{equation}
+U(t) \equiv U(t,t_0 = 0) = e^{-\frac{i}{\hbar}Ht}.
+\end{equation}
+\\
+\noindent Nella rappresentazione di Schrödinger gli stati evolvono nel tempo e gli operatori restano invariati:
+
+\begin{align}
+\ket{\alpha, t_0 = 0}_S &\rightarrow \ket{\alpha, t}_S = U(t) \ket{\alpha, t=0}_S \nonumber \\
+A^{(S)} &\rightarrow A^{(S)}.
+\end{align}
+\\
+\noindent Nella rappresentazione di Heisenberg, viceversa, gli stati restano invariati e gli operatori evolvono nel tempo:
+
+\begin{align}
+&\ket{\alpha}_H \rightarrow \ket{\alpha}_H, \\ \nonumber
+&A^{(H)}(t_0 = 0) \rightarrow A^{(H)}(t) = U^\textbf{+}(t)A^{(H)}(t_0 = 0)U(t).
+\end{align}
+\\
+\noindent Per definizione i vettori di stato e gli operatori coincidono nelle rappresentazioni di Schrödinger e di Heisenberg al tempo $t_0 = 0$ :
+
+\begin{align}
+\ket{\alpha}_H = \ket{\alpha, t_0 = 0}_S, \\ \nonumber
+A^{(H)}(t_0 = 0) = A^{(S)}.
+\end{align}
+\\
+\noindent Il valore di aspettazione di un generico operatore $A$ su qualunque stato $\ket{\alpha}$ è ovviamente identico nelle due rappresentazioni:
+
+\begin{eqnarray}
+~_S\braket{\alpha,t|A^{(S)}|\alpha,t}_S &=& _S\langle \alpha, t_0=0\vert U^\textbf{+}(t) A^{(S)}U(t)\vert\alpha,t_0=0\rangle _S \nonumber \\
+&=&~_H\braket{\alpha|A^{(H)}(t)|\alpha}_H.
+\end{eqnarray}
+\\
+\noindent Così come nella rappresentazione di Schrödinger l'evoluzione temporale degli stati è definita dall'equazione di Schrödinger, in modo analogo è possibile derivare, nella rappresentazione di Heisenberg, un'equazione fondamentale che definisce l'evoluzione temporale degli operatori. Questa equazione può essere derivata derivando rispetto al tempo l'operatore $A^{(H)}(t)$ nella rappresentazione di Heisenberg:
+
+\begin{align}
+& \frac{dA^{(H)}(t)}{dt} = \frac{d}{dt}\left[U^\textbf{+}(t) A^{(H)}(t_0=0)U(t)\right] = \nonumber \\
+&= \frac{\partial U^\textbf{+}(t)}{dt} A^{(H)}(t_0=0) U(t) + U^\textbf{+}(t) A^{(H)}(t_0=0) \frac{\partial U(t)}{dt} = \nonumber \\
+&= \frac{i}{\hbar} H U^\textbf{+}(t) A^{(H)}(t_0=0) U(t) + U^\textbf{+}(t) A^{(H)}(t_0=0) \left(-\frac{i}{h}\right) H U(t) = \nonumber \\
+&= \frac{i}{\hbar} H A^{(H)}(t) - \frac{i}{h} A^{(H)}(t) H,
+\end{align}
+
+\noindent dove si è supposto che l'operatore $A$, così come l'hamiltoniana $H$, non dipendano esplicitamente (ossia parametricamente) dal tempo. Dunque:
+
+\begin{equation} \label{eq:cap13_1}
+\frac{d A^{(H)}(t)}{dt} = \frac{i}{h} \left[H, A^{(H)}(t) \right].
+\end{equation}
+
+\noindent Questa equazione è nota come $\textbf{equazione del moto di Heisenberg}$.\\
+\\
+Osserviamo come l'equazione del moto di Heisenberg sia formalmente analoga all'equazione (\ref{eq:cap12_2}), ma il suo significato è alquanto differente: l'eq. (\ref{eq:cap12_2}) rappresenta la definizione dell'operatore $dA/dt$ della grandezza fisica corrispondente $dA/dt$, mentre il primo membro dell'equazione del moto di Heisenberg contiene la derivata rispetto al tempo dell'operatore della grandezza stessa $A$.\\
+Osserviamo anche che l'operatore hamiltoniano coincide nelle rappresentazioni di Schrödinger e di Heisenberg: $U^\textbf{+} H U = H$. Per questa ragione nell'eq. (\ref{eq:cap13_1}) non abbiamo specificato la rappresentazione.

@@ -1,0 +1,152 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[T1]{fontenc}                                      
+\usepackage[utf8]{inputenc}                               
+\usepackage[italian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{braket}
+\usepackage{blindtext}
+\usepackage{calc}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{epsfig}
+\usepackage{eucal}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{
+			colorlinks=true,
+			linkcolor=black,
+			anchorcolor=black,
+			citecolor=black,
+			urlcolor=black,
+			pdftitle={Appunti di Meccanica Quantistica},
+			pdfauthor={Vittorio Lubicz}
+}
+
+\usepackage{latexsym}
+\usepackage{listings} 
+\usepackage{longtable}
+\usepackage{makeidx}
+\usepackage{mathrsfs}
+\usepackage{mathdots}
+\usepackage{multirow}
+\usepackage{nicefrac}
+\usepackage{pdfpages}
+\usepackage{physics}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{textcomp}
+\usepackage{titlesec,color}
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{35mm}{30mm}{35mm}{30mm}%
+             {0mm}{10mm}{0mm}{10mm}
+
+
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\chapter}[hang]{\huge\bfseries}{\myfont{\textit{\large{\chaptername\hspace{1pt} \thechapter\hspace{3pt}}}}\textcolor{gray75}{$\mid$}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\titleformat{\section}[hang]{\large\bfseries}{\myfont{\textit{\normalsize{\thesection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\Huge\bfseries}}
+
+\titleformat{\subsection}[hang]{\large\bfseries}{\myfont{\textit{\small{\thesubsection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\newcommand*{\myfont}{\fontfamily{ppl}\selectfont}
+
+\begin{document}
+
+%*****************LAYOUT PAGINE**************************
+\fancypagestyle{plain}{%
+\fancyhf{} % cancella tutti i campi di  intestazione e pi\`e di pagina
+\fancyfoot[C]{\bfseries \myfont{\thepage}} % tranne il centro
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{VS}{
+\headheight = 15pt
+\lhead[\myfont{\textit{\textbf{\thechapter\nouppercase{\leftmark}}}}]{\myfont{\textit{\textbf{\nouppercase{\leftmark}}}}}
+\chead[]{}
+\rhead[\myfont{\textbf{\thepage}}]{\myfont{\textbf{\thepage}}}
+
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+}
+%*******************************************************
+
+
+
+\pagestyle{VS}
+\setcounter{chapter}{12}
+\setcounter{page}{144}
+\chapter[Rappresentazioni di Schrödinger e di Heisenberg]{Rappresentazioni\\ di Schrödinger e di\\ Heisenberg ed equazioni\\ del moto di Heisenberg\footnote{S22, LL13}}
+
+Nel discutere la dinamica in meccanica quantistica, abbiamo considerato come i vettori di stato evolvono nel tempo secondo l'equazione di Schrödinger. Questo significa che abbiamo considerato la trasformazione di evoluzione temporale come una trasformazione applicata ai vettori di stato, che lascia invariati gli operatori. Questo approccio è noto come \textbf{rappresentazione~di~Schr\"{o}dinger}.\\
+In accordo con la precedente discussione generale, possiamo considerare la trasformazione di evoluzione temporale nell'approccio alternativo, e completamente equivalente, secondo cui la trasformazione è applicata agli operatori, mentre i vettori di stato restano invariati nel tempo. Questo approccio è noto come $\textbf{rappresentazione~di~Heisenberg}$.\\
+\\
+\noindent Consideriamo allora l'operatore di evoluzione temporale $U(t, t_0)$ e poniamo per semplicità $t_0 = 0$ :
+ 
+\begin{equation}
+U(t) \equiv U(t,t_0 = 0) = e^{-\frac{i}{\hbar}Ht}.
+\end{equation}
+\\
+\noindent Nella rappresentazione di Schrödinger gli stati evolvono nel tempo e gli operatori restano invariati:
+
+\begin{align}
+\ket{\alpha, t_0 = 0}_S &\rightarrow \ket{\alpha, t}_S = U(t) \ket{\alpha, t=0}_S \nonumber \\
+A^{(S)} &\rightarrow A^{(S)}.
+\end{align}
+\\
+\noindent Nella rappresentazione di Heisenberg, viceversa, gli stati restano invariati e gli operatori evolvono nel tempo:
+
+\begin{align}
+&\ket{\alpha}_H \rightarrow \ket{\alpha}_H, \\ \nonumber
+&A^{(H)}(t_0 = 0) \rightarrow A^{(H)}(t) = U^\textbf{+}(t)A^{(H)}(t_0 = 0)U(t).
+\end{align}
+\\
+\noindent Per definizione i vettori di stato e gli operatori coincidono nelle rappresentazioni di Schrödinger e di Heisenberg al tempo $t_0 = 0$ :
+
+\begin{align}
+\ket{\alpha}_H = \ket{\alpha, t_0 = 0}_S, \\ \nonumber
+A^{(H)}(t_0 = 0) = A^{(S)}.
+\end{align}
+\\
+\noindent Il valore di aspettazione di un generico operatore $A$ su qualunque stato $\ket{\alpha}$ è ovviamente identico nelle due rappresentazioni:
+
+\begin{eqnarray}
+~_S\braket{\alpha,t|A^{(S)}|\alpha,t}_S &=& _S\langle \alpha, t_0=0\vert U^\textbf{+}(t) A^{(S)}U(t)\vert\alpha,t_0=0\rangle _S \nonumber \\
+&=&~_H\braket{\alpha|A^{(H)}(t)|\alpha}_H.
+\end{eqnarray}
+\\
+\noindent Così come nella rappresentazione di Schrödinger l'evoluzione temporale degli stati è definita dall'equazione di Schrödinger, in modo analogo è possibile derivare, nella rappresentazione di Heisenberg, un'equazione fondamentale che definisce l'evoluzione temporale degli operatori. Questa equazione può essere derivata derivando rispetto al tempo l'operatore $A^{(H)}(t)$ nella rappresentazione di Heisenberg:
+
+\begin{align}
+& \frac{dA^{(H)}(t)}{dt} = \frac{d}{dt}\left[U^\textbf{+}(t) A^{(H)}(t_0=0)U(t)\right] = \nonumber \\
+&= \frac{\partial U^\textbf{+}(t)}{dt} A^{(H)}(t_0=0) U(t) + U^\textbf{+}(t) A^{(H)}(t_0=0) \frac{\partial U(t)}{dt} = \nonumber \\
+&= \frac{i}{\hbar} H U^\textbf{+}(t) A^{(H)}(t_0=0) U(t) + U^\textbf{+}(t) A^{(H)}(t_0=0) \left(-\frac{i}{h}\right) H U(t) = \nonumber \\
+&= \frac{i}{\hbar} H A^{(H)}(t) - \frac{i}{h} A^{(H)}(t) H,
+\end{align}
+
+\noindent dove si è supposto che l'operatore $A$, così come l'hamiltoniana $H$, non dipendano esplicitamente (ossia parametricamente) dal tempo. Dunque:
+
+\begin{equation} \label{eq:cap13_1}
+\frac{d A^{(H)}(t)}{dt} = \frac{i}{h} \left[H, A^{(H)}(t) \right].
+\end{equation}
+
+\noindent Questa equazione è nota come $\textbf{equazione del moto di Heisenberg}$.\\
+\\
+Osserviamo come l'equazione del moto di Heisenberg sia formalmente analoga all'equazione (12.5), ma il suo significato è alquanto differente: l'eq. (12.5) rappresenta la definizione dell'operatore $dA/dt$ della grandezza fisica corrispondente $dA/dt$, mentre il primo membro dell'equazione del moto di Heisenberg contiene la derivata rispetto al tempo dell'operatore della grandezza stessa $A$.\\
+Osserviamo anche che l'operatore hamiltoniano coincide nelle rappresentazioni di Schrödinger e di Heisenberg: $U^\textbf{+} H U = H$. Per questa ragione nell'eq. (\ref{eq:cap13_1}) non abbiamo specificato la rappresentazione.
+\end{document}
