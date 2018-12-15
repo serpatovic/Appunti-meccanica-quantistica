@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt,openany,oneside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[italian, english]{babel}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{epsfig}
+\usepackage[font={small}]{caption}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{mathrsfs}
+\usepackage{subfigure}
+\usepackage{amsmath,amssymb}
+\usepackage{braket}
+\usepackage{mathtools}
+\usepackage[version=3]{mhchem}
+%\usepackage[pdfborder=0]{hyperref}
+\usepackage[applemac]{inputenc}
+\usepackage{moreverb}
+\usepackage{sidecap}
+\usepackage{floatflt}
+\usepackage{multirow}         % fonde righe in una colonna
+\usepackage{lscape}           % pagina orizzontale
+\usepackage{hyperref}         % segnalibri sul pdf
+%inserisco scorciatoia per inserire il pallino dei gradi
+\providecommand{\degree}{\ensuremath{^\circ}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\graphicspath{{./immagini/}}
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
+
+\newenvironment{sistema}%
+  {\left\lbrace\begin{array}{@{}l@{}}}%
+  {\end{array}\right.}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Stile della pagina
+\pagestyle{fancyplain}
+\addtolength{\headwidth}{\marginparsep}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]
+{\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]
+{\fancyplain{}{\bfseries\thepage}}
+   
+\newcommand{\captionfonts} {\small}
+
+%\pagenumbering{Arabic}
+%\tableofcontents
+
+
+\frontmatter
+
+\chapter{Richiami di Meccanica Classica}
+
+\section{Parentesi di Poisson}
+Sia $f(\mathbf{p},\mathbf{q},t)$ una funzione delle coordinate degli impulsi e del tempo e calcoliamone la sua derivata totale rispetto al tempo:
+
+\begin{equation}
+\frac{df}{dt}= \frac{\partial f}{\partial t} + \sum_i \left( \frac{\partial f}{\partial q_i} \dot {q_i} + \frac{\partial f}{\partial p_i} \dot {p_i} \right).
+\end{equation}
+
+Utilizzando le equazioni di Hamilton:
+
+\begin{equation}
+\begin{matrix}
+
+
+\dot{q_i}=\frac{\partial H}{\partial p_i}, & 
+\dot{p_i}=-\frac{\partial H}{\partial q_i}
+
+
+\end{matrix}
+\end{equation}
+
+possiamo scrivere:
+
+\begin{equation}
+\frac{df}{dt}=	\frac{\partial f}{\partial t} + \sum_i \left( \frac{\partial H}{\partial p_i}\frac{\partial f}{\partial q_i}-\frac{\partial H}{\partial q_i}\frac{\partial f}{\partial p_i}\right) \equiv \frac{\partial f}{\partial t} + \left\lbrace H,f \right\rbrace
+\end{equation}
+
+dove si \`e introdotta la notazione:
+
+\begin{equation}
+\left\lbrace H,f \right\rbrace \equiv \sum_i \left(\frac{\partial H}{\partial p_i}\frac{\partial f}{\partial q_i}-\frac{\partial H}{\partial q_i}\frac{\partial f}{\partial p_i}\right) 
+\end{equation}.
+
+La quantit\`a $\left\lbrace H,f \right\rbrace$ \`e detta \textbf{parentesi di Poisson} di H con f. In generale:
+
+\begin{equation}
+\left\lbrace f,g \right\rbrace \equiv \sum_i \left(\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}-\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}\right) 
+\end{equation}.
+
+Se $f(\mathbf{p},\mathbf{q},t)$ \`e una costante del moto, allora
+
+\begin{equation}
+\frac{\partial f}{\partial t}+\left\lbrace H,f \right\rbrace  \equiv 0
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document} 

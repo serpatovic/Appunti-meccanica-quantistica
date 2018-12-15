@@ -1,0 +1,267 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[T1]{fontenc}                                      
+\usepackage[utf8]{inputenc}                               
+\usepackage[italian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{braket}
+\usepackage{blindtext}
+\usepackage{calc}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{epsfig}
+\usepackage{eucal}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{
+			colorlinks=true,
+			linkcolor=black,
+			anchorcolor=black,
+			citecolor=black,
+			urlcolor=black,
+			pdftitle={Appunti di Meccanica Quantistica},
+			pdfauthor={Vittorio Lubicz}
+}
+
+\usepackage{latexsym}
+\usepackage{listings} 
+\usepackage{longtable}
+\usepackage{makeidx}
+\usepackage{mathrsfs}
+\usepackage{mathdots}
+\usepackage{multirow}
+\usepackage{nicefrac}
+\usepackage{pdfpages}
+\usepackage{physics}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{textcomp}
+\usepackage{titlesec,color}
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{35mm}{30mm}{35mm}{30mm}%
+             {0mm}{10mm}{0mm}{10mm}
+
+
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\chapter}[hang]{\huge\bfseries}{\myfont{\textit{\large{\chaptername\hspace{1pt} \thechapter\hspace{3pt}}}}\textcolor{gray75}{$\mid$}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\titleformat{\section}[hang]{\large\bfseries}{\myfont{\textit{\normalsize{\thesection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\Huge\bfseries}}
+
+\titleformat{\subsection}[hang]{\large\bfseries}{\myfont{\textit{\small{\thesubsection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\newcommand*{\myfont}{\fontfamily{ppl}\selectfont}
+
+\begin{document}
+
+%*****************LAYOUT PAGINE**************************
+\fancypagestyle{plain}{%
+\fancyhf{} % cancella tutti i campi di  intestazione e pi\`e di pagina
+\fancyfoot[C]{\bfseries \myfont{\thepage}} % tranne il centro
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{VS}{
+\headheight = 15pt
+\lhead[\myfont{\textit{\textbf{\thechapter\nouppercase{\leftmark}}}}]{\myfont{\textit{\textbf{\nouppercase{\leftmark}}}}}
+\chead[]{}
+\rhead[\myfont{\textbf{\thepage}}]{\myfont{\textbf{\thepage}}}
+
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+}
+%*******************************************************
+
+
+
+\pagestyle{VS}
+\setcounter{chapter}{5}
+\setcounter{page}{70}
+\chapter[Simmetrie e leggi di conservazione]{Simmetrie e leggi di\\ conservazione}
+\section{Derivata di un operatore rispetto al tempo}
+\textbf{Il concetto di derivata di una grandezza fisica rispetto al tempo non può essere definito in meccanica quantistica nel senso che esso ha in meccanica classica. Infatti, la definizione della derivata in meccanica classica è legata alla considerazione dei valori della grandezza in due istanti vicini ma differenti. Nella meccanica quantistica,} invece \textbf{una grandezza avente un valore determinato in un certo istante non ha, in generale, valore determinato negli istanti successivi}.
+In altri termini, se il vettore di stato del sistema considerato è un autostato di una determinata osservabile ad un certo istante, negli istanti successivi il vettore di stato non sarà più, in generale, autostato della stessa osservabile.\\
+Dunque il concetto di rispetto al tempo deve essere definito in meccanica quantistica in modo diverso. \textbf{È naturale definire la derivata} $\dv*{A}{t}$ di $A$ \textbf{come una grandezza il cui valore medio è uguale alla derivata rispetto al tempo del valore medio} $\expval{A}$. \textbf{Si ha dunque, per definizione}:
+\begin{equation}
+  \expval{\dv{A}{t}} = \dv{t}\expval{A}
+\end{equation}
+Partendo da questa definizione non è difficile ottenere l'espressione dell'operatore quantistico $\dv*{A}{t}$ corrispondente alla grandezza $\dv*{A}{t}$
+\begin{align}
+  \label{eq:cap6_1}
+  \expval{\dv{A}{t}} &= \expval{\dv{A}{t}}{\alpha,t}=\dv{t}\expval{A}=\dv{t}\expval{A}{\alpha,t}=\nonumber\\
+  &=\qty(\pdv{t}\bra{\alpha,t})A\ket{\alpha,t} + \expval{\pdv{A}{t}}{\alpha,t} + \bra{\alpha,t}A\qty(\pdv{t}\ket{\alpha,t})
+\end{align}
+In questa espressione $\pdv*{A}{t}$ è un operatore dedotto per derivazione dell'operatore $A$ rispetto al tempo, dal quale quest'ultimo può dipendere come da un parametro.\\
+Utilizzando l'equazione di Schr\"{o}dinger per il ket $\ket{\alpha,t}$  e per il bra corrispondente, $\bra{\alpha,t}$ :
+\begin{equation}
+  \begin{cases}
+    i\hbar\pdv{t}\ket{\alpha,t} = H\ket{\alpha,t}\\
+    -i\hbar\pdv{t}\bra{\alpha,t} = \bra{\alpha,t}H
+  \end{cases}
+\end{equation}
+otteniamo dall'equazione (\ref{eq:cap6_1}):
+\begin{align}
+  \ev{\dv{A}{t}} &= \frac{i}{\hbar}\ev{HA}{\alpha,t}+\ev{\pdv{A}{t}}{\alpha,t}-\frac{i}{\hbar}\ev{AH}{\alpha,t} =\nonumber\\
+  &=\ev{\qty(\pdv{A}{t}+\frac{i}{\hbar}\comm{H}{A})}{\alpha,t}
+\end{align}
+Per definizione di valore medio, l'espressione tra parentesi rappresenta l'operatore cercato $\dv*{A}{t}$ :
+\begin{equation}
+  \label{eq:cap6_2}
+  \dv{A}{t} = \pdv{A}{t}+\frac{i}{\hbar}\comm{H}{A}
+\end{equation}
+È istruttivo confrontare questo risultato con l'equazione del moto classica nella forma di parentesi di Poisson. \textbf{In meccanica classica}, per la derivata totale rispetto al tempo di una grandezza \emph{f}, che è funzione delle coordinate e dei momenti generalizzati $q_i$ e $p_i$ del sistema, si ha:
+\begin{align}
+  \label{eq:cap6_3}
+  \dv{f}{t} &= \pdv{f}{t}+\sum_i\qty(\pdv{H}{p_i}\pdv{f}{q_i}-\pdv{H}{q_i}\pdv{f}{p_i}) = \pdv{f}{t} + \pb{H}{f}
+\end{align}
+Nuovamente riscontriamo che la regola di corrispondenza di Dirac
+\begin{equation}
+  \pb{\;\;\;}{\;\;\;}_{classica} \iff \frac{i}{\hbar}\comm{\;\;\;}{\;\;\;}
+\end{equation}
+porta all'equazione corretta in meccanica quantistica. È bene sottolineare, tuttavia, come l'equazione (\ref{eq:cap6_2}) risulti valida anche quando la grandezza $A$ non ha analogo classico.\\
+Una classe molto importante di grandezze fisiche è costituita da quelle \textbf{grandezze i cui operatori non dipendono esplicitamente dal tempo e che, inoltre, commutano con l'hamiltoniana} in modo tale che
+\begin{equation}
+  \dv{A}{t} = \pdv{A}{t} + \frac{i}{\hbar}\comm{H}{A} = 0
+\end{equation}
+Tali \textbf{grandezze} si chiamano \textbf{conservative}.\\
+Per le grandezze conservative
+\begin{equation}
+  \ev{\dv{A}{t}}=\dv{t}\ev{A} = 0
+\end{equation}
+cioè
+\begin{equation}
+  \ev{A} = \text{costante}
+\end{equation}
+In altri termini \textbf{il valore medio della grandezza resta costante nel tempo}. Si può ugualmente affermare che \textbf{se, nello stato dato, la grandezza A ha un valore determinato} (cioè se lo stato è un autostato dell'operatore A) \textbf{essa avrà anche negli istanti successivi un valore determinato ed esattamente lo stesso}.\\
+\textbf{L'hamiltoniano di un sistema isolato} (nonché di un sistema che si trova in un campo esterno costante e non variabile) \textbf{non può contenere il tempo esplicitamente}. Ciò risulta dal fatto che tutti gli istanti sono equivalenti relativamente a tale sistema fisico. Pertanto, per un tale sistema
+\begin{equation}
+  \pdv{H}{t} = 0
+\end{equation}
+D'altra parte, poiché ogni operatore, come è ovvio, commuta con se stesso possiamo concludere che \textbf{l'energia di un sistema che non si trova in un campo esterno variabile si conserva}:
+\begin{equation}
+  \dv{H}{t} = 0
+\end{equation}
+Pertanto \textbf{in meccanica quantistica la legge di conservazione dell'energia significa che, se nello stato dato, l'energia ha un valore determinato, questo valore resterà costante nel tempo}.
+\section[Simmetria e leggi di conservazione in meccanica quantistica]{Simmetria e leggi di conservazione in meccanica quantistica \footnote{S2.2,4.1}}
+La legge di conservazione dell'energia, discussa nel paragrafo precedente, rappresenta un esempio specifico di \textbf{connessione tra simmetrie e leggi di conservazione}. Questa legge può essere infatti enunciata dicendo che, se un sistema fisico è invariante rispetto a traslazioni temporali, allora il corrispondente generatore della trasformazione, ossia l'hamiltoniano $H$, è una quantità conservata.\\
+\textbf{Così come in meccanica classica, anche in meccanica quantistica la connessione tra simmetrie e leggi di conservazione può essere stabilita in forma del tutto generale}.\\
+Per discutere questa connessione consideriamo una generica trasformazione che è rappresentata, in meccanica quantistica, da un operatore unitario, agente su vettori di stato
+\begin{equation}
+  \label{eq:cap6_4}
+  \ket{\alpha}\to U\ket{\alpha}
+\end{equation}
+Possiamo pensare che $U$ rappresenti l'operatore di traslazione spaziale $T\qty(\dd\va{x})$ oppure l'operatore di evoluzione temporale, $U\qty(t,t_0)$.
+Consideriamo come cambia, per effetto della trasformazione, un generico elemento di matrice di un operatore $X$ tra due stati $\ket{\alpha}$ e $\ket{\beta}$:
+\begin{equation}
+  \mel{\beta}{X}{\alpha} \to \mel{\beta}{U^{\dag}XU}{\alpha}
+\end{equation}
+Vediamo allora che la trasformazione può essere pensata o come una trasformazione (\ref{eq:cap6_4}) sui vettori di stato, che lascia gli operatori invariati, o come una trasformazione sugli operatori:
+\begin{equation}
+  \label{eq:cap6_5}
+  X\to U^{\dag}XU
+\end{equation}
+lasciando invariati i vettori di stato. Formalmente i due approcci sono completamente equivalenti.\\
+Come \textbf{esempio} discutiamo il caso di una trasformazione spaziale infinitesima operata dall'operatore $T\qty(\dd\va{x}')$.
+Nell'approccio utilizzato in precedenza, la trasformazione era pensata come una trasformazione sui vettori di stato che lascia invariati gli operatori.
+Così ad esempio
+\begin{align}
+  \ket{\alpha} \quad&\to\quad \qty(1-\frac{i}{\hbar}\va{p}\vdot\dd\va{x}')\ket{\alpha}\nonumber\\
+  \va{x} \quad&\to\quad \va{x}
+\end{align}
+Tuttavia possiamo considerare la trasformazione come una trasformazione degli operatori, che lascia invariati i vettori di stato:
+\begin{align}
+  \ket{\alpha} \quad&\to\quad \ket{\alpha}\nonumber\\
+  \va{x} \quad&\to\quad \qty(1+\frac{i}{\hbar}\va{p}\vdot\dd\va{x}')\va{x}\qty(1-\frac{i}{\hbar}\va{p}\vdot\dd\va{x}') \simeq \nonumber\\
+  &\simeq\quad \va{x} + \frac{i}{\hbar}\comm{\va{p}\vdot\dd\va{x}'}{\va{x}} = \va{x}+ \dd\va{x}'
+\end{align}
+È immediato mostrare come entrambi gli approcci portano allo stesso risultato per il valore di aspettazione di $\va{x}$:
+\begin{equation}
+  \ev{\va{x}} \to \ev{\va{x}} + \ev{\dd\va{x}'}
+\end{equation}
+Nel discutere la connessione tra simmetrie e leggi di conservazione è conveniente considerare le trasformazioni come agenti sugli operatori.\\
+\textbf{Consideriamo} allora \textbf{una generica trasformazione operata dall'operatore unitario} $U$ \textbf{e supponiamo che il sistema fisico considerato sia un'invariante rispetto a tale trasformazione, ossia che la trasformazione rappresenti una simmetria del sistema.} \textbf{In particolare, allora, dovrà risultare invariante per tale trasformazione l'hamiltoniana} $H$ \textbf{del sistema, che ne descrive la dinamica}. Per quanto discusso questo comporta
+\begin{equation}
+  U^{\dag}HU = H
+\end{equation}
+o, equivalentemente
+\begin{equation}
+  \label{eq:cap6_6}
+  \comm{H}{U}= 0
+\end{equation}
+Se consideriamo una \textbf{trasformazione infinitesima}, sappiamo che l'operatore unitario $U$ può essere scritto nella forma
+\begin{equation}
+  U= 1- \frac{i\epsilon}{\hbar}G
+\end{equation}
+dove $G$ è il generatore hermitiano della trasformazione considerata. In questo caso l'eq. (\ref{eq:cap6_6}) equivale
+\begin{equation}
+  \comm{H}{G}= 0
+\end{equation}
+Per l'equazione (\ref{eq:cap6_5}) si ha allora
+\begin{equation}
+  \dv{G}{t} = 0
+\end{equation}
+e quindi $G$ \textbf{è una costante del moto}. Questo risultato stabilisce la connessione tra simmetrie e leggi di conservazione nella meccanica quantistica.\\
+Consideriamo ad esempio un \textbf{sistema isolato non soggetto a campi esterni}. Poiché tutte le posizioni di tale sistema in blocco sono equivalenti nello spazio, si può affermare che l'hamiltoniano del sistema non cambia in uno spostamento arbitrario del sistema. In altri termini l'hamiltoniano commuta con l'operatore di traslazione
+\begin{equation}
+  \comm{H}{T\qty(\dd\va{x}')} = 0
+\end{equation}
+Ma questo equivale a dire che \textbf{l'hamiltoniano commuta con l'operatore impulso $\va{p}$ del sistema} o ancora che l'impulso $\va{p}$ del sistema è una quantità conservata
+\begin{equation}
+  \dv{\va{p}}{t} = 0
+\end{equation}
+Possiamo quindi affermare che \textbf{in meccanica quantistica, come in meccanica classica, la legge di conservazione dell'impulso per un sistema isolato è una diretta conseguenza dell'omogeneità dello spazio}.
+In seguito mostreremo che, \textbf{come conseguenza dell'invarianza rispetto a rotazioni spaziali di un sistema isolato non soggetto a corpi esterni, si conserva in meccanica quantistica, come in meccanica classica, il momento angolare del sistema}. \textbf{La legge di conservazione del momento angolare è dunque una conseguenza dell'isotropia dello spazio}.\\
+\textbf{L'invarianza di un sistema isolato, o di un sistema non soggetto a campi esterni variabili nel tempo, rispetto a traslazioni temporali è conseguenza dell'omogeneità del tempo}. \textbf{La conservazione dell'energia è dunque una diretta conseguenza di tale simmetria}.\\
+Sin qui abbiamo discusso in particolare il caso delle \textbf{simmetrie continue}, ossia delle simmetrie associate a trasformazioni che possono essere ottenute applicando successivamente trasformazioni infinitesime. Esistono tuttavia trasformazioni che non godono di questa proprietà, e che sono associate a cosiddette \textbf{simmetrie discrete}. In questo caso non esiste alcun generatore hermitiano associato alla trasformazione e dunque potrebbe non esistere alcuna osservabile corrispondente ad una quantità conservata.\\
+
+Per alcune simmetrie discrete, tutta via, lo stesso operatore unitario $U$ che opera la trasformazione può essere, al tempo stesso, un operatore hermitiano. In virtù dell'equazione (\ref{eq:cap6_6}) allora, l'operatore $U$ corrisponde ad una quantità osservabile conservata. Questo è il caso, ad esempio, della \textbf{trasformazione di inversione spaziale o Parità}. Abbiamo già discusso come la parità sia infatti una quantità conservata per i sistemi in cui il campo di forze esterne è descritto da un potenziale simmetrico rispetto ad inversione degli assi.
+\section[Teorema di Ehrenfest]{Teorema di Ehrenfest\footnote{s2.2, LL 19}}
+Consideriamo l'operatore di Hamilton per una particella
+\begin{equation}
+  H= \frac{\va{p}^2}{2m} + V\qty(\va{x})
+\end{equation}
+Calcoliamo l'operatore $\dv*{\va{x}}{t}$. Poiché l'operatore di posizione $\va{x}$ non dipende esplicitamente dal tempo in virtù dell'equazione (\ref{eq:cap6_3}) si ha
+\begin{equation}
+  \dv{\va{x}}{t} = \frac{i}{\hbar}\comm{H}{\va{x}}
+\end{equation}
+L'unico operatore tra i componenti di $H$ che non commuta con l'operatore di posizione è $\va{p}^2$. Si ha allora
+\begin{align}
+  \dv{x_i}{t} &= \frac{i}{\hbar}\comm{\frac{p_i^2}{2m}}{x_i} = \frac{i}{2m\hbar}\comm{p_i^2}{x_i} =\nonumber\\
+  &= \frac{i}{2m\hbar}\qty(p_i\comm{p_i}{x_i}+\comm{p_i}{x_i}p_i)=\nonumber\\
+  &= \frac{i}{2m\hbar}\qty(-i\hbar)\qty(p_i+p_i)= \frac{p_i}{m}
+\end{align}
+ossia
+\begin{equation}
+  \label{eq:cap6_7}
+  \dv{\va{x}}{t} = \frac{\va{p}}{m}
+\end{equation}
+Calcoliamo ora l'operatore $\dv*{\va{p}}{t}$. Otteniamo facilmente il risultato utilizzando per gli operatori la loro espressione nella rappresentazione delle coordinate:
+\begin{align}
+  \dv{\va{p}}{t}&=\frac{i}{\hbar}\comm{H}{\va{p}}=\frac{i}{\hbar}\comm{V\qty(\va{x})}{\va{p}}=\frac{i}{\hbar}\comm{V\qty(\va{x})}{-i\hbar\va{\grad}}=\nonumber\\
+  &= \qty(V\qty(\va{x})\va{\grad}-\va{\grad}V\qty(\va{x})) = V\qty(\va{x})\va{\grad} - \qty(\va{\grad}V\qty(\va{x}))- V\qty(\va{x})\va{\grad}
+\end{align}
+ossia
+\begin{equation}
+  \label{eq:cap6_8}
+  \dv{\va{p}}{t} = -\va{\grad}V\qty(\va{x})
+\end{equation}
+Le due equazioni, (\ref{eq:cap6_7}) e (\ref{eq:cap6_8}), possono essere combinate insieme per ottenere
+\begin{equation}
+  m\dv[2]{\va{x}}{t} = \dv{\va{p}}{t} = -\va{\grad}V\qty(\va{x})
+\end{equation}
+che esprimono, in forma operatoriale, la legge di Newton. Questo risultato è noto come \textbf{teorema di Ehrenfest}.
+\end{document}

@@ -1,0 +1,266 @@
+\chapter{Dinamica Quantistica}
+\section[Evoluzione temporale degli stati]{Evoluzione temporale degli stati.\\Operatore Hamiltoniano ed equazione di Schr\"{o}dinger\footnote{S2.1, LL8} }
+Nella meccanica quantistica il vettore di stato (o equivalentemente la funzione d'onda) determina in modo completo lo stato di un sistema fisico. Ciò significa che questo vettore, dato in un certo istante, ne definisce anche il comportamento in tutti gli istanti successivi. Il problema che ci proponiamo qui di affrontare è lo studio dell'\textbf{evoluzione dinamica dei vettori di stato}.\\
+Consideriamo un sistema fisico descritto, ad un certo istante di tempo $t_0$, dal vettore di stato $\vert \alpha, t_0 \rangle$. In generale lo stato del sistema evolverà nel tempo e sarà descritto, a ciascun istante di tempo successivo, $t>t_0$, dal vettore $\vert \alpha, t\rangle$.\\
+Poiché il vettore di stato $\vert \alpha, t \rangle$ deve essere determinato univocamente dal vettore di stato al tempo iniziale $\vert \alpha, t \rangle$, possiamo definire una relazione tra i due vettori nella forma: \begin{equation}
+\vert \alpha, t \rangle = U(t,t_0)\vert \alpha, t_0 \rangle,
+\end{equation}
+dove $U(t,t_0)$ è un operatore chiamato \textbf{operatore di evoluzione temporale}.\\
+Per la \textbf{conservazione della probabilità}, il vettore si stato deve rimanere normalizzato ad uno a tutti gli istanti di tempo:
+\begin{eqnarray}
+\langle \alpha, t \vert \alpha, t \rangle & = &
+\langle \alpha, t_0 \vert U^+ (t,t_0) U(t,t_0)\vert \alpha, t \rangle = \nonumber\\
+& = & \langle \alpha, t_0 \vert \alpha, t_0 \rangle.
+\end{eqnarray}
+Questo comporta pertanto che  \textbf{l'operatore di evoluzione temporale} debba essere \textbf{unitario}:
+\begin{equation}
+U^+ (t,t_0) U(t,t_0)=1.
+\end{equation}
+Evidentemente, nel limite $t\longrightarrow t_0$ l'operatore di traslazione temporale deve ridursi all'operatore identità. Inoltre, l'evoluzione temporale da $t_0$ a $t_1$ seguita dall'evoluzione temporale da $t_1$ a $t_2$ deve essere equivalente all'evoluzione dal tempo $t_0$ al tempo $t_2$ direttamente:
+\begin{equation}
+U (t_2,t_1) U(t_1,t_0)=U(t_2,t_0).
+\end{equation}
+Queste proprietà consentono di dedurre una semplice espressione per l'\textbf{operatore di evoluzione temporale infinitesimo}:
+\begin{equation}
+U(t_0+dt,t_0) = 1-i\Omega dt,
+\label{eq:cap8_1}
+\end{equation}
+dove, in virtù della condizione di unitarietà di $U$, l'operatore $\Omega$ è hermitiano:
+\begin{equation}
+\Omega ^+ = \Omega.
+\end{equation}
+Nella meccanica classica, una traslazione temporale infinitesima può essere considerata come una trasformazione canonica:
+\begin{equation}
+Q_i = q_i+\dot{q}_idt, \qquad P_i = p_i+\dot{p}_idt
+\end{equation}
+ottenibile dalla funzione generatrice:
+\begin{equation}
+\Phi = \sum _i q_iP_i+ Hdt.
+\label{eq:cap8_2}
+\end{equation}
+Ricordando che $\sum _i q_iP_i$ è la funzione generatrice della trasformazione identità, dal confronto delle eq. (\ref{eq:cap8_1}) e (\ref{eq:cap8_2}) siamo indotti a formulare l'ipotesi che l'operatore hermitiano $\Omega$ concida, a meno di un fattore di proporzionalità, con l'\textbf{operatore hamiltoniano} del sistema. L'inverso della costante di proporzionalità ha le dimensioni di un'azione e risulta essere uguale alla constante di Planck, $\hbar$. Dunque:
+\begin{equation}
+\Omega = \frac{H}{\hbar},
+\end{equation}
+e con questa identificazione:
+\begin{equation}
+U(t_0+dt,t_0) =1-\frac{i}{\hbar}Hdt.
+\end{equation}
+L'espressione derivata per l'operatore di evoluzione temporale infinitesima può essere convenientemente posta nella forma di un'equazione differenziale per l'operatore di evoluzione temporale finita, o, equivalentemente, per il vettore di stato del sistema- A tale scopo osserviamo che:
+\begin{eqnarray}
+& &U(t+dt,t_0)-U(t,t_0)= \nonumber \\
+& &= U(t+dt,t)U(t,t_0)-U(t,t_0)= \\
+& &=\left(1-\frac{i}{\hbar}Hdt \right)U(t,t_0)-U(t,t_0)=-\frac{i}{\hbar}Hdt U(t,t_0).\nonumber
+\end{eqnarray}
+Dividendo entrambi i membri di questa equazione per $dt$ e considerando il limite $dt \longrightarrow 0$, si ottiene quindi:
+\begin{equation}
+i\hbar \frac{\partial}{\partial t} U (t, t_0)= H U(t,t_0).
+\label{eq:cap8_3}
+\end{equation}
+Questa equazione definisce completamente l'operatore di evoluzione temporale in termini dell'operatore hamiltoniano del sistema (con la condizione $U(t_0,t_0)=1).$\\
+Ad un'analoga equazione pet i vettori di stato di giunge applicando entrambi i membri della (\ref{eq:cap8_3}) al kety $\vert \alpha, t_0\rangle$:
+\begin{equation}
+i\hbar \left( \frac{\partial}{\partial t} U (t,t_0) \right) \vert \alpha, t_0\rangle= H U(t, t_0)\vert \alpha, t_0\rangle.
+\end{equation}
+Poiché $\vert \alpha, t_0\rangle$ non dipende dal tempo t, possiamo espreimere questa relazione in termini del vettore di stato al tempo $t$, $\vert \alpha, t\rangle= U(t,t_0)\vert \alpha, t_0\rangle$. Si ottiene così:
+\begin{equation}
+i\hbar \frac{\partial}{\partial t} \vert \alpha, t \rangle = H \vert \alpha, t \rangle.
+\end{equation}
+Questa equazione fondamenttale della meccanica quantistica è detta \textbf{equazione di Schr\"{o}dinger. Se si conosce la forma dell'operatore hamiltoniano, allora l'equazione di Schr\"{o}dinger consente di determinare i vettori di stato del sistema fisico dato.}
+\section[Stati stazionari]{Stati stazionari\footnote{S2.1, LL10}}
+\textbf{L'hamiltoniano di un sistema isolato, o di un sistema che si trova in un campo esterno costante e non variabile non può contenere il tempo esplicitamente.} Ciò risulta dal fatto che tutti gli istanti di tempo sono equivalenti rispetto a tale sistema fisico.\\
+\textbf{Per tali sistemi, la soluzione dell'equazione di Schr\"{o}dinger assume una forma particolarmente semplice}. L'operatore di evoluzione temporale è infatti:
+\begin{equation}
+U(t,t_0)= e^{-i\frac{i}{\hbar}H(t-t_0)},
+\end{equation}
+ed i vettori di stato si scrivono nella forma:
+\begin{equation}
+\vert \alpha, t \rangle = e^{-i\frac{i}{\hbar}H(t-t_0)}\vert \alpha, t_0 \rangle.
+\end{equation}
+Queste conclusioni possono essere verificate per sostituzione diretta nell'equazione di Schr\"{o}dinger.\\
+Se l'hamiltoniano di un sistema fisico non dipende esplicitamente dal tempo, risulta possibile considerare, per tale sistema, \textbf{gli stati in cui l'energia assume un valore determinato}. Questi stato sono detti \textbf{stati stazionari} e corrispondono agli autostati dell'operatore hamiltoniano, soddisfano cioè l'equazione agli autovalori:
+\begin{equation}
+H|n\rangle = E_n |n \rangle.
+\end{equation}
+Consideriamo l'equazione di Schr\"{o}dinger per uno stato stazionario:
+\begin{equation}
+i\hbar \frac{\partial}{\partial t}|n,t\rangle = H |n,t \rangle = E_n |n, t \rangle.
+\end{equation}
+Questa equazione può \textbf{essere integrata direttamente rispetto al tempo, e dà}
+\begin{equation}
+|n,t\rangle = e^{-\frac{i}{\hbar}E_n t}\vert n, 0\rangle,
+\label{eq:cap8_4}
+\end{equation}
+dove si è considerato, per semplicità $t_0=0$. Allo stesso risultato si giunge ovviamente applicando l'operatore di evoluzione temporale allo stato $\vert n, 0\rangle$:
+\begin{equation}
+\vert n, t \rangle = U(t,0) \vert n, 0 \rangle = e^{-\frac{i}{\hbar}H t}\vert n, 0\rangle= e^{-\frac{i}{\hbar}E_n t}\vert n, 0\rangle.
+\end{equation}
+L'equazione (\ref{eq:cap8_4}) determina la dipendenza dal tempo dei vettori di stato corrispondenti agli stati stazionari. Essa indica, in particolare, che \textbf{se il sistema si trova in un determinato istante in un autostato dell'hamiltoniana, esso resta in tale autostato per tutti gli istanti seguenti. Equivalentemente, possiamo affermare che se, nello stato dato, l'energia ha un valore determinato, questo valore resterà costante nel tempo.} Questo risultato esprime in meccanica quantistica la \textbf{legge di conservazione dell'energia per i sistemi isolati, o sistemi che si trovano in campi esterni non dipendenti dal tempo}.\\
+Calcoliamo il valore di aspettazione di un generico osservabile $A$ in uno stato stazionario, come funzione del tempo. Utilizzando l'eq.(\ref{eq:cap8_4}) troviamo:
+\begin{eqnarray}
+\langle A \rangle _t &=& \langle n, t \vert A \vert n, t \rangle= \langle n, 0 \vert e^{\frac{i}{\hbar}E_n t}A e^{-\frac{i}{\hbar}E_n t}\vert n, 0 \rangle \nonumber \\
+& = &\langle n, 0 \vert A \vert n, 0 \rangle = \langle A \rangle _0.
+\end{eqnarray}
+Pertanto \textbf{il valore di aspettazione di un'osservabile in un autostato dell'energia non cambia nel tempo. Per questo motivo tali stati vengono detti stati stazionari.}\\
+Un generico vettore di stato $\vert \alpha \rangle $ può essere sviluppato in autostati dell'energia. All'istante iniziale $t=0$ tale sviluppo ha la forma:
+\begin{equation}
+\vert \alpha , t=0\rangle = \sum _n \vert n \rangle \langle n \vert \alpha, t=0 \rangle = \sum _n c_n(0)\vert n \rangle.
+\end{equation}
+Questo sviluppo consente di derivare una semplice espressione per lo stato evoluto ad un tempo $t$ successivo. A tale scopo è sufficiente applicare allo stato l'operatore di \textbf{evoluzione temporale}:
+\begin{eqnarray}
+\vert \alpha, t \rangle &=& U (t,0)\vert \alpha, t=0 \rangle = \sum _n c_n (0) e^{-\frac{i}{\hbar}H t}  \vert n \rangle = \nonumber \\
+& = &\sum _n c_n (0) e^{-\frac{i}{\hbar}E_n t}  \vert n \rangle.
+\end{eqnarray}
+In altre parole il generico coefficiente dello sviluppo varia nel tempo come:
+\begin{equation}
+c_n (t=0) \rightarrow c_n(t)=e^{-\frac{i}{\hbar}E_n t} c_n (0).
+\end{equation}
+I moduli quadri $\vert c_n(t)\vert^2$ dei coefficienti dello sviluppo rappresentano, come al solito, le probabilità dei diversi valori dell'energia del sistema. La precedente equazione mostra come tali probabilità restano \textbf{costanti nel tempo}.\\
+Il formalismo sin qui sviluppato si estende facilmente al caso in cui gli autovalori dell'energia formino uno \textbf{spettro continuo}.
+\section[ Equazione d'onda di Schrödinger]{Equazione d'onda di Schr\"{o}dinger\footnote{S2.4, LL17}}
+Esaminiamo l'\textbf{evoluzione temporale dei vettori di stato nella rappresentazione delle coordinate}. In altre parole studiamo il comportamento della funzione d'onda
+\begin{equation}
+\psi (\vec{x'}, t) = \langle \vec{x'}\vert \alpha, t \rangle
+\end{equation}
+come funzione del tempo.\\
+La forma specifica dell'equazione di Schr\"{o}dinger di un sistema fisico è determinata dal suo hamiltoniano, che acquista perciò un'importanza fondamentale in tutto l'apparato della meccanica quantistica.\\
+In perfetta corrispondenza con l'espressione classica, in meccanica quantistica \textbf{l'hamiltoniano di una particella sottoposta ad un campo esterno è}
+\begin{equation}
+H= \frac{\vec{p}^{\ 2}}{2m}+V(\vec{x}),
+\label{eq:cap8_5}
+\end{equation}
+dove $V(\vec{x})$ è l'energia potenziale della particella nel campo esterno.		
+L'equazione che determina l'evoluzione temporale della f.d.o. si ottiene moltiplicando a sinistra per il bra $\langle \vec{x'}\vert $ l'equazione di Schr\"{o}dinger per i vettori di stato:
+\begin{equation}
+i\hbar \frac{\partial}{\partial t} \langle \vec{x'}\vert \alpha , t \rangle = \langle \vec{x'}\vert H \vert \alpha , t \rangle.
+\end{equation}
+Ricordando l'espressione dell'operatore impulso nella rappresentazione delle coordinate, possiamo scrivere il contributo dell'energia cinetica al secondo membro della precedente equazione nella forma
+\begin{equation}
+\langle \vec{x'}\vert \frac{\vec{p}^{\ 2}}{2m} \vert \alpha , t \rangle = -\frac{\hbar^2}{2m}{{\nabla}'}^2\langle \vec{x'}\vert \alpha , t \rangle
+\end{equation}
+dove ${{\nabla}'}^2$ è l'operatore di Laplace, o Laplaciano:
+\begin{equation}
+{{\nabla}'}^2= \frac{\partial ^2}{\partial {x'} ^2}+\frac{\partial ^2}{\partial {y'} ^2}+\frac{\partial ^2}{\partial {z'} ^2}.
+\end{equation}
+Quanto al contributo dell'energia potenziale si ha semplicemente:
+\begin{equation}
+\langle \vec{x'}\vert V(\vec{x}) \vert \alpha , t \rangle = V(\vec{x'})\langle \vec{x'}  \vert \alpha , t \rangle ,
+\end{equation}
+dove $V(\vec{x'})$ non è più un operatore.\\
+raccogliendo i cari termini otteniamo l'\textbf{equazione d'onda per una particella sottoposta ad un campo esterno}:
+\begin{equation}
+i\hbar \frac{\partial \psi}{\partial t} = H\psi = -\frac{\hbar ^2}{2m}{\nabla '} ^2 \psi + V(\vec{x'}) \psi,
+\end{equation}
+con $\psi =\psi(\vec{x'}, t)$. Questa è l'equazione nella forma derivata da \textbf{Schr\"{o}dinger} nel \textbf{1926}.\\
+Nella rappresentazione delle coordinate, l'equazione agli autovalori che determina gli stati stazionari si scrive
+\begin{equation}
+\langle \vec{x'}\vert H \vert n \rangle = E_n\langle \vec{x'} \vert n \rangle,
+\end{equation}
+indicando con
+\begin{equation}
+\psi _n (\vec{x'}) = \langle \vec{x'} \vert n \rangle
+\end{equation}
+le autofunzioni dell'operatore \textbf{hamiltoniano corrispondenti agli autovalori $E_n$}, ed assumendo per $H$ l'espressione (\ref{eq:cap8_5}) otteniamo:
+\begin{equation}
+H\psi _n = -\frac{\hbar ^ 2}{2m}{\nabla '}^2 \psi _n + V(\vec{x'})\psi _n = E_n \psi _n.
+\end{equation}
+Questa equazione per le autofunzioni dell'energia è detta \textbf{equazione d'onda di Schr\"{o}dinger indipendente dal tempo}.\\
+\textbf{Lo spettro degli autovalori dell'energia}, determinato dall'equazione di Schr\"{o}dinger indipendente dal tempo \textbf{può essere sia discreto che continuo. Lo stato stazionario dello spettro discreto corrisponde sempre ad un moto finito della particella}, cioè ad un moto in cui la particella non si allontana all'infinito. La condizione di normalizzazione per gli autostati dello spettro discreto implica infatti:
+\begin{equation}
+\langle n \vert n \rangle = \int _{- \infty} ^{+\infty} d\vec{x'}\langle n \vert \vec{x'} \rangle \langle \vec{x'} \vert n \rangle = \int _{- \infty} ^{+\infty} d\vec{x'} \vert \psi _n (\vec{x'}) \vert ^2 =1.
+\end{equation}
+Ciò significa in ogni caso che $ vert \psi _n  \vert ^2$ decresce in modo sufficientemente rapido e si annulla all'infinito. In altri termini \textbf{le probabilità dei valori infiniti delle coordinate è nulla, cioè il sistema compie un moto finito o, come si dice ancora, si trova in uno stato legato}.\\
+La condizione di normalizzazione
+\begin{equation}
+\langle n \vert n' \rangle = \delta (E_n - E_{n'})
+\end{equation}
+per gli autostati dello spettro continuo, implica che \textbf{l'integrale}
+\begin{equation}
+\int _{- \infty} ^{+\infty} d\vec{x'} \vert \psi _n (\vec{x'}) \vert ^2
+\end{equation}
+\textbf{diverge per le autofunzioni dello spettro continuo}.
+il modulo quadro della f.d.o.,$\vert \psi _n \vert ^2 $, non dà in questo caso direttamente la probabilità dei diversi valori delle coordinate e deve essere considerato solamente come una grandezza proporzionale a questa probabilità. \textbf{La divergenza dell'integrale} $ \int  d\vec{x'} \vert \psi _n  \vert ^2$ \textbf{è sempre dovuta al fatto che $\vert \psi _n  \vert ^2$ non si annulla all'infinito (o comunque non si annulla con sufficiente rapidità)}. Si può affermare quindi che l'integrale $ \int  d\vec{x'} \vert \psi _n  \vert ^2$ calcolato all'esterno di una superficie chiusa arbitrariamente grande ma finita, continua ancora ad essere divergente. Ciò significa che, \textbf{nello stato considerato, la particella si trova all'infinito}.\\
+Consideriamo l'equazione di Schr\"{o}dinger indipendente del tempo per una \textbf{particella libera}:
+\begin{equation}
+-\frac{\hbar ^2}{2m}\nabla ^2 \psi = E\psi.
+\end{equation}
+QUesta equazione \textbf{ha soluzioni finite in tutto lo spazio per qualunque valore positivo dell'energia}. Queste soluzioni, per gli stati aventi direzioni da moto determinate, sono le \textbf{autofunzioni dell'operatore impulso}, con $E= p^2/2m$:
+\begin{equation}
+\psi (\vec{x'}) \propto e ^{\frac{i}{\hbar}\vec{p}\cdot \vec{x'}},
+\end{equation}
+come si può stabilire per sostituzione diretta nell'equazione. Per la particella liber, l'operatore hamiltoniano e l'operatore impulso commutano tra loro
+\begin{equation}
+\left[ H, \vec{p}\ \right] = \left[ \frac{ {\vec{p}}^{\ 2}}{2m}, \vec{p}\ \right] =\vec{0},
+\end{equation}
+ed ammettono pertanto una base di autostati in comune.\\
+\textbf{Le f.d.o. totali} (dipendenti dal tempo) degli stati stazionari della particella libera hanno la forma:
+\begin{equation}
+\psi (\vec{x'}, t) = c\ e^{-\frac{i}{\hbar} (Et - \vec{p}\cdot \vec{x'})}, \qquad E={\vec{p}}^{\ 2}/{2m}.
+\label{eq:cap8_6}
+\end{equation}
+Ogni funzione di questo tipo, descrivente un'\textbf{onda piana}, descrive uno stato in cui la particella ha energia $E$ e quantità di moto $\vec{p}$ determinate. La frequenza di quest'onda ed il suo vettore d'onda sono
+\begin{equation}
+\omega = \frac{E}{\hbar}, \quad \vec{k}= \frac{\vec{p}}{\hbar},
+\end{equation}
+rispettivamente.\\
+Lo spettro energetico di una particella libera è \textbf{quindi continuo e si estende da zero a} $+\infty$. \textbf{Ciascuno di questi autovalori} (ad eccezione del valore $E=0$, \textbf{è degenere, con ordine di degenerazione infinito}. Infatti a ciascun valore di $E$ non nullo corrisponde un'infinità di autofunzioni (\ref{eq:cap8_6}) che si distinguono per la direzione del vettore $\vec{p}$ di modulo fissato.
+\section[Densità di corrente ed equazione di continuità]{Densità di corrente ed equazione di continuità\footnote{S2.4}}
+L'integrale del modulo quadro della f.d.o. esteso ad un valore finito è la probabilità di trovare la particella in questo valore. Pertanto la quantità
+\begin{equation}
+\rho (\vec{x}, t) = \vert \psi (\vec{x},t) \vert ^2 = \vert \langle \vec{x}\vert \alpha, t \rangle \vert ^2
+\end{equation}
+rappresenta in meccanica quantistica una \textbf{densità di probabilità}.\\
+Calcoliamo la derivata di questa grandezza rispetto al tempo:
+\begin{equation}
+\frac{\partial \rho}{\partial t} = \frac{\partial }{\partial t}\left( \psi^*\ \psi \right) = \frac{\partial \psi ^*}{\partial t}\psi + \psi^*\frac{\partial \psi}{\partial t}.
+\end{equation}
+Sostituiamo in queste espressione l'equazione di Schr\"{o}dinger e la sua complessa coniugata:
+\begin{eqnarray}
+ i\hbar \frac{\partial \psi}{\partial t} &=& -\frac{\hbar ^2}{2m} \nabla ^ 2 \psi + V \psi ,\nonumber \\
+\\
+ -i\hbar \frac{\partial \psi ^*}{\partial t} &=& -\frac{\hbar ^2}{2m} \nabla ^ 2 \psi ^* + V \psi ^* .\nonumber
+\end{eqnarray}
+Si ottiene allora
+\begin{eqnarray}
+\frac{\partial }{\partial t}\left(\psi^*\ \psi \right) & = & \left(-\frac{i\hbar}{2m}\nabla ^2 \psi ^* +\frac{i}{\hbar}V\psi ^*\right)\psi + \nonumber \\
+& &+\psi ^* \left(\frac{i\hbar}{2m}\nabla ^2 \psi -\frac{i}{\hbar}V\psi ^*\right)=\\
+&=& \frac{i\hbar}{2m}\left(\psi ^* \nabla ^2 \psi - \psi \nabla ^2 \psi ^* \right) = \nonumber \\
+&=& \frac{i\hbar}{2m} \vec{\nabla}\cdot \left(\psi ^* \vec{\nabla} \psi - \psi \vec{\nabla} \psi ^* \right). \nonumber
+\end{eqnarray}
+Ponendo
+\begin{equation}
+\vec{j}=\frac{i\hbar}{2m} \left(\psi ^* \vec{\nabla} \psi - \psi \vec{\nabla} \psi ^* \right)= \frac{\hbar}{m}\ \textrm{Im}\left\{\psi ^* \vec{\nabla}\psi \right\},
+\end{equation}
+troviamo che il vettore $\vec{j}$ e la densità di probabilità $\rho$ soddisfano l'equazione
+\begin{equation}
+\frac{\partial \rho}{\partial t}+ \vec{\nabla}\cdot\vec{j}=0,
+\end{equation}
+analoga all'\textbf{equazione} classica \textbf{di continuità}.\\
+Integrando l'equazione di continuità su un volume finito $V$ ed applicando il teorema di Gauss troviamo:
+\begin{equation}
+\frac{\partial }{\partial t} \int _V \rho\ dV = - \int _V \vec{\nabla}\cdot\vec{j}\ dV = -\int _S \vec{j}\cdot\vec{n}\ dS.
+\end{equation}
+Da qui si vede che il vettore $\vec{j}$ ha il significato di una \textbf{densità di corrente di probabilità} ed è indicato di solito semplicemente con il nome di \textbf{densità di corrente}.\\
+L'interpretazione fisica dell'equazione di continuità può risultare più chiara se si considera che $\rho= \psi^* \psi$ può essere trattato alla stessa maniera di una \textbf{densità media di particelle}. Il vettore $\vec{j}$ acquista allora il significato di un flusso medio di particelle che attraversano una superficie unitaria nell'unità di tempo. Si può allora considerare l'equazione di continuità come espressione della \textbf{legge di conservazione del numero di particelle}.\\
+Per la f.d.o- della \textbf{particella libera}, normalizzata come:
+\begin{equation}
+\psi  =  e^{-\frac{i}{\hbar} (Et - \vec{p}\cdot \vec{x'})}
+\end{equation}
+la densità di corrente risulta
+\begin{equation}
+\vec{j}= \frac{\hbar}{m}\ \textrm{Im}\left\{\psi ^* \vec{\nabla}\psi \right\}= \frac{\vec{p}}{m},
+\end{equation}
+e rappresenta la \textbf{velocità della particella}.\\
+Questa scelta della normalizzazione corrisponde ad aver fissato da uno il numero di particelle per unità di volume:
+\begin{equation}
+\int _{V=1} \rho \ dV = \int _{V=1} \vert \psi \vert ^2 \ dV=1.
+\end{equation}
+Un'altra possibile scelta per la normalizzazione dell'onda piana è
+\begin{equation}
+\psi  = \sqrt{\frac{m}{p}}\ e^{-\frac{i}{\hbar} (Et - \vec{p}\cdot \vec{x'})},
+\end{equation}
+che descrive la corrente di particelle con flusso unitario, ossia una particella attraversa in media l'unità di superficie nell'unità di tempo. In questo caso la densità di corrente è infatti
+\begin{equation}
+\vec{j}=  \frac{\vec{p}}{p},
+\end{equation}
+ossia il vettore unitario nella direzione del moto.
