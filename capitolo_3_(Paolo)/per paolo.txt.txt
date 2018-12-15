@@ -1,0 +1,8 @@
+Ciao Paolino, sono il Direttore!
+ho visto che c'hai un problemino con i titoli dei capitoli/sezioni troppo lunghi!
+In caso puoi usare una cosa tipo:
+
+\section[Versione breve]{Lunghissimo titolo ...}
+
+vedi tu, male che va nella versione breve metti i puntini di sospensione!
+Ciao ciao!
