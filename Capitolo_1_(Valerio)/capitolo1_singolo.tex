@@ -418,4 +418,64 @@ Sebbene in grado di spiegare i dati sperimentali relativi alla diffusione delle 
 \end{itemize}
 
 Queste evidenti difficoltà tecniche nell'interpretazione dei risultati sperimentali relativi alla struttura atomica giocarono un ruolo fondamentale nello sviluppo della teoria quantistica.
+\section{Modello di Bohr dell'atomo di idrogeno (1913)}
+\textbf{Tre ipotesi:}
+	\begin{itemize}
+	\item l'elettrone ruota attorno al nucleo su orbite stabili (senza emettere radiazione);
+	\item le sole orbite consentite sono quelle per le quali il momento angolare risulta un multiplo intero di $\hbar$\footnote{poiché $p= mv =\hbar/\lambda$ (De Broglie, \textbf{1923}) l'equazione (\ref{eq:cap1_4}) equivale a $2\pi r=n\lambda$.}:
+		\begin{equation}
+			L= mvr =n\hbar ;
+		\label{eq:cap1_4}
+		\end{equation}
+	\item l'elettrone può effettuare transizioni discontinue tra due orbite consentite. Quando ciò accade viene emessa o assorbita radiazione di frequenza
+	\begin{equation}
+			\hbar \omega = E-E' ,
+		\label{eq:cap1_5}
+		\end{equation}
+dove $E-E'$ è la variazione di energia dell'elettrone tra le due orbite.
+	\end{itemize}
+	
+\textbf{Conseguenze}:
+La stabilità di un'orbita è determinata dall'equilibrio tra la forza coulombiana e la forza centrifuga\footnote{Forza centrifuga: $F= m\omega ^2 r = mv^2 /r$.}
+	\begin{equation}
+	\frac{e^2}{r^2}=\frac{mv^2}{r} .
+	\end{equation}
+Questa condizione, unita alla (\ref{eq:cap1_4}), fornisce
+	\begin{equation}
+		\begin{cases}
+		mv^2 r= e^2 \\
+		mvr =n\hbar		
+		\end{cases}
+		\Rightarrow v=\frac{e^2}{n\hbar}, \quad r=\frac{n\hbar}{mv}=\frac{n^2 \hbar ^2}{me^2} .
+	\end{equation}
+Dunque
+	\begin{equation}
+	r=n^2 \frac{\hbar ^2}{me^2}= n^2 a_0 \qquad \left[\textrm{in MQ}\ \left\langle\frac{1}{r}\right\rangle = \frac{1}{n^2 a_0}\right],
+	\end{equation}
+		\begin{equation}
+	\frac{v}{c}= \frac{1}{n}\frac{e^2}{\hbar c}=\frac{\alpha}{n} \qquad \left[\textrm{in MQ}\ \left\langle\frac{v^2}{c^2}\right\rangle = \frac{\alpha ^2}{n^2}\right].
+	\end{equation}
+	
+	
+Calcoliamo l'energia delle orbite:
+	\begin{equation}
+		\frac{p^2}{2m}= \frac{mv^2}{2} =\frac{me^4}{2n^2 \hbar ^2} =\frac{mc^2 \alpha ^2}{2n^2},
+		\label{eq:cap1_6}
+	\end{equation}
+	\begin{equation}
+		\frac{e^2}{r}= \frac{me^4}{n^2 \hbar^2} =\frac{mc^2 \alpha ^2}{n^2},
+		\label{eq:cap1_7}
+	\end{equation}
+da cui\footnote{In meccanica quantistica i risultati ottenuti per le equazioni (\ref{eq:cap1_6}) e (\ref{eq:cap1_7}) valgono per i valori medi, rispettivamente, di $T$ e $V$.}
+	\begin{equation}
+		\boxed{
+			E=\frac{p^2}{2m}-\frac{e^2}{r}=-\frac{mc^2\alpha ^2}{2n^2}. }
+	\end{equation}.
+	
+Le righe di emissione e assorbimento dell'atomo hanno pertanto frequenze della forma:
+	\begin{equation}
+		\boxed{
+			\hbar \omega = E-E' =\frac{mc^s \alpha ^2}{2}\left(\frac{1}{n^{\prime \, 2}} - \frac{1}{n^2}\right).
+			}
+	\end{equation}
 \end{document}
