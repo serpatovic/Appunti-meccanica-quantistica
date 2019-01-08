@@ -401,25 +401,8 @@ Poiché le tre matrici di Pauli hanno determinante uguale a $-1$ e traccia nulla
 			\end{aligned}
 			}
 	\end{equation}
-	\begin{equation}
-		\label{eq:cap4_5}
-		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
-			\begin{aligned}
-			&\displaystyle{S_y = \frac{\hbar}{2}, \quad \vert y \rangle = \frac{1}{\sqrt{2}}\vert +z \rangle + \frac{i}{\sqrt{2}}\vert -z \rangle}= \frac{1}{\sqrt{2}} 
-			\begin{pmatrix}
-			1\\
-			i
-			\end{pmatrix} ,\\
-			&\displaystyle{S_y = -\frac{\hbar}{2}, \quad \vert -y \rangle = \frac{1}{\sqrt{2}}\vert +z \rangle - \frac{i}{\sqrt{2}}\vert -z \rangle}= \frac{1}{\sqrt{2}} 
-			\begin{pmatrix}
-			1\\
-			-i
-			\end{pmatrix},
-			\end{aligned}
-			}	
-	\end{equation}
 \begin{center}
-\begin{tcolorbox}[toprule=3mm, width=.9\textwidth]
+\begin{tcolorbox}[toprule=3mm, width=.9\textwidth, colback=white]
 Calcoliamo esplicitamente l'autostato di $\vert +x\rangle$ di $S_x$ con autovalore $+\hbar /2$. Scriviamo questo stato come combinazione lineare generica di autostati di $S_z$:
 	\begin{equation}
 		\vert +x \rangle = c_1\vert +z \rangle+ c_2\vert -z \rangle \doteq 
@@ -460,10 +443,26 @@ che, unitamente alla condizione $c_1=c_2$ implica $\vert c_1 \vert =1/\sqrt{2}$.
 	\begin{equation}
 		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{c_1 =c_2 = \frac{e^{i\delta}}{\sqrt{2}}}\ \Rightarrow \ \tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{\vert +x \rangle \frac{e^{i\delta}}{\sqrt{2}} \left(\vert +z \rangle + \vert -z \rangle \right).}
 	\end{equation}
-Il fattore di fase moltiplicativo, nel vettore di stato, è completamente arbitrario, ossia non interviene mai nelle quantità fisiche che sono la probabilità ($\vert \langle \alpha \vert +x \rangle \vert ^2$) ed i valori di aspettazione ($\langle +x \vert A \vert +x \rangle $). Una scelta possibile è 	quella effettuata effettuata in eq. \eqref{eq:cap4_4}, ossia $e^{i\delta}=1$.
+Il fattore di fase moltiplicativo, nel vettore di stato, è completamente arbitrario, ossia non interviene mai nelle quantità fisiche che sono la probabilità ($\vert \langle \alpha \vert +x \rangle \vert ^2$) ed i valori di aspettazione ($\langle +x \vert A \vert +x \rangle $). Una scelta possibile è quella effettuata effettuata nell' eq. \eqref{eq:cap4_4}, ossia $e^{i\delta}=1$.
 \end{tcolorbox}
-
 \end{center}
+	\begin{equation}
+		\label{eq:cap4_5}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\begin{aligned}
+			&\displaystyle{S_y = \frac{\hbar}{2}, \quad \vert y \rangle = \frac{1}{\sqrt{2}}\vert +z \rangle + \frac{i}{\sqrt{2}}\vert -z \rangle}= \frac{1}{\sqrt{2}} 
+			\begin{pmatrix}
+			1\\
+			i
+			\end{pmatrix} ,\\
+			&\displaystyle{S_y = -\frac{\hbar}{2}, \quad \vert -y \rangle = \frac{1}{\sqrt{2}}\vert +z \rangle - \frac{i}{\sqrt{2}}\vert -z \rangle}= \frac{1}{\sqrt{2}} 
+			\begin{pmatrix}
+			1\\
+			-i
+			\end{pmatrix},
+			\end{aligned}
+			}	
+	\end{equation}
 È semplice verificare i risultati (\ref{eq:cap4_4}) e (\ref{eq:cap4_5}). Ad esempio si ha:
 	\begin{equation}
 		S_y \vert - y \rangle = \frac{\hbar}{2\sqrt{2}}\begin{pmatrix}
