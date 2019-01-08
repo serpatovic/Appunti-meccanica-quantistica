@@ -41,6 +41,7 @@
 \usepackage{pdfpages}
 \usepackage{physics}
 \usepackage{setspace}
+\usepackage[many]{tcolorbox}
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 \usepackage{textcomp}
@@ -92,220 +93,253 @@
 \setcounter{chapter}{5}
 
 \chapter{Richiami di Meccanica Classica}
-\section[Parentesi di Poisson]{Parentesi di Poisson\footnote{LL, Meccanica, \S 42}}
+\section[Parentesi di Poisson]{Parentesi di Poisson}
 Sia $f(\mathbf{p},\mathbf{q},t)$ una funzione delle coordinate degli impulsi e del tempo e calcoliamone la sua derivata totale rispetto al tempo:
-\begin{equation}
-\frac{df}{dt}= \frac{\partial f}{\partial t} + \sum_i \left( \frac{\partial f}{\partial q_i} \dot {q_i} + \frac{\partial f}{\partial p_i} \dot {p_i} \right).
-\end{equation}
+	\begin{equation}
+		\frac{df}{dt}= \frac{\partial f}{\partial t} + \sum_i \left( \frac{\partial f}{\partial q_i} \dot {q_i} + \frac{\partial f}{\partial p_i} \dot {p_i} \right).
+	\end{equation}
 Utilizzando le equazioni di Hamilton:
-\begin{equation}
-\dot{q_i}=\frac{\partial H}{\partial p_i} , \qquad \dot{p_i}=-\frac{\partial H}{\partial q_i} ,
-\end{equation}
+	\begin{equation}
+		\dot{q_i}=\frac{\partial H}{\partial p_i} , \qquad \dot{p_i}=-\frac{\partial H}{\partial q_i} ,
+	\end{equation}
 possiamo scrivere:
-\begin{equation}
-\frac{df}{dt}=	\frac{\partial f}{\partial t} + \sum_i \left( \frac{\partial H}{\partial p_i}\frac{\partial f}{\partial q_i}-\frac{\partial H}{\partial q_i}\frac{\partial f}{\partial p_i}\right) \equiv \frac{\partial f}{\partial t} + \left\lbrace H,f \right\rbrace ,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\frac{df}{dt}=	\frac{\partial f}{\partial t} + \sum_i \left( \frac{\partial H}{\partial p_i}\frac{\partial f}{\partial q_i}-\frac{\partial H}{\partial q_i}\frac{\partial f}{\partial p_i}\right) \equiv \frac{\partial f}{\partial t} + \left\lbrace H,f \right\rbrace ,
+				}
+	\end{equation}
 dove si \`e introdotta la notazione:
-\begin{equation}
-\left\lbrace H,f \right\rbrace \equiv \sum_i \left(\frac{\partial H}{\partial p_i}\frac{\partial f}{\partial q_i}-\frac{\partial H}{\partial q_i}\frac{\partial f}{\partial p_i}\right)  .
-\end{equation}.
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\left\lbrace H,f \right\rbrace \equiv \sum_i \left(\frac{\partial H}{\partial p_i}\frac{\partial f}{\partial q_i}-\frac{\partial H}{\partial q_i}\frac{\partial f}{\partial p_i}\right)  .
+			}
+	\end{equation}
 La quantit\`a $\left\lbrace H,f \right\rbrace$ è detta \textbf{parentesi di Poisson} di $H$ con $f$. In generale:
-\begin{equation}
-\left\lbrace f,g \right\rbrace \equiv \sum_i \left(\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}-\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}\right)  .
-\end{equation}.
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\left\lbrace f,g \right\rbrace \equiv \sum_i \left(\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}-\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}\right)  .
+			}
+	\end{equation}.
 Se $f(\mathbf{p},\mathbf{q},t)$ \`e una costante del moto, allora
-\begin{equation}
-\frac{\partial f}{\partial t}+\left\lbrace H,f \right\rbrace   \equiv 0 , \qquad
+	\begin{equation}
+		\frac{\partial f}{\partial t}+\left\lbrace H,f \right\rbrace   \equiv 0 , \qquad
 \left( \frac{df}{dt}=0 \right) .
-\end{equation}.
+	\end{equation}
 Se l'integrale del moto non dipende esplicitamente dal tempo, allora
 \begin{equation}
 \left\lbrace H,f \right\rbrace  \equiv 0 ,
 \end{equation}
 ossia la sua parentesi di Poisson con l'Hamiltoniana deve annullarsi.\\
+
 Come esempio specifico consideriamo il caso in cui la funzione $f$ \`e la stessa Hamiltoniana $H$ del sistema. Si ha
-\begin{equation}
-\frac{d H}{d t} = \frac{\partial H}{\partial t} + \left\lbrace H,H \right\rbrace = \frac{\partial H}{\partial t}
-\end{equation}
+	\begin{equation}
+		\frac{d H}{d t} = \frac{\partial H}{\partial t} + \left\lbrace H,H \right\rbrace = \frac{\partial H}{\partial t}
+	\end{equation}
 Per un sistema isolato, l'Hamiltoniana $H$, in virt\`u dell'omogeneit\`a del tempo, non dipende esplicitamente dal tempo: $\partial H/ \partial t=0$ In questo caso risulta allora
 \begin{equation}
 \frac{d H}{d t} = 0 \qquad \textrm{sui sistemi isolati,}
 \end{equation}
-che esprime la legge di conservazione dell'energia.
-Consideriamo la parentesi di Poisson di una funzione $f$ con una componente delle coordinate e degli impulsi:
-\begin{eqnarray}
-\left\lbrace f,q_k \right\rbrace &=& \sum_i \left( \frac{\partial f}{\partial p_i} \frac{\partial q_k}{\partial q_i} - \frac{\partial f}{\partial q_i}\frac{\partial q_k}{\partial p_i} \right) = \frac{\partial f}{\partial p_k} ,\\
-\nonumber \\
-\left\lbrace f,p_k \right\rbrace &=& \sum_i \left( \frac{\partial f}{\partial p_i} \frac{\partial p_k}{\partial p_i} - \frac{\partial f}{\partial q_i}\frac{\partial p_k}{\partial p_i} \right) = - \frac{\partial f}{\partial q_k} .
-\end{eqnarray}
-Da queste segue allora anche:
-\begin{equation}
-\begin{matrix}
-\left\lbrace q_i,q_k \right\rbrace =0 , &  \left\lbrace p_i,p_k \right\rbrace =0 , & \left\lbrace p_i,q_k \right\rbrace = \delta_{i,k} .
-\end{matrix}
-\end{equation}
+che esprime la legge di conservazione dell'energia.\\
 
-\section[Trasformazioni Canoniche]{Trasformazioni Canoniche\footnote{LL, Meccanica, \S 45}}
+Consideriamo la parentesi di Poisson di una funzione $f$ con una componente delle coordinate e degli impulsi:
+	\begin{eqnarray}
+		\left\lbrace f,q_k \right\rbrace &=& \sum_i \left( \frac{\partial f}{\partial p_i} \frac{\partial q_k}{\partial q_i} - \frac{\partial f}{\partial q_i}\frac{\partial q_k}{\partial p_i} \right) = \frac{\partial f}{\partial p_k} ,\\
+\nonumber \\
+		\left\lbrace f,p_k \right\rbrace &=& \sum_i \left( \frac{\partial f}{\partial p_i} \frac{\partial p_k}{\partial p_i} - \frac{\partial f}{\partial q_i}\frac{\partial p_k}{\partial p_i} \right) = - \frac{\partial f}{\partial q_k} .
+	\end{eqnarray}
+Da queste segue allora anche:
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\begin{matrix}
+			\left\lbrace q_i,q_k \right\rbrace =0 , &  \left\lbrace p_i,p_k \right\rbrace =0 , & \left\lbrace p_i,q_k \right\rbrace = \delta_{i,k} .
+			\end{matrix}
+			}
+	\end{equation}
+
+\section[Trasformazioni Canoniche]{Trasformazioni Canoniche}
 Nel formalismo lagrangiano la scelta delle coordinate non \`e limitata da alcuna condizione: la loro funzione pu\`o essere determinata da $N$ grandezze qualsiasi che definiscono univocamente la posizione del sistema nello spazio. La forma delle equazioni di Lagrange non dipende da questa scelta. In altri termini, in luogo di un insieme di coordinate $q$ che soddisfano le equazioni:
-\begin{equation}
-\frac{d}{dt}  \left( \sum_i\frac{\partial L}{\partial \dot{q}_i} \right) - \sum_i \frac{\partial L}{\partial q_i} = 0 ,
-\end{equation}
+	\begin{equation}
+		\frac{d}{dt}  \left( \sum_i\frac{\partial L}{\partial \dot{q}_i} \right) - \sum_i \frac{\partial L}{\partial q_i} = 0 ,
+	\end{equation}
 posso scegliere un differente insieme $Q$, dove in generale:
-\begin{equation}
-Q_i = Q_i(q,t) .
-\label{eq:cap6_1}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			Q_i = Q_i(q,t) .
+			}
+		\label{eq:cap6_1}
+	\end{equation}
 La nuova lagrangiana $L$ \`e definita dall'equazione
-\begin{equation}
-L'(Q,\dot{Q},t) = L'\left(Q(q,t), \dot {Q}(q, \dot{q}, t), t \right) = L(q,\dot{q},t) ,
-\end{equation}
+	\begin{equation}
+		L'(Q,\dot{Q},t) = L'\left(Q(q,t), \dot {Q}(q, \dot{q}, t), t \right) = L(q,\dot{q},t) ,
+	\end{equation}
 e valgono le equazioni di Eulero-Lagrange\footnote{DIM: Si utilizza $\dot{Q} = \frac{\partial Q}{\partial q}\dot{q} + \frac{\partial Q}{\partial t} \Rightarrow \frac{\partial \dot{Q}}{\partial \dot{q}} = \frac{\partial Q}{\partial q}$ }
-\begin{equation}
-\frac{d}{dt} \left( \sum_i \frac{\partial L}{\partial \dot{Q}_i} \right) - \frac{\partial L'}{\partial Q_i} = 0 .
-\end{equation}
+	\begin{equation}
+		\frac{d}{dt} \left( \sum_i \frac{\partial L'}{\partial \dot{Q}_i} \right) - \frac{\partial L'}{\partial Q_i} = 0 .
+	\end{equation}
 Queste trasformazioni lasciano inoltre evidentemente invariata anche la forma delle equazioni di Hamilton giacch\'e queste possono essere dedotte a partire dalle equazioni di Eulero-Lagrange.\\
+
 Nel formalismo hamiltoniano, tuttavia, le coordinate e gli impulsi sono variabili indipendenti. \`E possibile allora considerare, in luogo delle trasformazioni (\ref{eq:cap6_1}), una classe di trasformazioni pi\`u ampia, della forma:
-\begin{equation}
-\begin{matrix}
-Q_i = Qi(p,q,t),  & P_i = Pi(p,q,t) .
-\end{matrix}
-\label{eq:cap6_2}
-\end{equation}.
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\begin{matrix}
+			Q_i = Qi(p,q,t),  & P_i = Pi(p,q,t) .
+			\end{matrix}
+			\label{eq:cap6_2}
+			}
+	\end{equation}
 La possibilit\`a di allargare la classe delle trasformazioni ammissibili rappresenta uno dei vantaggi sostanziali della formulazione hamiltoniana della meccanica.
 In generale, tuttavia, trasformazioni della forma (\ref{eq:cap6_2}) non conducono ad equazioni di Hamilton nella forma canonica, ossia
-\begin{equation}
-\begin{matrix}
-\dot{Q}_i = \frac{\partial H'}{\partial \mathbf{P}_i}, & \dot{P}_i = -\frac{\partial H'}{\partial \mathbf{Q}_i}  ,
-\end{matrix}
-\end{equation}
+	\begin{equation}
+		\begin{matrix}
+		\displaystyle{\dot{Q}_i = \frac{\partial H'}{\partial P_i}}, & \displaystyle{\dot{P}_i = -\frac{\partial H'}{\partial Q_i}}  ,
+		\end{matrix}
+	\end{equation}
 con una nuova $H'$.\\
-La classe di trasformazioni (\ref{eq:cap6_2}) per le quali ci\`o invece accade sono dette \textit{trasformazioni canoniche}. Stabiliamo le condizioni per le quali le trasformazioni (\ref{eq:cap6_2}) risultano essere trasformazioni canoniche.
-Poich\`e $ L = \sum _i p_i \dot{q}_i -H $, le equazioni di Hamilton possono essere derivate dal principio di minima azione scritto nella forma:
-\begin{equation}
-\partial S = \delta \int_{t_1}^{t_2} \left[ \sum_i p_i \dot{q}_i - H \right] dt = \delta \int \left[ \sum_i p_i dq_i - Hdt \right] = 0 .
-\label{eq:cap6_3}
-\end{equation}
-Considerando le variazioni $p_i \rightarrow p_i + \delta p_i$ , $q_i \rightarrow q_i + \delta q_i$ si ha infatti:
 
-\begin{eqnarray}
-\delta S & =& \int _{t_1} ^{t_2} \sum _i \left[ \delta p_i \dot{q}_i + p_i \delta \dot{q}_i - \frac{\partial H}{\partial p_i} \delta p_i - \frac{\partial H}{\partial q_i}\delta q_i \right] dt = \nonumber \\
-&=&\int _{t_1} ^{t_2} \sum _i \left[ \delta p_i \dot{q}_i + p_i \delta \dot{q}_i - \frac{\partial H}{\partial p_i} \delta p_i - \frac{\partial H }{\partial q_i} \delta q_i \right] dt + \left.\sum_i  p_i \delta q_i \right\vert _{t_1} ^{t_2} = \nonumber \\
-&=& \int _{t_1} ^{t_2} \sum _i \left[ \left( \dot{q}_i - \frac{\partial H}{\partial p_i} \right) \delta p_i - \left( \dot{p}_i + \frac{\partial H}{\partial q_i}\right)\delta q_i \right] dt = 0 ,
-\end{eqnarray}
+La classe di trasformazioni (\ref{eq:cap6_2}) per le quali ci\`o invece accade sono dette \textit{trasformazioni canoniche}. Stabiliamo le condizioni per le quali le trasformazioni (\ref{eq:cap6_2}) risultano essere trasformazioni canoniche.
+Poiché $ L = \sum _i p_i \dot{q}_i -H $, le equazioni di Hamilton possono essere derivate dal principio di minima azione scritto nella forma:
+	\begin{equation}
+		\partial S = \delta \int_{t_1}^{t_2} \left[ \sum_i p_i \dot{q}_i - H \right] dt = \delta \int \left[ \sum_i p_i dq_i - Hdt \right] = 0 .
+		\label{eq:cap6_3}
+	\end{equation}
+Considerando le variazioni $p_i \rightarrow p_i + \delta p_i$ , $q_i \rightarrow q_i + \delta q_i$ si ha infatti:
+	\begin{eqnarray}
+		\delta S & =& \int _{t_1} ^{t_2} \sum _i \left[ \delta p_i \dot{q}_i + p_i \delta \dot{q}_i - \frac{\partial H}{\partial p_i} \delta p_i - \frac{\partial H}{\partial q_i}\delta q_i \right] dt = \nonumber \\
+		&=&\int _{t_1} ^{t_2} \sum _i \left[ \delta p_i \dot{q}_i - p_i \delta \dot{q}_i - \frac{\partial H}{\partial p_i} \delta p_i - \frac{\partial H }{\partial q_i} \delta q_i \right] dt + \left.\sum_i  p_i \delta q_i \right\vert _{t_1} ^{t_2} = \nonumber \\
+		&=& \int _{t_1} ^{t_2} \sum _i \left[ \left( \dot{q}_i - \frac{\partial H}{\partial p_i} \right) \delta p_i - \left( \dot{p}_i + \frac{\partial H}{\partial q_i}\right)\delta q_i \right] dt = 0 ,
+	\end{eqnarray}
 da cui
-\begin{equation}
-\begin{matrix}
-\dot{q}_i = \frac{\partial H}{\partial p_i} , & \dot{p}_i = - \frac{\partial H}{\partial q_i} .
-\end{matrix}
-\end{equation}
+	\begin{equation}
+		\dot{q}_i = \frac{\partial H}{\partial p_i} , \quad \dot{p}_i = - \frac{\partial H}{\partial q_i} .
+	\end{equation}\\
+	
 Se le nuove variabili $P_i$ e $Q_i$ sono definite da trasformazioni canoniche, ossia soddisfano le equazioni di Hamilton, allora devono soddisfare anche un principio di minima azione della forma:
-\begin{equation}
-\delta \int \left[ \sum_i P_i\ dQ_i - H'dt\right] = 0
-\label{eq:cap6_4}
-\end{equation}
+	\begin{equation}
+		\delta \int \left[ \sum_i P_i\ dQ_i - H'dt\right] = 0
+		\label{eq:cap6_4}
+	\end{equation}\\
+	
 Le eq. (\ref{eq:cap6_3}) e (\ref{eq:cap6_4}) possono risultare simultaneamente soddisfatte solo se le espressioni integrande differiscono al pi\`u per il differenziale totale di una funzione $F$ degli impulsi, delle coordinate e del tempo. In tal caso la differenza tra i due integrali, ossia la differenza dei valori della funzione $F$ nei limiti di integrazione, sar\`a una costante ininfluente ai fini della variazione. Si ha pertanto:
-\begin{equation}
-\sum_i p_i dq_i - Hdt = \sum_i P_i d Q_i - H'dt + dF .
-\end{equation}.
-Ogni trasformazione canonica \`e caratterizzata da una sua funzione $F$, detta \textit{funzione generatrice della trasformazione}.\\
-Si ha pertanto:
-Riscrivendo la precedente equazione nella forma
-\begin{equation}
-dF = \sum_i p_i d q_i - \sum_i P_i dQ_i + (H'-H)dt ,
-\label{eq:cap6_5}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\sum_i p_i dq_i - Hdt = \sum_i P_i d Q_i - H'dt + dF .
+			}
+	\end{equation}\\
+	
+Ogni trasformazione canonica \`e caratterizzata da una sua funzione $F$, detta \textit{funzione generatrice della trasformazione}. Riscrivendo la precedente equazione nella forma
+	\begin{equation}
+		dF = \sum_i p_i d q_i - \sum_i P_i dQ_i + (H'-H)dt ,
+		\label{eq:cap6_5}
+	\end{equation}
 vediamo che
-\begin{equation}
-\begin{matrix}
-p_i = \frac{\partial F}{\partial q_i} , & P_i = - \frac{\partial F}{\partial Q_i} , & H' = H + \frac{\partial F}{\partial t} ,
-\end{matrix}
-\label{o}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			p_i = \frac{\partial F}{\partial q_i} , \quad P_i = - \frac{\partial F}{\partial Q_i} , \quad H' = H + \frac{\partial F}{\partial t} ,
+			}
+		\label{o}
+	\end{equation}
 dove si \`e posto che la funzione generatrice \`e data come funzione delle vecchie e delle nuove coordinate del tempo:
-\begin{equation}
-F = F(q_i, Q_i,t) .
-\end{equation}.
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			F = F(q_i, Q_i,t) .
+			}
+	\end{equation}\\
+	
 Pu\`o essere utile esprimere la funzione generatrice non in termini delle variabili $q$ e $Q$ ma in termini delle coordinate $q$ e dei nuovi impulsi $P$. Questo si ottiene effettuando una trasformata di Legendre nella (\ref{eq:cap6_5}):
-\begin{equation}
-d(F+\sum_i P_iQ_i) = \sum_i p_i dq_i + \sum_i Q_i dP_i + (H'-H)dt
-\end{equation}.
+	\begin{equation}
+		d(F+\sum_i P_iQ_i) = \sum_i p_i dq_i + \sum_i Q_i dP_i + (H'-H)dt
+	\end{equation}.
 Indicando con $\Phi$ la funzione $F+\sum_iP_i Q_i $ si ha in questo caso:
-\begin{equation}
-\begin{matrix}
-\frac{\partial \Phi}{\partial q_i} = p_i , & \frac{\partial \Phi}{\partial P_i} = Q_i , & \frac{\partial \Phi}{\partial t} = H'- H ,
-\end{matrix}
-\label{eq:cap6_6}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\frac{\partial \Phi}{\partial q_i} = p_i , \quad \frac{\partial \Phi}{\partial P_i} = Q_i , \quad \frac{\partial \Phi}{\partial t} = H'- H ,
+			}
+		\label{eq:cap6_6}
+	\end{equation}
 con
-\begin{equation}
-\Phi = \Phi (q,P,t) .
-\end{equation}
-Analogamente si possono definire funzioni generatrici dipendenti dalle variabili $(p,Q)$ o $(p,P)$.
-Osserviamo che se la funzione generatrice non dipende esplicitamente dal tempo,
-\begin{equation}
-\begin{matrix}
-\frac{\partial F}{\partial t} = 0 & \rightarrow & H' = H ,
-\end{matrix}
-\end{equation}
-ossia la nuova hamiltoniana $H'$ si ottiene semplicemente da $H$ sostituendo le vecchie variabili $p$ e $q$ in termini delle nuove variabili $P$ e $Q$.
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\Phi = \Phi (q,P,t) .
+			}
+	\end{equation}\\
+	
+Analogamente si possono definire funzioni generatrici dipendenti dalle variabili $(p,Q)$ o $(p,P)$. Osserviamo che se la funzione generatrice non dipende esplicitamente dal tempo,
+	\begin{equation}
+		\frac{\partial F}{\partial t} = 0 , \quad \Rightarrow \quad H' = H ,
+	\end{equation}
+ossia la nuova hamiltoniana $H'$ si ottiene semplicemente da $H$ sostituendo le vecchie variabili $p$ e $q$ in termini delle nuove variabili $P$ e $Q$.\\
+
 Come esempio particolare di trasformazione canonica, consideriamo il caso in cui la funzione generatrice \`e:
-\begin{equation}
-F(q,Q) = \sum_i q_i Q_i .
-\end{equation}
+	\begin{equation}
+		F(q,Q) = \sum_i q_i Q_i .
+	\end{equation}
 Si ha allora
-\begin{equation}
-\begin{matrix}
-p_i = \frac{\partial F}{\partial q_i} = Q_i , & P_i = - \frac{\partial F}{\partial Q_i} = -q_i .
-\end{matrix}
-\end{equation}
+	\begin{equation}
+		p_i = \frac{\partial F}{\partial q_i} = Q_i , \quad P_i = - \frac{\partial F}{\partial Q_i} = -q_i .
+	\end{equation}
 La trasformazione
-\begin{equation}
-\begin{matrix}
-Q_i = p_i  , & P_i = -q_i ,
-\end{matrix}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			Q_i = p_i  , \quad P_i = -q_i ,
+			}
+	\end{equation}
 \`e dunque una trasformazione canonica, che corrisponde essenzialmente ad invertire tra loro il ruolo delle coordinate e degli impulsi.
-\section[Trasformazioni infinitesime e corrispondenti generatori]{Trasformazioni infinitesime e corrispondenti generatori\footnote{Goldstein, 8.6,  ``Meccanica Classica'', Ed. Zanichelli.}}
+\section[Trasformazioni infinitesime e corrispondenti generatori]{Trasformazioni infinitesime e corrispondenti generatori}
 Un caso particolarmente importante di trasformazioni canoniche è quello delle \textbf{trasformazioni infinitesime} (di contatto), in cui cioè le nuove coordinate differiscono dalle vecchie solo per quantità infinitesime:
-\begin{equation}
-Q_i = q_i + \delta q _i \label{eq:cap6_7}
-\end{equation}
-\begin{equation}
-P_i = p_i + \delta p _i \label{eq:cap6_8} 
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced,sharp corners=downhill ,colback=yellow!50!white,colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			Q_i = q_i + \delta q _i
+			}
+		\label{eq:cap6_7}
+	\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced,sharp corners=downhill ,colback=yellow!50!white,colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			P_i = p_i + \delta p _i
+			}
+		\label{eq:cap6_8} 
+	\end{equation}
 È evidente che in questo caso la funzione generatrice differirà solo per un a quantità infinitesima dalla funzione corrispondente alla trasformazione identità. È semplice verificare, allora, che la funzione generatrice si può scrivere in generale nella forma:
-\begin{equation}
-\Phi(q, P, t) = \sum _i q_iP_i +\varepsilon G(q, P) ,
-\label{eq:cap6_9}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced,sharp corners=downhill ,colback=yellow!50!white,colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			\Phi(q, P, t) = \sum _i q_iP_i +\varepsilon G(q, P) ,
+			}
+		\label{eq:cap6_9}
+	\end{equation}
 dove $\varepsilon $ è un certo parametro infinitesimo della trasformazione. Utilizzando le eq. (\ref{eq:cap6_6}) si ottiene infatti:
-\begin{equation}
-\begin{cases}
-\displaystyle{p_i= \frac{\partial \Phi}{\partial q_i} = P_i + \varepsilon \frac{\partial G}{\partial q_i }, }\\
-\\
-\displaystyle{Q_i= \frac{\partial \Phi}{\partial P_i} = P_i + \varepsilon \frac{\partial G}{\partial P_i }.}
-\end{cases}
-\end{equation}
-Nel limite $\varepsilon \rightarrow 0$ la funzione (\ref{eq:cap6_9}) si riduce alla funzione generatrice della trasformazione identità, e per $\varepsilon$ infinitesimo ma diverso da zero la funzione (\ref{eq:cap6_9}) genera una trasformazione data da (\ref{eq:cap6_7}) e (\ref{eq:cap6_7}) con
-\begin{equation}
-\delta q_i = \varepsilon \frac{\partial G}{\partial p_i },\qquad \delta p _i = -\varepsilon \frac{\partial G}{\partial q_i } .
-\label{eq:cap6_11}
-\end{equation}
+	\begin{equation}
+		\begin{cases}
+		\displaystyle{p_i= \frac{\partial \Phi}{\partial q_i} = P_i + \varepsilon \frac{\partial G}{\partial q_i }, }\\
+		\\
+		\displaystyle{Q_i= \frac{\partial \Phi}{\partial P_i} = P_i + \varepsilon \frac{\partial G}{\partial P_i }.}
+		\end{cases}
+	\end{equation}
+Nel limite $\varepsilon \rightarrow 0$ la funzione (\ref{eq:cap6_9}) si riduce alla funzione generatrice della trasformazione identità, e per $\varepsilon$ infinitesimo ma diverso da zero la funzione (\ref{eq:cap6_9}) genera una trasformazione data da (\ref{eq:cap6_7}) e (\ref{eq:cap6_8}) con
+	\begin{equation}
+		\tcboxmath[enhanced,sharp corners=downhill ,colback=yellow!50!white,colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			\delta q_i = \varepsilon \frac{\partial G}{\partial p_i },\qquad \delta p _i = -\varepsilon \frac{\partial G}{\partial q_i } .
+			}
+		\label{eq:cap6_11}
+	\end{equation}	
 Quantunque il termine  ``funzione generatrice''  sia strettamente riservato alla quantità $\Phi$, è però di uso comune indicare con questo nome anche la funzione $G$.\\
+
 Consideriamo ora alcuni esempi importanti di trasformazioni infinitesime. Un esempio sono le \textbf{traslazioni spaziali} lungo una direzione, definite dalle trasformazioni
-\begin{equation}
-\begin{cases}
-\displaystyle{\delta q_i = \varepsilon, \  \delta q_j =0 \textrm{ per } j\neq i, }\\
-\\
-\displaystyle{\delta p_i = 0,}
-\end{cases}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+		\begin{cases}
+			\displaystyle{\delta q_i = \varepsilon, \  \delta q_j =0 \textrm{ per } j\neq i, }\\[0.5cm]
+			\displaystyle{\delta p_i = 0,}
+		\end{cases}
+		}
+	\end{equation}
 dove $\varepsilon$ rappresenta dunque lo spostamento infinitesimo di $q_i$. Dalle eq. (\ref{eq:cap6_11}) è evidente che la funzione generatrice che produce questa trasformazione è
-\begin{equation}
-G=p_i .
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced,sharp corners=downhill ,colback=yellow!50!white,colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			G=p_i .
+			}
+	\end{equation}
 Dunque: \textbf{il momento $p_i$ coniugato alla variabile $q_i$, è il generatore delle traslazioni spaziali nella direzione di $q_i$}.\\
-Consideriamo come altro esempio di trasformazione infinitesima, una \textbf{rotazione infinitesima} di un angolo $d\varphi$ \textbf{attorno all' asse $z$}. introducendo un sistema di coordinate polari, per ciascuna particella del sistema 
+
+Consideriamo come altro esempio di trasformazione infinitesima, una \textbf{rotazione infinitesima} di un angolo $d\varphi$ \textbf{attorno all' asse $z$}. introducendo un sistema di coordinate polari, per ciascuna particella del sistema:
 \begin{center}
 \begin{minipage}{0.50\textwidth}
 \centering
@@ -342,48 +376,60 @@ x= r \cos \theta .
 \end{minipage}
 \end{center}
 Possiamo scrivere la trasformazione nella forma:
-\begin{equation}
-\begin{cases}
-x'= r \sin \theta \ \cos (\varphi + d \varphi ) \simeq x- r \sin \theta \ \sin \varphi \ d \varphi = x-yd\varphi ,\\
-y'= r \sin \theta \ \sin (\varphi + d \varphi ) \simeq y+ r \sin \theta \ \cos \varphi \ d \varphi = y+xd\varphi ,\\
-z' = r\cos \theta = z .
-\end{cases}
-\end{equation}
+	\begin{equation}
+		\begin{cases}
+			x'= r \sin \theta \ \cos (\varphi + d \varphi ) \simeq x- r \sin \theta \ \sin \varphi \ d \varphi = x-yd\varphi ,\\
+			y'= r \sin \theta \ \sin (\varphi + d \varphi ) \simeq y+ r \sin \theta \ \cos \varphi \ d \varphi = y+xd\varphi ,\\
+			z' = r\cos \theta = z .
+		\end{cases}
+	\end{equation}
 La variazione infinitesima delle coordinate e dei momenti è allora
-\begin{eqnarray}
-& & \delta x_i = -\varepsilon y_i, \ \delta y_i = +\varepsilon x_i, \ \delta z_i =0,\\
-& & \delta p_{x_i} = -\varepsilon p_{y_i}, \ \delta p_{y_i} = +\varepsilon p_{x_i}, \ \delta p_{z_i} =0,
-\end{eqnarray}
+	\begin{eqnarray}
+			& & \tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{\delta x_i = -\varepsilon y_i, \ \delta y_i = +\varepsilon x_i, \ \delta z_i =0,}\\
+			& &\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{ \delta p_{x_i} = -\varepsilon p_{y_i}, \ \delta p_{y_i} = +\varepsilon p_{x_i}, \ \delta p_{z_i} =0,}
+	\end{eqnarray}
 avendo uguagliato ad $\varepsilon$ l'angolo infinitesimo di rotazione e considerato che i momenti si trasformano, rispetto alle rotazioni, nello stesso modo delle componenti di posizione ($\dot{p_x}'= m \dot{x}'=  m\dot{x}-m\dot{y}d\varphi$ $=p_x-p_yd\varphi , \dots$).\\
 La funzione generatrice di questa trasformazione è
-\begin{equation}
-G= \sum _i (x_ip_{y_i} - y_i p_{x_i}) = L_z ,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced,sharp corners=downhill ,colback=yellow!50!white,colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			G= \sum _i (x_ip_{y_i} - y_i p_{x_i}) = L_z ,
+			}
+	\end{equation}
 dove $L_z$ è la componente lungo $z$ del momento angolare totale. È immediato verificare l'espressione di $G$ per sostituzione diretta nelle eq. (\ref{eq:cap6_11}). Così, \textbf{il momento angolare lungo un determinato asse è il generatore delle rotazioni spaziali attorno a quell'asse}.\\
+
 Come ultimo esempio, consideriamo le \textbf{traslazioni temporali} infinitesime, ossia le trasformazioni che cambiano i valori delle coordinate e dei momenti al tempo $t$ nei valori che coordinate e momenti assumono al tempo $t+dt$. La forma di queste trasformazioni è definita dagli incrementi:
-\begin{eqnarray}
-& &\delta q_i = q_i(t+dt)-q_i(t) = \dot{q_i} dt = \frac{\partial H}{\partial p_i}dt, \\
-& &\delta p_i = p_i(t+dt)-p_i(t) = \dot{p_i} dt = -\frac{\partial H}{\partial q_i}dt. 
-\end{eqnarray}
+	\begin{eqnarray}
+		& &\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\delta q_i = q_i(t+dt)-q_i(t) = \dot{q_i} dt = \frac{\partial H}{\partial p_i}dt,} \\
+		& &\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\delta p_i = p_i(t+dt)-p_i(t) = \dot{p_i} dt = -\frac{\partial H}{\partial q_i}dt. }
+	\end{eqnarray}
 Per confronto con le eq. (\ref{eq:cap6_11}), ponendo $\varepsilon = dt$, vediamo che
-\begin{equation}
-G=H(p,q) ,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced,sharp corners=downhill ,colback=yellow!50!white,colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			G=H(p,q) ,
+			}
+	\end{equation}
 ossia \textbf{il generatore delle traslazioni temporali è l'hamiltoniana del sistema}.\\
+
 Stabiliamo ora un'importante \textbf{connessione tra simmetrie e leggi di conservazione}. Calcoliamo come varia una generica funzione $u(p,q)$ dei momenti e delle coordinate a seguito di una trasformazione infinitesima generata dalla trasformazione $G$. Utilizzando le eq. (\ref{eq:cap6_11}) e ricordando la definizione di parentesi di Poisson, troviamo:
-\begin{eqnarray}
-du & = & u(p+\delta p , q+\delta q )- u (p,q) = \nonumber \\
-&=& \sum _i \left( \frac{\partial u}{\partial p_i} \delta p_i + \frac{\partial u}{\partial q_i } \delta q_i \right) = \nonumber \\
-&=& \varepsilon \sum _i \left( -\frac{\partial u}{\partial p_i} \frac{\partial G}{\partial q_i} + \frac{\partial u}{\partial q_i } \frac{\partial G}{\partial p_i} \right) =-\varepsilon \{ u, G \} .
-\end{eqnarray}
+	\begin{eqnarray}
+		du & = & u(p+\delta p , q+\delta q )- u (p,q) = \sum _i \left( \frac{\partial u}{\partial p_i} \delta p_i + \frac{\partial u}{\partial q_i } \delta q_i \right) = \nonumber \\
+		&=& \varepsilon \sum _i \left( -\frac{\partial u}{\partial p_i} \frac{\partial G}{\partial q_i} + \frac{\partial u}{\partial q_i } \frac{\partial G}{\partial p_i} \right) =-\varepsilon \{ u, G \} .
+	\end{eqnarray}
 Scegliendo in particolare come funzione $u$ l'hamiltoniana del sistema,  e ricordando la relazione tra le parentesi di Poisson di una determinata funzione con l'hamiltoniana e la derivata totale rispetto al tempo di detta funzione, otteniamo:
-\begin{equation}
-\delta H = -\varepsilon \{H,G\} = -\varepsilon \frac{dG}{dt}.
-\end{equation}
-Risulta cioè che se \textbf{un sistema fisico è simmetrico rispetto ad una feterminata trasformazione, ossia se l'hamiltoniana del sistema non cambia per effetto di tale trasformazione ($\delta H =0$), allora il generatore di questa trasformazione è una quantità conservata}:
-\begin{equation}
-\frac{dG}{dt}=0.
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced,sharp corners=downhill ,colback=yellow!50!white,colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			\delta H = -\varepsilon \{H,G\} = -\varepsilon \frac{dG}{dt}.
+			}
+	\end{equation}
+Risulta cioè che se \textbf{un sistema fisico è simmetrico rispetto ad una determinata trasformazione, ossia se l'hamiltoniana del sistema non cambia per effetto di tale trasformazione ($\delta H =0$), allora il generatore di questa trasformazione è una quantità conservata}:
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill ,colback=white,colframe=red!75!black]{
+			\frac{dG}{dt}=0.
+			}
+	\end{equation}\\
+	
 Riassumiamo quindi in uno schema le trasformazioni infinitesime qui considerate e i corrispondenti generatori ossia le quantità conservate in presenza di simmetria:
 
 \begin{table}[!htbp]
