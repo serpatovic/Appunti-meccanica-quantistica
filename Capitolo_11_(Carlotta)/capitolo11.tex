@@ -1,115 +1,154 @@
-
-\chapter[Oscillatore Armonico]{Oscillatore Armonico\footnote{S2.3, LL23, G5}}
+\chapter[Oscillatore Armonico]{Oscillatore Armonico}
 Consideriamo una particella che compie piccole oscillazioni unidimensionale (il cosidetto \textbf{oscillatore armonico}). L'energia potenziale di tale particella è uguale a $\frac{1}{2}mw^2x^2$, dove $w$ rappresenta nella meccanica classica la frequenza propria delle oscillazioni. L'hamiltoniana dell'oscillatore è quindi:
-\begin{equation}
-H=\frac{p^2}{2m}+\frac{1}{2}mw^2x^2.
-\label{eq:cap11_1}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			H=\frac{p^2}{2m}+\frac{1}{2}mw^2x^2.
+			}
+	\label{eq:cap11_1}
+	\end{equation}
 Poiché l'energia potenziale diventa infinita per $x=\pm \infty$, la particella può compiere soltanto un moto finito e, di conseguenza,  \textbf{tutto lo spettro} energetico dell'oscillatore \textbf{sarà discreto}.\\
+
  I livelli energetici dell'oscillatore armonico si possono determinare risolvendo \textbf{l'equazione di Schr\"{o}dinger indipendente dal tempo}:
-\begin{equation}
-H\psi= -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+\frac{1}{2}mw^2x^2\psi=E\psi,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{	
+			H\psi= -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+\frac{1}{2}mw^2x^2\psi=E\psi,
+			}
+	\end{equation}
 con le condizioni al contorno:
-\begin{equation}
-\lim _{x \rightarrow \pm \infty} \psi(x)=0.
-\end{equation}
-Noi invece risolviamo il problema della determinazione dei livelli energetici, e dei relativi autostati, seguendo un elegante \textbf{metodo operatoria sviluppato da Dirac}.
- A tale scopo è conveniente in primo luogo introdurre degli operatori adimensionali, dividendo entrambe i membri dell'equazione (\ref{eq:cap11_1}) per $\hbar w$:
-\begin{equation} \label{eq:cap11_2}
-\frac{H}{\hbar w}=\frac{p^2}{2m\hbar w}+\frac{mw^2x^2}{2\hbar w}.
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			\lim _{x \rightarrow \pm \infty} \psi(x)=0.
+			}
+	\end{equation}\\
+	
+Noi invece risolviamo il problema della determinazione dei livelli energetici, e dei relativi autostati, seguendo un elegante \textbf{metodo operatoriale sviluppato da Dirac}. A tale scopo è conveniente in primo luogo introdurre degli operatori adimensionali, dividendo entrambe i membri dell'equazione (\ref{eq:cap11_1}) per $\hbar w$:
+	\begin{equation} \label{eq:cap11_2}
+		\frac{H}{\hbar w}=\frac{p^2}{2m\hbar w}+\frac{mw^2x^2}{2\hbar w}.
+	\end{equation}
 Definendo allora:
-\begin{eqnarray}  
-	& &\hat{H}=\frac{H}{\hbar w},  \\
-	& &\hat{p}=\frac{p}{\sqrt{\hbar w m}},  \\
-	& &\hat{x}= \sqrt{\frac{mw}{\hbar}}x,
-\end{eqnarray}
+	\begin{gather}  
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{	
+			\hat{H}=\frac{H}{\hbar w},
+			}  \\[0.3cm]
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			 \hat{p}=\frac{p}{\sqrt{m \hbar w }},
+			}  \\[0.3cm]
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			 \hat{x}= \sqrt{\frac{mw}{\hbar}}x,
+			}
+	\end{gather}
 possiamo scrivere la precedente equazione nella forma:
-\begin{equation}
-\hat{H}=\frac{1}{2} (\hat{p}^2+\hat{x}^2).
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			\hat{H}=\frac{1}{2} (\hat{p}^2+\hat{x}^2).
+			}
+	\end{equation}\\
+	 
 Calcoliamo il commutatore tra $\hat{p}$ e $\hat{x}$:
-\begin{equation}
-[\hat{p},\hat{x}]= \frac{1}{\sqrt{\hbar w m}} \sqrt{\frac{mw}{\hbar}} [p,x]=\frac{1}{\hbar}(-i\hbar),
-\end{equation}
+	\begin{equation}
+		[\hat{p},\hat{x}]= \frac{1}{\sqrt{\hbar w m}} \sqrt{\frac{mw}{\hbar}} [p,x]=\frac{1}{\hbar}(-i\hbar),
+	\end{equation}
 ossia:
-\begin{equation}  \label{eq:cap11_3}
-[\hat{p},\hat{x}]=-i.
-\end{equation}
+	\begin{equation}
+	\label{eq:cap11_3}
+	 	\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			[\hat{p},\hat{x}]=-i.
+			}
+	\end{equation}\\
+	
 In termini degli operatori $\hat{p}$ ed $\hat{x}$ risulta poi conveniente definire due operatori non hermitiani:
-\begin{equation} \label{eq:cap11_4}
-\begin{split} 
-	a=\frac{1}{\sqrt{2} } (\hat{x}+i\hat{p}), \\
-	a^+=\frac{1}{\sqrt{2} } (\hat{x}-i\hat{p}),
-\end{split} \end{equation}
+	\begin{equation}
+	\label{eq:cap11_4}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			\begin{aligned}
+			&a=\frac{1}{\sqrt{2} } (\hat{x}+i\hat{p}),
+			\\
+			&a^+=\frac{1}{\sqrt{2} } (\hat{x}-i\hat{p}),
+			\end{aligned}
+	}
+	\end{equation}
 o, più semplicemente:
-\begin{equation} 
-\begin{split}
-	a=\sqrt{\frac{mw}{2\hbar}}(x+i \frac{p}{mw}), \\
-	a^+=\sqrt{\frac{mw}{2\hbar}}(x-i \frac{p}{mw}).
-\end{split}
-\end{equation}
+	\begin{equation} 
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{	
+		\begin{split}
+			&a=\sqrt{\frac{mw}{2\hbar}}(x+i \frac{p}{mw}), \\
+			&a^+=\sqrt{\frac{mw}{2\hbar}}(x-i \frac{p}{mw}).
+		\end{split}
+		}
+	\end{equation}\\
+	
 Facendo uso della regola di commutazione canonica (\ref{eq:cap11_3}) possiamo calcolare il commutatore tra $a$ e $a^+$:
-\begin{equation}
-[a,a^+]=\frac{1}{2} [\hat{x}+i\hat{p},\hat{x}-i\hat{p}]=\frac{1}{2}  \left( +i[\hat{p},\hat{x}]-i[\hat{x},\hat{p}]   \right ) = i[\hat{p},\hat{x}],
-\end{equation}
+	\begin{equation}
+		[a,a^+]=\frac{1}{2} [\hat{x}+i\hat{p},\hat{x}-i\hat{p}]=\frac{1}{2}  \left( +i[\hat{p},\hat{x}]-i[\hat{x},\hat{p}]   \right ) = i[\hat{p},\hat{x}],
+	\end{equation}
 e dunque:
-\begin{equation}
-\mathbf{[a,a^+]=1}.
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			[a,a^+]=1.
+			}
+	\end{equation}\\
+	
 Esprimiamo l'operatore $\hat{H}$ in termini degli operatori $a$ e $a^+$. A tale scopo invertiamo le equazioni (\ref{eq:cap11_4}) per ottenere:
-\begin{equation} \label{eq:cap11_5}
-\begin{split} 
-	\hat{x}=\frac{1}{\sqrt{2} } (a+a^+), \\
-	\hat{p}=\frac{1}{\sqrt{2}i } (a-a^+).
-\end{split}
-\end{equation}
+	\begin{equation}
+	\label{eq:cap11_5}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{ 
+				\hat{x}=\frac{1}{\sqrt{2} } (a+a^+),
+				} \quad
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+				\hat{p}=\frac{1}{\sqrt{2}i } (a-a^+).
+				}
+	\end{equation}
 Si trova allora:
-\begin{eqnarray}
-	\hat{H} &=& \frac{1}{2} (\hat{p}^2+\hat{x}^2)=  \frac{1}{4} \left[ -(a-a^+)^2+(a+a^+)^2  \right]= \nonumber\\
-	&= &\frac{1}{4} (aa^++a^+a)\cdot 2= \frac{1}{2}(aa^++a^+a)= \nonumber\\
-	&=&\frac{1}{2}( [a,a^+]+2a^+a  )=\frac{1}{2}(1+2a^+a ),
-\end{eqnarray}
+	\begin{align}
+		\hat{H} &= \frac{1}{2} (\hat{p}^2+\hat{x}^2)=  \frac{1}{4} \left[ -(a-a^+)^2+(a+a^+)^2  \right]=  \frac{1}{4} (aa^++a^+a)\cdot 2= \nonumber \\
+		&=\frac{1}{2}(aa^++a^+a)= \frac{1}{2}( [a,a^+]+2a^+a  )=\frac{1}{2}(1+2a^+a ),
+	\end{align}
 ossia:
-\begin{equation} 
-\begin{split}
-	\hat{H} =a^+a +\frac{1}{2}.
-\end{split}
-\end{equation}
+	\begin{equation} 
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			\hat{H} =a^+a +\frac{1}{2}.
+			}
+	\end{equation}
 Equivalentemente:
-\begin{equation} \label{eq:cap11_6}
-\begin{split}
-	H =(a^+a+ \frac{1}{2}) \hbar w.
-\end{split}
-\end{equation}
+	\begin{equation}
+	\label{eq:cap11_6}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			H =(a^+a+ \frac{1}{2}) \hbar w.
+			}
+	\end{equation}\\
+	
 Per comprendere il significato degli operatori $a$ e $a^+$ supponiamo di conoscere un autovalore $E_n$  dell'energia ed il corrispondente autostato $|n \rangle$:
-\begin{equation}
-H|n\rangle=E_n|n\rangle.
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]	{		
+			H|n\rangle=E_n|n\rangle.
+			}
+	\end{equation}
 Consideriamo quindi l'applicazione di H allo stato ottenuto applicando l'operatore $a$ ad $|n\rangle$:
-\begin{equation}
-Ha|n\rangle= [H,a]|n \rangle+aH|n\rangle=([H,a]+E_na)|n\rangle.
-\end{equation}
+	\begin{equation}
+		Ha|n\rangle= [H,a]|n \rangle+aH|n\rangle=([H,a]+E_na)|n\rangle.
+	\end{equation}
 Calcoliamo il commutatore [H,$a$]:
-\begin{eqnarray}
-	[H,a]&=&\hbar w[a^+a+\frac{1}{2},a]=\hbar w [a^+a,a]= \nonumber\\
-	&=&\hbar w (a^+aa-aa^+a)=\hbar w[a^+,a]a=-\hbar wa.
-\end{eqnarray}
+	\begin{align}
+		[H,a]&=\hbar w[a^+a+\frac{1}{2},a]=\hbar w [a^+a,a]= \nonumber\\
+		&=\hbar w (a^+aa-aa^+a)=\hbar w[a^+,a]a=-\hbar wa.
+	\end{align}
 Allora:
-\begin{equation}
-Ha|n\rangle=(E_n-\hbar w)a|n\rangle.
-\end{equation}
-Pertanto, se \textbf{$\mathbf{|n\rangle}$ è un autostato dell'hamiltoniana con autovalore $E_n$ allora anche $a|n\rangle$ è  un autostato dell'hamiltoniana con autosalone $E_n$-$\hbar w$. Per questa ragione l'operatore $a$ è anche detto \textit{operatore di distruzione}}.  \\
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		Ha|n\rangle=(E_n-\hbar w)a|n\rangle.
+		}
+	\end{equation}
+Pertanto, se \textbf{$\mathbf{|n\rangle}$ è un autostato dell'hamiltoniana con autovalore $E_n$ allora anche $a|n\rangle$ è  un autostato dell'hamiltoniana con autovalore $E_n$-$\hbar w$. Per questa ragione l'operatore $a$ è anche detto \textit{operatore di distruzione}}.  \\
+
  Similmente possiamo considerare l'applicazione di H sullo stato $a^+|n\rangle$:
-\begin{equation}
-Ha^+|n\rangle= [H,a^+]|n\rangle+a^+H|n\rangle=([H,a^+]+E_na^+)|n\rangle.
-\end{equation}
+	\begin{equation}
+		Ha^+|n\rangle= [H,a^+]|n\rangle+a^+H|n\rangle=([H,a^+]+E_na^+)|n\rangle.
+	\end{equation}
 Il commutatore di H con $a^+$ risulta:
-\begin{eqnarray}
-	[H,a^+]&=&\hbar w[a^+a+\frac{1}{2},a^+]=\hbar w [a^+a,a^+]= \nonumber\\
-	&=&\hbar w (a^+aa^+-a^+a^+a)=\hbar w a^+ [a,a^+]=\hbar wa^+,
-\end{eqnarray}
+	\begin{align}
+		[H,a^+]&= \hbar w[a^+a+\frac{1}{2},a^+]=\hbar w [a^+a,a^+]= \nonumber\\
+		&= \hbar w (a^+aa^+-a^+a^+a)=\hbar w a^+ [a,a^+]=\hbar wa^+,
+	\end{align}
 o anche:
 \begin{equation}
 [H,a^+]=-[H,a]^+=\hbar w a^+.
@@ -263,6 +302,13 @@ sono dei polinomi di grado $n$ in $\xi$ contenenti potenze della stessa parità 
 \begin{equation}
 \psi_n(\xi)=\frac{1}{\pi^{1/4}\sqrt{2^nx_0n!}} H_n(\xi)e^{-\xi^2/2}.
 \end{equation}
+
+
+
+
+
+
+
 
 \newpage
 \begin{figure}[htbp]
