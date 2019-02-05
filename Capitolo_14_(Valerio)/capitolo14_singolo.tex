@@ -41,6 +41,7 @@
 \usepackage{pdfpages}
 \usepackage{physics}
 \usepackage{setspace}
+\usepackage[many]{tcolorbox}
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 \usepackage{textcomp}
@@ -91,172 +92,245 @@
 \pagestyle{VS}
 \setcounter{chapter}{13}
 \setcounter{page}{147}
-\chapter[T.d.P. indipendenti dal tempo]{Teoria delle perturbazioni indipendenti dal tempo\footnote{LL38,39; S5.1,S5.2; G16}}
+\chapter[T.d.P. indipendenti dal tempo]{Teoria delle perturbazioni indipendenti dal tempo}
 La soluzione esatta dell'equazione di Schr\"{o}dinger può essere trovata solamente per un numero relativamente piccolo di casi molto semplici.\\
+
 Tuttavia, nelle condizioni del problema figurano spesso \textbf{grandezze piccole} trascurando le quali il problema si semplifica in modo tale da rendere possibile una soluzione esatta. Allora il primo passo nella risoluzione del problema fisico posto consiste nel trovare la soluzione esatta del problema ma semplificato e il secondo nel calcolare, in modo approssimato, le correzioni dovute ai termini piccoli trascurati nel problema semplificato.\\
+
 Il metodo generale che permette di calcolare queste correzioni prende il nome di \textbf{teoria delle perturbazioni}.\\
+
 Supponiamo che l'hamiltoniano del sistema fisico considerato abbia la forma
-\begin{equation}
-H= H_0+ V,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			H= H_0+ V,
+			}
+	\end{equation}
 dove V è una piccola correzione (\textbf{perturbazione}) dell'operatore ``\textbf{imperturbato}'' $H_0$. Le condizioni necessarie perché l'operatore $V$ possa essere considerato come ``piccolo'' rispetto all'operatore $H_0$ saranno dedotte più avanti.\\
+
 La risoluzione del problema mediante la teoria delle perturbazioni dipende in maniera essenziale dalla degenerazione o meno dei livelli di energia del sistema imperturbato, descritto dall'hamiltoniano $H_0$. I due casi devono dunque essere trattati separatamente.
 \section{Caso non degenere}
 Supponiamo che siano noti gli autostati $\vert n^{(0)} \rangle$ e gli autovalori $E_n ^{(0)}$ dell'operatore imperturbato $H_0$, cioè che siano note le soluzioni esatte dell'equazione
-\begin{equation}
-H_0\vert n^{(0)} \rangle=E_n ^{(0)}\vert n^{(0)} \rangle.
-\label{eq:cap14_1}
-\end{equation}
-Assumiamo qui che \textbf{gli autovalori} $E_n ^{(0)}$ appartengano allo \textbf{spettro discreto} e siano \textbf{non degeneri}\footnote{per semplicità assumeremo dapprima che esiste uno spettro discreto di livelli energetici.}.\\
-Il problema posto consiste nel trovare le soluzioni approssimate dell'equazione:
-\begin{equation}
-H\vert n \rangle=\left( H_0+ V \right) \vert n \rangle= E_n \vert n \rangle,
-\label{eq:cap14_2}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			H_0\vert n^{(0)} \rangle=E_n ^{(0)}\vert n^{(0)} \rangle.
+			}
+	\label{eq:cap14_1}
+	\end{equation}
+Assumiamo qui che \textbf{gli autovalori} $E_n ^{(0)}$ appartengano allo \textbf{spettro discreto} e siano \textbf{non degeneri}\footnote{per semplicità assumeremo dapprima che esiste uno spettro discreto di livelli energetici.}. Il problema posto consiste nel trovare le soluzioni approssimate dell'equazione:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			H\vert n \rangle=\left( H_0+ V \right) \vert n \rangle= E_n \vert n \rangle,
+			}
+	\label{eq:cap14_2}
+	\end{equation}
 cioè le espressioni approssimate degli autostati $\vert n \rangle$ e degli autovalori $E_n$ dell'operatore perturbato $H$.\\
+
 È comodo condurre i calcoli sin dall'inizio in forma matriciale. A tale scopo sviluppiamo gli autostati cercati $\vert n \rangle$ in serie di autostati $\vert n^{(0)} \rangle$:
-\begin{equation}
-\vert n \rangle= \sum _m c_m \vert m^{(0)} \rangle.
-\label{eq:cap14_3}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			\vert n \rangle= \sum _m c_m \vert m^{(0)} \rangle.
+			}
+	\label{eq:cap14_3}
+	\end{equation}
 Sostituendo questo sviluppo nella (\ref{eq:cap14_2}) si ottiene:
-\begin{eqnarray}
-\sum _m c_m \left( H_0+V\right)\vert m^{(0)} \rangle &=&\sum _m c_m \left( E_m ^{(0)}+V\right)\vert m^{(0)} \rangle= \nonumber \\
-&=&E_n\sum _m c_m \vert m^{(0)} \rangle,
-\end{eqnarray}
+	\begin{equation}
+		\sum _m c_m \left( H_0+V\right)\vert m^{(0)} \rangle =\sum _m c_m \left( E_m ^{(0)}+V\right)\vert m^{(0)} \rangle= E_n\sum _m c_m \vert m^{(0)} \rangle,
+	\end{equation}
 ossia
-\begin{equation}
-\sum _m c_m \left( E_n-E_m ^{(0)}\right)\vert m^{(0)}\rangle=\sum _m c_m\ V\vert m^{(0)}\rangle.
-\end{equation}
+	\begin{equation}
+		\sum _m c_m \left( E_n-E_m ^{(0)}\right)\vert m^{(0)}\rangle=\sum _m c_m\ V\vert m^{(0)}\rangle.
+	\end{equation}
 Moltiplicando quindi entrambi i membri di questa uguaglianza per il bra $\langle k^{(0)}\vert$ si trova:
-\begin{equation}
-\left( E_n-E_k ^{(0)}\right)c_k =\sum _m \langle k^{(0)}\vert V\vert m^{(0)}\rangle c_m.
-\label{eq:cap14_4}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			\left( E_n-E_k ^{(0)}\right)c_k =\sum _m \langle k^{(0)}\vert V\vert m^{(0)}\rangle c_m.
+			}
+	\label{eq:cap14_4}
+	\end{equation}\\
+	
 Introduciamo, per comodità di notazione, gli elementi di matrice $V_{km}$ della perturbazione $V$ nella base degli autostati imperturbati:
-\begin{equation}
-V_{km} = \langle k^{(0)}\vert V\vert m^{(0)}\rangle.
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			V_{km} = \langle k^{(0)}\vert V\vert m^{(0)}\rangle.
+			}
+	\end{equation}\\
+	
 L'eq. (\ref{eq:cap14_4}) si scrive allora nella forma:
-\begin{equation}
-(E_n - E_k ^{(0)}) c_k = \sum _m V_{km}\ c_m
-\label{eq:cap14_5}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{	(E_n - E_k ^{(0)}) c_k = \sum _m V_{km}\ c_m .
+		}
+	\label{eq:cap14_5}
+	\end{equation}
 Osserviamo che questa equazione, le cui incognite sono rappresentate dai coefficienti $c_m$ dello sviluppo (\ref{eq:cap14_3}) e dagli autovalori $E_n$ dell'hamiltoniano imperturbato, è un'equazione esatta.\\
+
 \textbf{Cerchiamo ora i valori dei coefficienti} $c_m$ \textbf{e dell'energia} $E_n$ \textbf{sotto forma di serie}:
-\begin{eqnarray}
-& &E_n = E_n ^{(0)}+E_n ^{(1)}+E_n ^{(2)}+\dots \nonumber \\
-\\
-& &c_m = c_m ^{(0)}+c_m ^{(1)}+c_m ^{(2)}+\dots \nonumber
-\end{eqnarray}
-dove le quantità $E_n ^{(1)}$, $c_m ^{(1)}$ sono dello stesso ordine della perturbazione $V$, le quantità $E_n ^{(2)}$, $c_m ^{(2)}$ sono del secondo ordine, etc... Allora, evidentemente, $E_n ^{(0)}$ coincide con l'autovalore di energia imperturbato.\\
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\begin{aligned}
+			& E_n = E_n ^{(0)}+E_n ^{(1)}+E_n ^{(2)}+\dots  \\
+			& c_m = c_m ^{(0)}+c_m ^{(1)}+c_m ^{(2)}+\dots
+		\end{aligned}
+		}
+	\end{equation}
+dove le quantità $E_n ^{(1)}$, $c_m ^{(1)}$ sono dello stesso ordine della perturbazione $V$, le quantità $E_n ^{(2)}$, $c_m ^{(2)}$ sono del secondo ordine, eccetera. Allora, evidentemente, $E_n ^{(0)}$ coincide con l'autovalore di energia imperturbato.\\
+
 Per determinare le quantità $E_n ^{(2)}$ e $c_m ^{(2)}$ risolviamo l'equazione (\ref{eq:cap14_3}) ordine per ordine. \textbf{All'ordine zero}, si ha:\\
 
 $\bullet$ \textbf{[Ordine 0]}\\
-\begin{equation}
-\left(E_n ^{(0)}- E_k ^{(0)}\right)c_k ^{(0)}=0,
-\end{equation}
+	\begin{equation}
+		\left(E_n ^{(0)}- E_k ^{(0)}\right)c_k ^{(0)}=0,
+	\end{equation}
 che fornisce evidentemente
-\begin{equation}
-c_k ^{(0)}=0, per k\neq n.
-\label{eq:cap14_6}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{	
+			c_k ^{(0)}=0, per k\neq n.
+			}
+	\label{eq:cap14_6}
+	\end{equation}
 Quanto al coefficiente $c_n$ all'ordine zero, questo è determinato dalla condizione di normalizzazione
-\begin{equation}
-\langle n \vert n \rangle = \sum _m \vert c_m \vert ^2 =1.
-\end{equation}
+	\begin{equation}
+		\langle n \vert n \rangle = \sum _m \vert c_m \vert ^2 =1.
+	\end{equation}
 Scegliendo \textbf{$c_n$ reale e positivo}, questa condizione all'ordine zero fornisce
-\begin{equation}
-c_n ^{(0)}=1.
-\label{eq:cap14_7}
-\end{equation}
-Consideriamo ora l'eq. (\ref{eq:cap14_5}) \textbf{al primo ordine} dello sviluppo perturbativo:\\
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			c_n ^{(0)}=1.
+			}
+	\label{eq:cap14_7}
+	\end{equation}\\
+	
+Consideriamo ora l'eq.~(\ref{eq:cap14_5}) \textbf{al primo ordine} dello sviluppo perturbativo:\\
 
 $\bullet$ \textbf{[Ordine 1]}\\
-\begin{equation}
-E_n ^{(1)}c_k ^{(0)}+\left(E_n ^{(0)}- E_k ^{(0)}\right)c_k ^{(1)}=\sum _m V_{km}\ c_m ^{(0)} = V_{kn},
-\label{eq:cap14_8}
-\end{equation}
-dove, a secondo membro, si sono sostituiti i risultati (\ref{eq:cap14_6}) e (\ref{eq:cap14_7}) per i coefficienti di ordine zero. L'eq. (\ref{eq:cap14_8}) con $k=n$ dà:
-\begin{equation}
-E_n  ^{(1)} = V_{nn} = \langle n^{(0)}\vert V \vert n^{(0)} \rangle.
-\end{equation}
-Pertanto \textbf{in prima approssimazione la correzione all'autovalore} $E_n ^{(0)}$ \textbf{è uguale al valore medio della perturbazione nello stato} $\vert n^{(0)} \rangle$.\\
-L'eq. (\ref{eq:cap14_8})  con $k\neq n$ fornisce:
-\begin{equation}
-c_k ^{(1)} = \frac{V_{kn}}{E_n ^{(0)}-E_k ^{(0)}}=\frac{\langle k^{(0)}\vert V \vert n^{(0)} \rangle}{E_n ^{(0)}-E_k ^{(0)}}, \qquad \qquad (k\neq n).
-\label{eq:cap14_9}
-\end{equation}
+	\begin{equation}
+		E_n ^{(1)}c_k ^{(0)}+\left(E_n ^{(0)}- E_k ^{(0)}\right)c_k ^{(1)}=\sum _m V_{km}\ c_m ^{(0)} = V_{kn},
+	\label{eq:cap14_8}
+	\end{equation}
+dove, a secondo membro, si sono sostituiti i risultati (\ref{eq:cap14_6}) e (\ref{eq:cap14_7}) per i coefficienti di ordine zero. L'eq.~(\ref{eq:cap14_8}) con $k=n$ dà:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			E_n  ^{(1)} = V_{nn} = \langle n^{(0)}\vert V \vert n^{(0)} \rangle ;
+			}
+	\end{equation}
+pertanto \textbf{in prima approssimazione la correzione all'autovalore} $E_n ^{(0)}$ \textbf{è uguale al valore medio della perturbazione nello stato} $\vert n^{(0)} \rangle$.\\
+
+L'eq.~(\ref{eq:cap14_8})  con $k\neq n$ fornisce:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			c_k ^{(1)} = \frac{V_{kn}}{E_n ^{(0)}-E_k ^{(0)}}=\frac{\langle k^{(0)}\vert V \vert n^{(0)} \rangle}{E_n ^{(0)}-E_k ^{(0)}}, }\qquad \qquad (k\neq n).			
+	\label{eq:cap14_9}
+	\end{equation}\\
+	  
 Quanto al coefficiente $c_n ^{(1)}$ che ricordiamo per convenzione abbiamo scelto essere reale, questo è fissato nuovamente dalla condizione di normalizzazione che a meno di termini del secondo ordine fornisce:
-\begin{equation}
-1= \sum _m \vert c_m \vert ^2 = \left( 1+ c_n ^{(1)}\right) ^2+ \sum _{m\neq n } \vert c_m ^{(1)} \vert ^2 \simeq \left( 1+ c_n ^{(1)}\right) ^2,
-\end{equation}
+	\begin{equation}
+		1= \sum _m \vert c_m \vert ^2 = \left( 1+ c_n ^{(1)}\right) ^2+ \sum _{m\neq n } \vert c_m ^{(1)} \vert ^2 \simeq \left( 1+ 2c_n ^{(1)}\right),
+	\end{equation}
 ossia
-\begin{equation}
-c_n ^{(1)} =0.
-\label{eq:cap14_10}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			c_n ^{(1)} =0.
+			}
+	\label{eq:cap14_10}
+	\end{equation}\\
+	
 La formula (\ref{eq:cap14_9}) dà la correzione in prima approssimazione agli autostati dell'hamiltoniano. Da essa, tra l'altro, si vede quali sono le \textbf{condizioni di applicabilità del metodo considerato}. Precisamente, dovendo risultare i coefficienti al primo ordine molto minori del coefficiente di ordine zero ($c_n ^{(0)} =1$) deve valere la diseguaglianza
-\begin{equation}
-\vert V_{kn} \vert \ll E_ n ^{(0)}-E_ k ^{(0)},
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			\vert V_{kn} \vert \ll E_ n ^{(0)}-E_ k ^{(0)},
+		}
+	\end{equation}
 cioè \textbf{gli elementi di matrice della perturbazione devono essere piccoli rispetto alle differenze corrispondenti dei livelli energetici imperturbati}.\\
+
 Determiniamo ancora la correzione in seconda approssimazione all'autovalore $E_n ^{(0)}$. A tale scopo consideriamo l'equazione (\ref{eq:cap14_5}) per i termini del secondo ordine:\\
 
 $\bullet$ \textbf{[Ordine 2]}\\
-\begin{eqnarray}
-& & E_n^{(2)}c_k^{(0)}+E_n^{(1)}c_k^{(1)}+ \left( E_n^{(0)}-E_k ^{(0)}\right) c_k^{(2)} = \nonumber \\
-& & = \sum _m V_{km} c_m ^{(1)} = \sum _{m\neq n} \frac{V_{km} V_{mn}}{E_n^{(0)}-E_m ^{(0)}},
-\label{eq:cap14_11}
-\end{eqnarray}
-dove abbiamo sostituito a secondo membro le espressioni (\ref{eq:cap14_9}) e (\ref{eq:cap14_10}) per i coefficienti di ordine uno. Scegliendo nell'eq. (\ref{eq:cap14_11}) $k=n$ si ottiene:
-\begin{equation}
-E_n ^{(2)} = \sum _{m \neq n } \frac{\vert V_{mn} \vert ^2}{E_n ^{(0)}-E_m ^{(0)}}.
-\label{eq:cap14_12}
-\end{equation}
+	\begin{equation}
+			E_n^{(2)}c_k^{(0)}+E_n^{(1)}c_k^{(1)}+ \left( E_n^{(0)}-E_k ^{(0)}\right) c_k^{(2)}  = \sum _m V_{km} c_m ^{(1)} = \sum _{m\neq n} \frac{V_{km} V_{mn}}{E_n^{(0)}-E_m ^{(0)}},
+	\label{eq:cap14_11}
+	\end{equation}
+dove abbiamo sostituito a secondo membro le espressioni (\ref{eq:cap14_9}) e (\ref{eq:cap14_10}) per i coefficienti di ordine uno. Scegliendo nell'eq.~(\ref{eq:cap14_11}) $k=n$ si ottiene:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			E_n ^{(2)} = \sum _{m \neq n } \frac{\vert V_{mn} \vert ^2}{E_n ^{(0)}-E_m ^{(0)}}.
+			}
+	\label{eq:cap14_12}
+	\end{equation}
 Possiamo allora riassumere i risultati ottenuti mediante le formule
-\begin{eqnarray}
-& & E_n = E_n ^{(0)}+ V_{nn} +\sum _{m \neq n } \frac{\vert V_{mn} \vert ^2}{E_n ^{(0)}-E_m ^{(0)}}+ \dots \\
-& & \vert n \rangle = \vert n^{(0)} \rangle +\sum _{m \neq n } \frac{V_{mn} }{E_n ^{(0)}-E_m ^{(0)}} \vert m^{(0)}+ \dots 
-\end{eqnarray}
+	\begin{align}
+		& \tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			E_n = E_n ^{(0)}+ V_{nn} +\sum _{m \neq n } \frac{\vert V_{mn} \vert ^2}{E_n ^{(0)}-E_m ^{(0)}}+ \dots
+			} \\[0.5cm]
+		& \tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+ 			\vert n \rangle = \vert n^{(0)} \rangle +\sum _{m \neq n } \frac{V_{mn} }{E_n ^{(0)}-E_m ^{(0)}}\, \vert m^{(0)}\rangle+ \dots 
+			 }
+	\end{align}
 che esprimono gli \textbf{autovalori ed autovettori dell'hamiltoniano completo} $H$ \textbf{rispettivamente al secondo ed al primo ordine nella perturbazione}. le approssimazioni successive si possono calcolare in modo analogo.\\
+
 I risultati ottenuti si generalizzano direttamente al \textbf{caso in cui l'operatore} $H_0$ \textbf{ha anche uno spettro continuo (si tratta però sempre di una perturbazione dello spettro discreto)}. A tale scopo occorre solamente aggiungere alle somme sullo spettro discreto gli integrali corrispondenti allo spettro continuo. Così, ad esempio l'eq. (\ref{eq:cap14_12}) si scrive:
-\begin{equation}
-E_n ^{(2)} = \sum _{m \neq n} \frac{\vert V_{mn} \vert ^2}{E_n ^{(0)}-E_m ^{(0)}}+ \int d\nu \frac{\vert V_{\nu n} \vert ^2}{E_n ^{(0)}-E_{\nu} ^{(0)}} 
-\end{equation}
+	\begin{equation}
+		E_n ^{(2)} = \sum _{m \neq n} \frac{\vert V_{mn} \vert ^2}{E_n ^{(0)}-E_m ^{(0)}}+ \int d\nu \frac{\vert V_{\nu n} \vert ^2}{E_n ^{(0)}-E_{\nu} ^{(0)}} 
+	\end{equation}
 \section{Caso degenere}
 Vediamo ora il caso in cui l'operatore imperturbato $H_0$ ha \textbf{autovalori degeneri}. Indichiamo con
-\begin{equation}
-\vert n^{(0)} \rangle, \vert n'^{(0)} \rangle, \vert n''^{(0)} \rangle, \dots
-\end{equation}
+	\begin{equation}
+		\vert n^{(0)} \rangle, \vert n^{\prime \,(0)} \rangle, \vert n^{\prime \prime \,(0)} \rangle, \dots
+	\end{equation}
 gli autostati relativi ad uno stesso autovalore $E_n ^{(0)}$. Come è noto, la scelta di questi autostati non è univoca: in luogo di essi si possono scegliere $s$ combinazioni lineari indipendenti di questi stati, dove $s$ è l'ordine di degenerazione del livello $E_n ^{(0)}$.\\
-\textbf{Il metodo perturbativo sviluppato in precedenza non è più valido quando gli autostati dell'energia sono degeneri}. Nello sviluppo di questo metodo abbiamo infatti assunto l'esistenza di un unico e ben definito vettore di stato imperturbato $\vert n ^{(0)}\rangle$ a cui tende il vettore di stato perturbato quando la perturbazione $V$ tende a zero. In presenza di degenerazione, tuttavia, non è ovvio a priori a quale vettore di stato, combinazione lineare degli $\vert n'^{(0)}\rangle$, tende il ket perturbato in questo limite\\
-per determinare il vettore di stato imperturbato cui tende il ket perturbato nel limite in cui la perturbazione tende a zero, e simultaneamente le correzioni al primo ordine dell'energia, consideriamo nuovamente l'eq. (\ref{eq:cap14_5}):
-\begin{equation}
-(E_n - E_k ^{(0)}) c_k = \sum _m V_{km}\ c_m.
-\end{equation}
-Poniamo in questa equazione $k=n$, sostituendo in prima approssimazione $E_n = E_n ^{(0)}+E_n ^{(1)}$. Per le grandezze $c_k$ è allora sufficiente limitarsi all'approssimazione di ordine zero:
-\begin{eqnarray}
-& &c_n = c_n ^{(0)}, \quad c_{n'} = c_{n'} ^{(0)},\dots \nonumber \\
-\\
-& &c_m =0 \quad \textrm{per}\quad m\neq n, n', \dots \nonumber
-\end{eqnarray}
+
+\textbf{Il metodo perturbativo sviluppato in precedenza non è più valido quando gli autostati dell'energia sono degeneri}. Nello sviluppo di questo metodo abbiamo infatti assunto l'esistenza di un unico e ben definito vettore di stato imperturbato $\vert n ^{(0)}\rangle$ a cui tende il vettore di stato perturbato quando la perturbazione $V$ tende a zero. In presenza di degenerazione, tuttavia, non è ovvio a priori a quale vettore di stato, combinazione lineare degli $\vert n^{\prime \,(0)}\rangle$, tende il ket perturbato in questo limite.\\
+
+Per determinare il vettore di stato imperturbato cui tende il ket perturbato nel limite in cui la perturbazione tende a zero, e simultaneamente le correzioni al primo ordine dell'energia, consideriamo nuovamente l'eq.~(\ref{eq:cap14_5}):
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			(E_n - E_k ^{(0)}) c_k = \sum _m V_{km}\ c_m.
+			}
+	\end{equation}
+Studiamo in primo luogo l'equazione all'ordine zero:
+	\begin{equation}
+		\left( E_n ^{(0)} - E_k ^{(0)} \right) c_ k ^{(0)} =0,
+	\end{equation}
+che fornisce, evidentemente,
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+			c_k ^{(0)} =0\quad \textrm{per} \quad k \neq n, n',\dots
+			}
+	\end{equation}
+si ha infatti $E_n ^{(0)} = E_{n'} ^{(0)} = \dots $ per tutti i livelli degeneri.\\
+
+Poniamo quindi nel'eq.~(\ref{eq:cap14_5}) $k=n$, e consideriamo i termini del primo ordine. Per le grandezze $c_k$ è allora sufficiente limitarsi all'approssimazione di ordine zero:
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\begin{aligned}
+			&c_n = c_n ^{(0)}, \quad c_{n'} = c_{n'} ^{(0)},\dots \\
+			&c_m =0 \quad \textrm{per}\quad m\neq n, n', \dots 
+		\end{aligned}
+		}
+	\end{equation}
 Si ottiene allora
-\begin{equation}
-E_n ^{(1)}c_n ^{(0)}= \sum _{n'} V_{n n'}\ c_{n'} ^{(0)},
-\end{equation}
+	\begin{equation}
+		E_n ^{(1)}c_n ^{(0)}= \sum _{n'} V_{n n'}\ c_{n'} ^{(0)},
+	\end{equation}
 ossia
-\begin{equation}
-\sum _{n'} \left( V_{n n'}- E_n ^{(1)}\delta _{nn'} \right) c_{n'} ^{(0)}=0,
-\label{eq:cap14_13}
-\end{equation}
-dove $n, n'$ assumono tutti i valori che numerano gli stati relativi all'operatore imperturbato $E_n ^{(0)}$. Il sistema (\ref{eq:cap14_13}) rappresenta un sistema di equazioni lineari omogenee che ammette, rispetto alle grandezze $c_{n'} ^{(0)}$, soluzioni non nulle a condizione che il determinante formato con i coefficienti delle incognite si annulli. Si ottiene quindi l'equazione
-\begin{equation}
-\det \left( V - E_n ^{(1)} I \right) =0,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+			\sum _{n'} \left( V_{n n'}- E_n ^{(1)}\delta _{nn'} \right) c_{n'} ^{(0)}=0,
+			}
+	\label{eq:cap14_13}
+	\end{equation}
+dove $n, n'$ assumono tutti i valori che numerano gli stati relativi all'operatore imperturbato $E_n ^{(0)}$.\\
+
+Il sistema (\ref{eq:cap14_13}) rappresenta un sistema di equazioni lineari omogenee che ammette, rispetto alle grandezze $c_{n'} ^{(0)}$, soluzioni non nulle a condizione che il determinante formato con i coefficienti delle incognite si annulli. Si ottiene quindi l'equazione
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+				\det \left( V - E_n ^{(1)} I \right) =0,
+			}
+	\end{equation}
 detta \textbf{equazione secolare}.\\
+
 L'\textbf{equazione secolare} è un'equazione di grado $s$ in $E^{(1)}$ ed \textbf{ammette, in generale,} $s$ \textbf{radici reali distinte}. Sono precisamente queste radici che costituiscono le \textbf{correzioni agli autovalori in prima approssimazione}.\\
-Sostituendo successivamente le radici dell'equazione secolare nel sistema (\ref{eq:cap14_13}) e risolvendo quest'ultimo, troviamo i coefficienti $c_n ^{(0)}$ ed otteniamo così \textbf{gli autostati nell'approssimazione zero}. Questi autostati rappresentano le particolari \textbf{combinazioni lineari di autostati degeneri} $\vert n'^{(0)}$ \textbf{di} $H_0$ \textbf{cui si riducono gli autostati perturbati di} $H$ \textbf{ nel limite in cui la perturbazione} $V$ \textbf{tende a zero}.\\
+Sostituendo successivamente le radici dell'equazione secolare nel sistema (\ref{eq:cap14_13}) e risolvendo quest'ultimo, troviamo i coefficienti $c_n ^{(0)}$ ed otteniamo così \textbf{gli autostati nell'approssimazione zero}. Questi autostati rappresentano le particolari \textbf{combinazioni lineari di autostati degeneri} $\vert n^{\prime \,(0)}\rangle $ \textbf{di} $H_0$ \textbf{cui si riducono gli autostati perturbati di} $H$ \textbf{ nel limite in cui la perturbazione} $V$ \textbf{tende a zero}.\\
+
 Per effetto della perturbazione, il livello energetico inizialmente degenere cessa di essere tale; le radici dell'equazione secolare sono infatti generalmente distinte. Si dice che \textbf{la perturbazione ``rimuove'' la degenerazione}. Questa rimozione della degenerazione puà essere completa o parziale.\\
+
 Per il calcolo delle \textbf{correzioni di ordine superiore} agli autovalori ed agli autostati dell'hamiltoniano $H$ si procede in modo analogo al caso della teoria perturbativa non degenere. Si ottengono allora per queste correzioni, le stesse espressioni ottenute nel caso non degenere, con la sola differenza che, nella sommatoria, vengono esclusi tutti gli stati dell'hamiltoniano imperturbato che appartengono al sottospazio degenere.
 \end{document}
