@@ -41,6 +41,7 @@
 \usepackage{pdfpages}
 \usepackage{physics}
 \usepackage{setspace}
+\usepackage[many]{tcolorbox}
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 \usepackage{textcomp}
@@ -91,152 +92,214 @@
 \pagestyle{VS}
 \setcounter{chapter}{19}
 \setcounter{page}{199}
-\chapter[Particelle identiche]{Particelle identiche\footnote{S6.1,6.2,6.3; LL61,62, G8}}
-Nella meccanica classica le particelle identiche (per esempio, elettroni), malgrado l'identità delle loro proprietà fisiche, non perdono però una loro "individualità": si può immaginare di numerare in un certo istante le particelle di un sistema fisico dato e seguire poi il moto di ciascuna di esse lungo la sua traiettoria; sarà allora possibile identificare la particella in qualsiasi istante.\\ 
-Nella meccanica quantistica, invece, la situazione \`e completamente diversa. In virtù del principio di indeterminazione, il concetto di traiettoria della particella perde completamente significato. Di conseguenza, localizzate e numerate le particelle ad un certo istante, questo non ci dà la possibilità di identificarle negli istanti successivi.\\
-Cos\`i nella meccanica quantistica non esiste, in linea di principio, alcuna possibilità di seguire separatamente ciascuna delle particelle identiche, e quindi di distinguerle. L'identità delle particelle relativa alle loro proprietà fisiche ha quindi un significato molto profondo: essa porta all'indistinguibilità totale delle particelle.\\
-Questo principio di indistinguibilità delle particelle identiche ha un ruolo fondamentale nella teoria quantistica dei sistemi formati da particelle identiche.\\
-Consideriamo, per iniziare, un sistema formato da due sole particelle identiche. Siano $|a\rangle$, $|b\rangle$,... i vettori di stato di ciascuna particella considerato solo come un sistema dinamico. Possiamo ottenere un vettore di stato per il sistema costituito dalle due particelle prendendo il prodotto di ket per ciascuna particella considerata da sola. Per esempio:
-\begin{equation}
-|a\rangle|b\rangle,
-\label{eq:cap20_1}
-\end{equation}
+\chapter[Particelle identiche]{Particelle identiche}
+Nella \textbf{meccanica classica} le particelle identiche (per esempio, elettroni), malgrado l'identità delle loro proprietà fisiche, non perdono però una loro "individualità": si può immaginare di numerare in un certo istante le particelle di un sistema fisico dato e seguire poi il moto di ciascuna di esse lungo la sua traiettoria; sarà allora possibile identificare la particella in qualsiasi istante.\\ 
+
+Nella \textbf{meccanica quantistica}, invece, la situazione \`e completamente diversa. In virtù del principio di indeterminazione, il concetto di traiettoria della particella perde completamente significato. Di conseguenza, localizzate e numerate le particelle ad un certo istante, questo non ci dà la possibilità di identificarle negli istanti successivi.\\
+
+Cos\`i \textbf{nella meccanica quantistica non esiste, in linea di principio, alcuna possibilità di seguire separatamente ciascuna delle particelle identiche, e quindi di distinguerle. L'identità delle particelle relativa alle loro proprietà fisiche ha quindi un significato molto profondo: essa porta all'indistinguibilità totale delle particelle}.\\
+
+Questo \textbf{principio di indistinguibilità} delle particelle identiche ha un ruolo fondamentale nella teoria quantistica dei sistemi formati da particelle identiche.\\
+
+Consideriamo, per iniziare, un \textbf{sistema formato da due sole particelle identiche}. Siano $|a\rangle$, $|b\rangle$,... i vettori di stato di ciascuna particella considerato solo come un sistema dinamico. Possiamo ottenere un vettore di stato per il sistema costituito dalle due particelle prendendo il prodotto di ket per ciascuna particella considerata da sola. Per esempio:
+	\begin{equation}
+		|a\rangle|b\rangle,
+	\label{eq:cap20_1}
+	\end{equation}
 rappresenta lo stato in cui la prima particella si trova nello stato a e la seconda particella nello stato b.\\
-Nella \ref{eq:cap20_1} possiamo scambiare il ruolo delle due particelle e ottenere un altro vettore di stato per il sistema costituito dalle due particelle, ossia il vettore di stato:\\
-\begin{equation}
-|b\rangle|a\rangle.
-\label{eq:cap20_2}
-\end{equation}
+
+Nella (\ref{eq:cap20_1}) possiamo scambiare il ruolo delle due particelle e ottenere un altro vettore di stato per il sistema costituito dalle due particelle, ossia il vettore di stato:\\
+	\begin{equation}
+		|b\rangle|a\rangle.
+	\label{eq:cap20_2}
+	\end{equation}
 Questo rappresenta lo stato in cui la prima particella si trova nello stato $|b\rangle$,e la seconda nello stato $|a\rangle$.\\
-Il processo di scambiare tra loro le due particelle è un operatore lineare che può essere applicato ai vettori di stato del sistema costituito dalle due particelle. Indicando con $P_{12}$ questo operatore si ha ad esempio:
-\begin{equation}
-P_{12}|a\rangle|b\rangle = |b\rangle|a\rangle.
-\end{equation}
+
+\textbf{Il processo di scambiare tra loro le due particelle è un operatore lineare} che può essere applicato ai vettori di stato del sistema costituito dalle due particelle. Indicando con $P_{12}$ questo operatore si ha ad esempio:
+	\begin{equation}
+		P_{12}|a\rangle|b\rangle = |b\rangle|a\rangle.
+	\end{equation}\\
+	
 Supponiamo di effettuare una misura sul sistema costituito dalle due particelle, e di trovare che una particella si trova nello stato a e l'altra nello stato b, Tuttavia non sappiamo a priori se lo stato sia $|a\rangle|b\rangle$ o $|b\rangle|a\rangle$ oppure una qualsiasi combinazione lineare dei due, della forma:
-\begin{equation}
-|\psi\rangle = C_1|a\rangle|b\rangle + C_2 |b\rangle|a\rangle.
-\label{eq:cap20_3}
-\end{equation}
-In altri termini, tutti i vettori di stato della forma \ref{eq:cap20_3} portano allo stesso insieme di autovalori quando si esegue la misura. Ciò è noto come \textbf{degenerazione di scambio}.\\
+	\begin{equation}
+		|\psi\rangle = C_1|a\rangle|b\rangle + C_2 |b\rangle|a\rangle.
+	\label{eq:cap20_3}
+	\end{equation}
+In altri termini, tutti i vettori di stato della forma (\ref{eq:cap20_3}) portano allo stesso insieme di autovalori quando si esegue la misura. Ciò è noto come \textbf{degenerazione di scambio}.\\
+
 La degenerazione di scambio sembra rappresentare una difficoltà, poiché, contrariamente al caso di una particella singola, l'assegnazione degli autovalori di un insieme completo di osservabili non determina completamente il vettore di stato.\\
+
 Tuttavia, \textbf{il principio di indistinguibilità delle particelle identiche implica che gli stati del sistema che si ottengono l'uno dall'altro semplicemente scambiando le due particelle, devono essere fisicamente del tutto equivalenti. Questo significa che, come risultato dello scambio, il vettore di stato del sistema può variare soltanto di un fattore di fase inessenziale.} Ossia:
-\begin{equation}
-P_{12}|\psi\rangle =  e^{i\alpha}|\psi\rangle,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			P_{12}|\psi\rangle =  e^{i\alpha}|\psi\rangle,
+			}
+	\end{equation}
 dove $\alpha$ è una costante reale.\\
-Scambiando ancora una volta le due particelle si deve riottenere, evidentemente, lo stato iniziale. L'operatore $P_{12}$ soddisfa cioè:\\
-\begin{equation}
-P_{12}^2 = 1.
-\end{equation}
+
+Scambiando ancora una volta le due particelle si deve riottenere, evidentemente, lo stato iniziale. L'operatore $P_{12}$ soddisfa cioè:
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			P_{12}^2 = 1.
+			}
+	\end{equation}
 L'applicazione dell'operatore $P_{12}^2$ allo stato $|\psi\rangle$ equivale a moltiplicare il fattore di stato per $e^{2i}$. Ne segue che $e^{2i\alpha} = 1 $, ossia $e^{i\alpha}=\pm1$. Di conseguenza:
-\begin{equation}
-P_{12} |\psi\rangle= \pm |\psi\rangle .
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			P_{12} |\psi\rangle= \pm |\psi\rangle .
+			}
+	\end{equation}\\
+	
 \textbf{Siamo quindi giunti al risultato fondamentale che esistono in tutto due possibilità: o il vettore di stato di un sistema costituito da due particelle identiche è simmetrico, cioè non cambia nello scambio delle due particelle, o esso è antisimmetrico, cioè nello scambio cambia di segno}. Le due combinazioni corrispondono rispettivamente agli stati:
-\begin{eqnarray}
-\label{eq:cap20_4}
-|\psi\rangle= \frac{1}{\sqrt{2}}\left(|a\rangle |b\rangle + |b\rangle|a\rangle \right) ,\nonumber \\
-\\
-|\psi\rangle= \frac{1}{\sqrt{2}}\left(|a\rangle |b\rangle - |b\rangle|a\rangle \right). \nonumber
-\end{eqnarray}
+	\begin{equation}
+	\label{eq:cap20_4}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+		\begin{aligned}
+			|\psi _S\rangle= \frac{1}{\sqrt{2}}\left(|a\rangle |b\rangle + |b\rangle|a\rangle \right) , \\[0.3cm]
+			|\psi _A\rangle= \frac{1}{\sqrt{2}}\left(|a\rangle |b\rangle - |b\rangle|a\rangle \right). 
+		\end{aligned}		
+		}
+	\end{equation}\\
+	
 \textbf{È evidente, inoltre, che i vettori di stato rappresentativi di tutti gli stati dello stesso sistema devono godere della stessa simmetria. Se così non fosse, infatti, il vettore di stato che rappresenta la sovrapposizione di stati con diverse simmetrie, non sarebbe né simmetrico né antisimmetrico}.\\
+
 Questo risultato si generalizza immediatamente ai sistemi formati da un \textbf{numero qualsiasi di particelle identiche}. Infatti, a causa dell'identità delle particelle, è chiaro che se una coppia di queste particelle goda della proprietà di poter essere scritta, per esempio, da vettori di stato simmetrici, tutte le altre coppie di particelle avranno la stessa proprietà. \textbf{Quindi il vettore di stato delle particelle identiche deve o restare o assolutamente immutato per lo scambio di qualsiasi coppia di particelle, o cambiare di segno per lo scambio di ogni coppia.}\\
+
 \textbf{Le proprietà del sistema di poter essere descritto da vettori di stato simmetrici o antisimmetrici dipende dalla natura delle particelle che lo compongono.} Delle particelle descritte da vettori di stato simmetrici, si dice che ubbidiscano alla \textbf{statistica di Bose-Einstein}, o che sono \textbf{bosoni}, delle particelle descritte da vettori di stato antisimmetrici, si dice che ubbidiscano alla \textbf{statistica di Fermi-Dirac}, ovvero che sono \textbf{fermioni}. Così, indicando con $P_{ij}$ l'operatore che scambia la i-esima e la j-esima particella si ha:
-\begin{eqnarray}
-&P_{ij} |N_{\textrm{bosoni identici}}\rangle= +|N_{\textrm{bosoni identici}}\rangle & \nonumber \\
-\\
-&P_{ij} |N_{\textrm{fermioni identici}}\rangle= -|N_{\textrm{fermioni identici}}\rangle & \nonumber
-\end{eqnarray}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+		\begin{aligned}
+			&P_{ij} |N_{\textrm{bosoni identici}}\rangle= +|N_{\textrm{bosoni identici}}\rangle  \\
+			&P_{ij} |N_{\textrm{fermioni identici}}\rangle= -|N_{\textrm{fermioni identici}}\rangle 
+		\end{aligned}
+		}
+	\end{equation}\\
+	
 Utilizzando le leggi della meccanica quantistica relativistica è possibile mostrare che l\textbf{a statistica cui obbediscono le particelle è univocamente legata al loro spin: le particelle con spin intero sono bosoni, quelle con spin semintero sono fermioni.}\\
-È semplice generalizzare le espressioni \ref{eq:cap20_4} al caso di sistemi con un numero arbitrario di particelle identiche. Nel caso generale di un sistema con un numero arbitrario di \textbf{N bosoni identici}, il vettore di stato normalizzato è:\\
-\begin{equation}
-|\psi\rangle= \left(\frac{N_{1}! N_{2}!\dots}{N!}\right)^{1/2} \begin{matrix} \sum_{k=1}^N |p^k\rangle_{k} \end{matrix}, \\
-\end{equation}
+
+È semplice generalizzare le espressioni (\ref{eq:cap20_4}) al caso di sistemi con un numero arbitrario di particelle identiche. Nel caso generale di un sistema con un numero arbitrario di \textbf{N bosoni identici}, il vettore di stato normalizzato è:\\
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			|\psi _S\rangle= \left(\frac{N_{1}! N_{2}!\,\dots}{N!}\right)^{1/2}   \sum  |p^1\rangle_{1} |p^2\rangle_{2} \dots |p^N\rangle_{N} , 
+			}
+	\end{equation}
 dove $|p^{(k)}\rangle_i$ rappresenta il ket della particella i-esima che si trova nello stato $p^k$, la somma \`e estesa a tutte le permutazioni distinte degli indici $p^{(1)}...p^{(N)}$, ed il numero $N_{k}$ indica quante volte il valore $p^{(k)}$ compare nella combinazione sotto il segno di somma.\\
-Per un sistema di \textbf{N fermioni identici} il vettore di stato \`e la combinazione antisimmetrica dei prodotti $|p^1\rangle_1...|p^N\rangle_N$. Questa combinazione pu\`o essere scritta nella forma di determinante:\\
-\begin{equation}
-|\psi\rangle= \frac{1}{\sqrt{N}} \begin{vmatrix} |p_{1}\rangle_1 & |p_{1}\rangle_2 & ... & |p_{1}\rangle_N \\|p_{2}\rangle_1 & |p_{2}\rangle_2 & ... & |p_{2}\rangle_N \\ ... & ... & ... & ... \\ ... & ... & ... & ... \\ ... & ... & ... & ... \\|p_{N}\rangle_1 & |p_{N}\rangle_2 & ... & |p_{N}\rangle_N\end{vmatrix}.
-\label{eq:cap20_5}
-\end{equation}
+
+Per un sistema di \textbf{N fermioni identici} il vettore di stato \`e la combinazione antisimmetrica dei prodotti $|p^1\rangle_1...|p^N\rangle_N$. Questa combinazione pu\`o essere scritta nella forma di determinante:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			|\psi _A\rangle= \frac{1}{\sqrt{N}} \begin{vmatrix} |p_{1}\rangle_1 & |p_{1}\rangle_2 & ... & |p_{1}\rangle_N \\|p_{2}\rangle_1 & |p_{2}\rangle_2 & ... & |p_{2}\rangle_N \\ ... & ... & ... & ... \\ ... & ... & ... & ... \\ ... & ... & ... & ... \\|p_{N}\rangle_1 & |p_{N}\rangle_2 & ... & |p_{N}\rangle_N\end{vmatrix}.
+			}
+	\label{eq:cap20_5}
+	\end{equation}\\
+	
 Allo scambio di due particelle corrisponde in questo caso lo scambio di due colonne dal determinante, ciò che causa il cambiamento di segno di quest'ultimo.\\
-Dall'espressione \ref{eq:cap20_5} segue un risultato importante: se fra gli indici $p_1, p_2...$ ve ne sono due identici, due righe del determinante risulteranno identiche e quindi esso si annulla identicamente \textbf{Di conseguenza, in un sistema di fermioni identici due (o pi\`u) particelle non possono trovarsi in uno stesso stato.} Questo è il cosiddetto \textbf{principio di Pauli.} Nel caso particolare di un sistema costituito da due soli fermioni identici, ad esempio, l'espressione \ref{eq:cap20_4} mostra come il vettore di stato antisimmetrico si annulla identicamente quando i due fermioni si trovano nello stesso stato: $|a\rangle= |b\rangle$.\\
+
+Dall'espressione (\ref{eq:cap20_5}) segue un risultato importante: se fra gli indici $p_1, p_2...$ ve ne sono due identici, due righe del determinante risulteranno identiche e quindi esso si annulla identicamente \textbf{Di conseguenza, in un sistema di fermioni identici due (o pi\`u) particelle non possono trovarsi in uno stesso stato.} Questo è il cosiddetto \textbf{principio di Pauli.} Nel caso particolare di un sistema costituito da due soli fermioni identici, ad esempio, l'espressione \ref{eq:cap20_4} mostra come il vettore di stato antisimmetrico si annulla identicamente quando i due fermioni si trovano nello stesso stato: $|a\rangle= |b\rangle$.\\
+
 La proprietà di simmetria di un vettore di stato per un sistema di particelle identiche deve conservarsi invariata nel tempo. Così, ad esempio, un vettore di stato simmetrico all'istante iniziale t=0, deve risultare simmetrico a qualunque istante di tempo successivo. \textbf{Questa circostanza è garantita dal fatto che l'operatore hamiltoniano per un sistema composto da N particelle identiche commuta con l'operatore di scambio $P_{i}$ di una coppia qualunque di particelle i e j del sistema:}\\
-\begin{equation}
-\left [ H, P_{ij}\right ]=0
-\end{equation}
-Per dimostrare questa relazione limitiamoci a considerare, per semplicit\`a, un sistema costituito da una sola coppia di particelle identiche. Indichiamo poi con $\xi_{1}$ e $\xi_{2}$ gli insiemi delle tre coordinate e della proiezione dello spin di ciascuna delle particelle. Possiamo allora introdurre la funzione d'onda del sistema:\\
-\begin{equation}
-|\psi_{\alpha}(\xi_1 \xi_2)\rangle =\langle(\xi_1, \xi_2)|\alpha\rangle ,
-\end{equation}
-e l'espressione dell'hamiltoniano del sistema del sistema nella rappresentazione delle coordinate e dello spin:
-\begin{equation}
-\langle \xi_1 \xi_2 |H|\alpha \rangle = H(\xi_1 \xi_2)\langle \xi_1 \xi_2 |\alpha \rangle =  H(\xi_1 \xi_2)\psi_{\alpha}(\xi_1 \xi_2) .
-\end{equation}
-L'espressione dell'operatore H($\xi_1, \xi_2$) sarà della forma:
-\begin{equation}
-H(\xi_1, \xi_2) = \frac{-\hbar^2}{2m}\bigtriangledown_1^2-\frac{-\hbar^2}{2m}\bigtriangledown_2^2+V(x_1, S_1)+V(x_2,S_2)+U(x_1,x_2,S_1,S_2) .
-\end{equation}
-È evidente che, \textbf{in virtù dell'identità della particella, l'operatore H($\xi_1, \xi_2$) dovrà essere simmetrico rispetto allo scambio simultaneo delle coordinate spaziali e delle variabili di spin delle due particelle:}
-\begin{equation}
-H(\xi_1, \xi_2)=H(\xi_2, \xi_1)
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\left [ H, P_{ij}\right ]=0.
+			 }
+	\end{equation}\\
+	
+Per dimostrare questa relazione limitiamoci a considerare, per semplicit\`a, un sistema costituito da una sola coppia di particelle identiche. Indichiamo poi con $\xi_{1}$ e $\xi_{2}$ gli insiemi delle tre coordinate e della proiezione dello spin di ciascuna delle particelle. Possiamo allora introdurre la funzione d'onda del sistema:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			|\psi_{\alpha}(\xi_1 \xi_2)\rangle =\langle(\xi_1, \xi_2)|\alpha\rangle ,
+			}
+	\end{equation}
+e l'espressione dell'hamiltoniano del sistema del sistema nella rappresentazione delle coordinate e dello spin sarà della forma:
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+		\begin{aligned}
+			H(\xi_1, \xi_2) = \frac{-\hbar^2}{2m}\nabla_1^2&-\frac{-\hbar^2}{2m}\nabla_2^2+V(x_1, S_1)+ \\
+			&\quad \quad +V(x_2,S_2)+U(x_1,x_2,S_1,S_2) .
+		\end{aligned}
+			}
+	\end{equation}
+È evidente che, \textbf{in virtù dell'identità della particella, l'operatore $H$($\xi_1, \xi_2$) dovrà essere simmetrico rispetto allo scambio simultaneo delle coordinate spaziali e delle variabili di spin delle due particelle:}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			H(\xi_1, \xi_2)=H(\xi_2, \xi_1)
+			}
+	\end{equation}
 Questa proprietà comporta allora:
-\begin{eqnarray}
-\langle \xi_1 \xi_2|P_{12}H|\alpha\rangle &=& \langle \xi_2 \xi_1|H|\alpha\rangle=H(\xi_2 \xi_1)\langle \xi_2 \xi_1|\alpha\rangle= \nonumber \\
-&=& H(\xi_1 \xi_2)\langle \xi_1 \xi_2|P_{12}|\alpha\rangle=\langle \xi_1 \xi_2|HP_{12}|\alpha\rangle .
-\end{eqnarray}
+	\begin{equation}
+		P_{12}\,H(\xi _1 ,\xi_2)\, \psi (\xi _1 ,\xi _2) = H(\xi _2 ,\xi_1)\, \psi (\xi _2 ,\xi _1)  = H(\xi _1 ,\xi_2)\, P_{12}\,\psi (\xi _1, \xi _2).
+	\end{equation}
 Poiché questa relazione risulta valida per un vettore di stato arbitrario $|\alpha\rangle$ essa deve corrispondere ad un'identità operatoriale, che possiamo scrivere quindi nella forma:
-\begin{equation}
-\left [ H, P_{12}\right ]=0 .
-\end{equation}
-In virtù di questa relazione, per un vettore di stato al tempo generico t, ottenuto evolvendo un vettore di stato rispettivamente simmetrico o antisimmetrico al tempo iniziale t=0, troviamo
-\begin{equation}
-P_{12}|\psi_{S,A}(t)\rangle= P_{12}e^{-\frac{iHt}{\hbar}}|\psi_{S,A}(0)\rangle=e^{
-{-\frac{iHt}{\hbar}}
-}P_{12}|\psi_{S,A}(0)\rangle=\\\pm e^{-\frac{iHt}{\hbar}}|\psi_{S,A}(0)\rangle ,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\left [ H, P_{12}\right ]=0 .
+			}
+	\end{equation}\\
+In virtù di questa relazione, per un vettore di stato al tempo generico $t$, ottenuto evolvendo un vettore di stato rispettivamente simmetrico o antisimmetrico al tempo iniziale t=0, troviamo
+	\begin{equation}
+		P_{12}|\psi_{S,A}(t)\rangle= P_{12}\,e^{-\frac{i}{\hbar}Ht}|\psi_{S,A}(0)\rangle=e^{-\frac{i}{\hbar}Ht}\,P_{12}|\psi_{S,A}(0)\rangle= \pm e^{-\frac{i}{\hbar}Ht}|\psi_{S,A}(0)\rangle ,
+	\end{equation}
 ossia:
-\begin{equation}
-P_{12}|\psi_{S,A}(t)\rangle= \pm |\psi_{S,A}(t)\rangle .
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			P_{12}|\psi_{S,A}(t)\rangle= \pm |\psi_{S,A}(t)\rangle .
+			}
+	\end{equation}
 Le proprietà di simmetria dei vettori di stato restano dunque costanti nel tempo.
-\section{Funzioni d'onda per un sistema\\ composto da due particelle identiche\\ ed interazione di scambio}
-Consideriamo la f.d.o. $\psi_{\xi_1 \xi_2}$ per un sistema composto da due particelle identiche rispettivamente bosoni o fermioni. Possiamo osservare che valgono le seguenti relazioni:
-\begin{eqnarray}
-& &\psi_S (\xi_2, \xi_1) =\langle \xi_2, \xi_1|\psi_S\rangle= \langle \xi_1, \xi_2|P_{12}|\psi_S\rangle=\langle \xi_1, \xi_2|\psi_S|P_{12}\rangle  , \\ 
-\nonumber \\
-& & \psi_A (\xi_2, \xi_1) =\langle \xi_2, \xi_1|\psi_S\rangle= \langle \xi_1, \xi_2|P_{12}|\psi_S\rangle=-\langle \xi_1, \xi_2|\psi_S|P_{12}\rangle ,
-\end{eqnarray}
+\section{Funzioni d'onda per un sistema  composto da due particelle identiche  ed interazione di scambio}
+Consideriamo la f.d.o.~$\psi_{S,A} (\xi_1 ,\xi_2)$ per un sistema composto da due particelle identiche rispettivamente bosoni o fermioni. Possiamo osservare che valgono le seguenti relazioni:
+	\begin{align}
+		& \psi_S (\xi_2, \xi_1) =\langle \xi_2, \xi_1|\psi_S\rangle= \langle \xi_1, \xi_2|P_{12}|\psi_S\rangle=~\langle \xi_1, \xi_2|\psi_S \rangle  , \\[0.3cm] 
+		& \psi_A (\xi_2, \xi_1) =\langle \xi_2, \xi_1|\psi_S\rangle= \langle \xi_1, \xi_2|P_{12}|\psi_S\rangle=-\langle \xi_1, \xi_2|\psi_S\rangle ,
+	\end{align}
 da cui
-\begin{eqnarray}
-& &\psi_S (\xi_2, \xi_1) = +|\psi_S(\xi_1, \xi_2)\rangle ,\\
- \nonumber \\
-& &\psi_A (\xi_2, \xi_1) = -|\psi_A(\xi_1, \xi_2)\rangle .
-\end{eqnarray}
-\textbf{Pertanto le f.d.o. corrispondenti agli stati simmetrici ed antisimmetrici dei sistemi costituiti da una coppia di particelle identiche risultano rispettivamente simmetriche ed antisimmetriche rispetto allo scambio simultaneo delle coordinate spaziali e delle variabili di spin delle due particelle.}\\
-\textbf{Osserviamo che per un sistema di particelle interagenti elettricamente, in assenza di campo magnetico, la hamiltoniana non dipende dagli operatori di spin.} Quindi l'equazione di Schr\"{o}dinger è soddisfatta da ogni componente di spin della funzione d'onda. In altre parole, la funzione d'onda di un sistema di particelle identiche può essere scritta in forma di prodotto di una funzione $\phi(x_1, x_2...)$, dipendente soltanto dalle coordinate delle particelle, e di una funzione $\chi(\sigma_1,\sigma_2,...)$ dipendente soltanto dallo spin. Per cui un sistema di due particelle si ha ad esempio:
-\begin{equation}
-|\psi(\xi_1, \xi_2)\rangle= \phi(x_1, x_2)\chi(\sigma_1, \sigma_2) .
-\end{equation}
-In questi casi l'equazione di Schr\"{o}dinger determina soltanto la funzione delle coordinate $\phi$. Sebbene l'interazione elettrica delle particelle sia indipendente dal loro spin, \textbf{esiste} tuttavia u\textbf{na dipendenza peculiare dell'energia del sistema dal suo spin totale che è originata}, in ultima analisi, dal \textbf{principio di indistinguibilità delle particelle identiche.}\\
+	\begin{align}
+		&\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\psi_S (\xi_2, \xi_1) = +|\psi_S(\xi_1, \xi_2)\rangle ,
+		}\\[0.3cm]
+		&\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\psi_A (\xi_2, \xi_1) = -|\psi_A(\xi_1, \xi_2)\rangle ;
+		}
+	\end{align}
+\textbf{pertanto le f.d.o.~corrispondenti agli stati simmetrici ed antisimmetrici dei sistemi costituiti da una coppia di particelle identiche risultano rispettivamente simmetriche ed antisimmetriche rispetto allo scambio simultaneo delle coordinate spaziali e delle variabili di spin delle due particelle.}\\
+
+Osserviamo che \textbf{per un sistema di particelle interagenti elettricamente, in assenza di campo magnetico, la hamiltoniana non dipende dagli operatori di spin.} Quindi l'equazione di Schr\"{o}dinger è soddisfatta da ogni componente di spin della funzione d'onda. In altre parole, la funzione d'onda di un sistema di particelle identiche può essere scritta in forma di prodotto di una funzione $\varphi(\vec{x}_1, \vec{x}_2...)$, dipendente soltanto dalle coordinate delle particelle, e di una funzione $\chi(\sigma_1,\sigma_2,...)$ dipendente soltanto dallo spin. Per cui un sistema di due particelle si ha ad esempio:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\psi(\xi_1, \xi_2)= \varphi(\vec{x}_1, \vec{x}_2)\chi(\sigma_1, \sigma_2) .
+			}
+	\end{equation}
+In questi casi l'equazione di Schr\"{o}dinger determina soltanto la funzione delle coordinate $\varphi$.\\
+
+Sebbene l'interazione elettrica delle particelle sia indipendente dal loro spin, \textbf{esiste} tuttavia u\textbf{na dipendenza peculiare dell'energia del sistema dal suo spin totale che è originata}, in ultima analisi, dal \textbf{principio di indistinguibilità delle particelle identiche.}\\
+
 Consideriamo un sistema composto da due particelle identiche per il quale la hamiltoniana sia indipendente dagli operatori di spin della particella. Risolvendo l'equazione di Schr\"{o}dinger troviamo una serie di livelli energetici a ciascuno dei quali corrisponde una determinata f.d.o. delle coordinate simmetrica o antisimmetrica:
-\begin{equation}
-\phi_{S,A}(x_2,x_1)= \pm \phi_{S,A}(x_1,x_2) .
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			\varphi_{S,A}(\vec{x}_2,\vec{x}_1)= \pm \varphi_{S,A}(\vec{x}_1,\vec{x}_2) .
+			}
+	\end{equation}
 Infatti, a causa dell'identità delle particelle, la hamiltoniana è invariante rispetto allo scambio di esse.\\
-Supponiamo dapprima che le particelle abbiano \textbf{spin nullo}. Il fattore di spin per tali particelle non esiste affatto, e la f.d.o. si riferisce alla sola funzione delle coordinate $\varphi(x_1, x_2)$, che deve essere simmetrica poiché le particelle ubbidiscono alla \textbf{statistica di Bose}. Così \textbf{non tutti i livelli energetici si ottengono dalla soluzione formale della equazione di Schr\"{o}dinger possono realmente esistere. Quelli di essi, a cui corrispondono funzioni $\phi$ antisimmetriche, sono impossibili per il sistema considerato.}\\
-Supponiamo ora che il sistema sia costituito da due particelle con \textbf{spin $1/2$} (per esempio, da elettroni). Allora la f.d.o. totale del sistema (cioè il prodotto della funzione $\varphi(x_1,x_2)$ con la funzione di spin $\chi(\sigma_1, \sigma_2)$ deve essere necessariamente antisimmetrica rispetto allo scambio delle due particelle. Quindi \textbf{se la funzione delle coordinate è simmetrica la funzione di spin deve essere antisimmetrica e viceversa.}\\
+
+Supponiamo dapprima che le particelle abbiano \textbf{spin nullo}. Il fattore di spin per tali particelle non esiste affatto, e la f.d.o. si riferisce alla sola funzione delle coordinate $\varphi(\vec{x}_1, \vec{x}_2)$, che deve essere simmetrica poiché le particelle ubbidiscono alla \textbf{statistica di Bose}. Così \textbf{non tutti i livelli energetici si ottengono dalla soluzione formale della equazione di Schr\"{o}dinger possono realmente esistere. Quelli di essi, a cui corrispondono funzioni $\phi$ antisimmetriche, sono impossibili per il sistema considerato.}\\
+
+Supponiamo ora che il sistema sia costituito da due particelle con \textbf{spin $1/2$} (per esempio, da elettroni). Allora la f.d.o.~ totale del sistema (cioè il prodotto della funzione $\varphi(\vec{x}_1,\vec{x}_2)$ con la funzione di spin $\chi(\sigma_1, \sigma_2)$ deve essere necessariamente antisimmetrica rispetto allo scambio delle due particelle. Quindi \textbf{se la funzione delle coordinate è simmetrica la funzione di spin deve essere antisimmetrica e viceversa.}\\
+
 Sappiamo che per un sistema costituito da due particelle di spin $1/2$ la funzione d'onda di spin simmetrica descrive un sistema con spin totale uguale ad 1 (\textbf{tripletto}) e la funzione antisimmetrica corrisponde allo spin 0 (\textbf{singoletto}). Si hanno quindi le seguenti possibilità:
-\begin{eqnarray}
-& &\varphi_S(x_1,x_2)\chi_A(\sigma_1,\sigma_2)\qquad \qquad \chi_A=\frac{1}{\sqrt{2}}(\chi_+\chi_--\chi_-\chi_+) , \\
-\nonumber \\
-& &\varphi_S(x_1,x_2)\chi_S(\sigma_1,\sigma_2)\qquad \qquad \chi_S=
-\begin{cases}
-\chi_+\chi_- , \\
-\frac{1}{\sqrt{2}}(\chi_+\chi_-+\chi_-\chi_+), \\
-\chi_-\chi_-.
-\end{cases} 
-\end{eqnarray}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+		\begin{aligned}
+			& \varphi_S(\vec{x}_1,\vec{x}_2)\chi_A(\sigma_1,\sigma_2)\qquad \qquad \chi_A=\frac{1}{\sqrt{2}}(\chi_+\chi_--\chi_-\chi_+) , \\[0.3cm]
+			& \varphi_S(\vec{x}_1,\vec{x}_2)\chi_S(\sigma_1,\sigma_2)\qquad \qquad \chi_S=
+			\begin{cases}
+			\chi_+\chi_- , \\
+			\frac{1}{\sqrt{2}}(\chi_+\chi_-+\chi_-\chi_+), \\
+			\chi_-\chi_-.
+			\end{cases}
+			\end{aligned}
+		} 
+	\end{equation}
 In altri termini, i livelli energetici cui corrispondono le soluzioni simmetriche dell'equazione di Schr\"{o}dinger possono di fatto esistere se lo spin totale del sistema è uguale a zero, mentre i livelli energetici corrispondenti a funzioni antisimmetriche richiedono che lo spin totale sia uguale ad 1.\\
+
 La circostanza per cui i valori energetici possibili di un sistema di elettroni risultano dipendenti dallo spin totale ci permette di parlare di una interazione peculiare della particella che porta questa dipendenza. Tale interazione si chiama \textbf{interazione di scambio}.
 \end{document}
