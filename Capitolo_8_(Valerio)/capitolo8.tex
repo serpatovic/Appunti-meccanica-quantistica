@@ -4,7 +4,7 @@ Nella meccanica quantistica il vettore di stato (o equivalentemente la funzione 
 
 Consideriamo un sistema fisico descritto, ad un certo istante di tempo $t_0$, dal vettore di stato $\vert \alpha, t_0 \rangle$. In generale lo stato del sistema evolverà nel tempo e sarà descritto, a ciascun istante di tempo successivo, $t>t_0$, dal vettore $\vert \alpha, t\rangle$. Poiché il vettore di stato $\vert \alpha, t \rangle$ deve essere determinato univocamente dal vettore di stato al tempo iniziale $\vert \alpha, t \rangle$, possiamo definire una relazione tra i due vettori nella forma:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{	
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{	
 			\vert \alpha, t \rangle = U(t,t_0)\vert \alpha, t_0 \rangle,
 			}
 	\end{equation}
@@ -17,28 +17,28 @@ Per la \textbf{conservazione della probabilità}, il vettore di stato deve riman
 	\end{equation}
 Questo comporta pertanto che  \textbf{l'operatore di evoluzione temporale} debba essere \textbf{unitario}:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			U^+ (t,t_0)\, U(t,t_0)=1.
 			}
 	\end{equation}\\
 	
 Evidentemente, nel limite $t\longrightarrow t_0$ l'operatore di traslazione temporale deve ridursi all'operatore identità. Inoltre, l'evoluzione temporale da $t_0$ a $t_1$ seguita dall'evoluzione temporale da $t_1$ a $t_2$ deve essere equivalente all'evoluzione dal tempo $t_0$ al tempo $t_2$ direttamente:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			U (t_2,t_1) U(t_1,t_0)=U(t_2,t_0).
 			}
 	\end{equation}\\
 	
 Queste proprietà consentono di dedurre una semplice espressione per \textbf{l'operatore\hyphenation{l'o-per-a-tor-e} di evoluzione temporale infinitesimo}:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			U(t_0+dt,t_0) = 1-i\Omega dt,
 			}
 		\label{eq:cap8_1}
 	\end{equation}
 dove, in virtù della condizione di unitarietà di $U$, l'operatore $\Omega$ è hermitiano:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\Omega ^+ = \Omega.
 			}
 	\end{equation}\\
@@ -54,13 +54,13 @@ ottenibile dalla funzione generatrice:
 \end{equation}
 Ricordando che $\sum _i q_iP_i$ è la funzione generatrice della trasformazione identità, dal confronto delle eq. (\ref{eq:cap8_1}) e (\ref{eq:cap8_2}) siamo indotti a formulare l'ipotesi che l'operatore hermitiano $\Omega$ concida, a meno di un fattore di proporzionalità, con l'\textbf{operatore hamiltoniano} del sistema. L'inverso della costante di proporzionalità ha le dimensioni di un'azione e risulta essere uguale alla constante di Planck, $\hbar$. Dunque:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 		\Omega = \frac{H}{\hbar},
 		}
 	\end{equation}
 e con questa identificazione:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			U(t_0+dt,t_0) =1-\frac{i}{\hbar}Hdt.
 			}
 	\end{equation}
@@ -72,7 +72,7 @@ L'espressione derivata per l'operatore di evoluzione temporale infinitesima può
 	\end{align}
 Dividendo entrambi i membri di questa equazione per $dt$ e considerando il limite $dt \longrightarrow 0$, si ottiene quindi:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			i\hbar \frac{\partial}{\partial t} U (t, t_0)= H U(t,t_0).
 			}
 	\label{eq:cap8_3}
@@ -85,7 +85,7 @@ Ad un'analoga equazione pet i vettori di stato di giunge applicando entrambi i m
 	\end{equation}
 Poiché $\vert \alpha, t_0\rangle$ non dipende dal tempo t, possiamo espreimere questa relazione in termini del vettore di stato al tempo $t$, $\vert \alpha, t\rangle= U(t,t_0)\vert \alpha, t_0\rangle$. Si ottiene così:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 		i\hbar \frac{\partial}{\partial t} \vert \alpha, t \rangle = H \vert \alpha, t \rangle.
 		}
 	\end{equation}
@@ -93,13 +93,13 @@ Questa equazione fondamentale della meccanica quantistica è detta \textbf{equaz
 \section[Stati stazionari]{Stati stazionari}
 \textbf{L'hamiltoniano di un sistema isolato, o di un sistema che si trova in un campo esterno costante e non variabile non può contenere il tempo esplicitamente.} Ciò risulta dal fatto che tutti gli istanti di tempo sono equivalenti rispetto a tale sistema fisico. \textbf{Per tali sistemi, la soluzione dell'equazione di Schr\"{o}dinger assume una forma particolarmente semplice}. L'operatore di evoluzione temporale è infatti:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 		U(t,t_0)= e^{-i\frac{i}{\hbar}H(t-t_0)},
 		}
 	\end{equation}
 ed i vettori di stato si scrivono nella forma:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\vert \alpha, t \rangle = e^{-i\frac{i}{\hbar}H(t-t_0)}\vert \alpha, t_0 \rangle.
 			}
 	\end{equation}
@@ -107,20 +107,20 @@ Queste conclusioni possono essere verificate per sostituzione diretta nell'equaz
 
 Se l'hamiltoniano di un sistema fisico non dipende esplicitamente dal tempo, risulta possibile considerare, per tale sistema, \textbf{gli stati in cui l'energia assume un valore determinato}. Questi stato sono detti \textbf{stati stazionari} e corrispondono agli autostati dell'operatore hamiltoniano, soddisfano cioè l'equazione agli autovalori:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H|n\rangle = E_n |n \rangle.
 			}
 	\end{equation}\\
 	
 Consideriamo l'equazione di Schr\"{o}dinger per uno stato stazionario:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			i\hbar \frac{\partial}{\partial t}|n,t\rangle = H |n,t \rangle = E_n |n, t \rangle.
 			}
 	\end{equation}
 Questa equazione può \textbf{essere integrata direttamente rispetto al tempo, e dà}
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{	
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{	
 			|n,t\rangle = e^{-\frac{i}{\hbar}E_n t}\vert n, 0\rangle,
 			}
 	\label{eq:cap8_4}
@@ -140,19 +140,19 @@ Pertanto \textbf{il valore di aspettazione di un'osservabile in un autostato del
 
 Un generico vettore di stato $\vert \alpha \rangle $ può essere sviluppato in autostati dell'energia. All'istante iniziale $t=0$ tale sviluppo ha la forma:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\vert \alpha , t=0\rangle = \sum _n \vert n \rangle \langle n \vert \alpha, t=0 \rangle = \sum _n c_n(0)\vert n \rangle.
 			}
 	\end{equation}
 Questo sviluppo consente di derivare una semplice espressione per lo stato evoluto ad un tempo $t$ successivo. A tale scopo è sufficiente applicare allo stato l'operatore di \textbf{evoluzione temporale}:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\vert \alpha, t \rangle = U (t,0)\vert \alpha, t=0 \rangle = \sum _n c_n (0) e^{-\frac{i}{\hbar}H t}  \vert n \rangle =  =\sum _n c_n (0) e^{-\frac{i}{\hbar}E_n t}  \vert n \rangle.
 			}
 	\end{equation}
 In altre parole il generico coefficiente dello sviluppo varia nel tempo come:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			c_n (t=0) \rightarrow c_n(t)=e^{-\frac{i}{\hbar}E_n t} c_n (0).
 			}
 	\end{equation}\\
@@ -163,7 +163,7 @@ Il formalismo sin qui sviluppato si estende facilmente al caso in cui gli autova
 \section[ Equazione d'onda di Schrödinger]{Equazione d'onda di Schr\"{o}dinger}
 Esaminiamo l'\textbf{evoluzione temporale dei vettori di stato nella rappresentazione delle coordinate}. In altre parole studiamo il comportamento della funzione d'onda
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 		\psi (\vec{x'}, t) = \langle \vec{x'}\vert \alpha, t \rangle
 		}
 	\end{equation}
@@ -171,7 +171,7 @@ come funzione del tempo.\\
 
 La forma specifica dell'equazione di Schr\"{o}dinger di un sistema fisico è determinata dal suo hamiltoniano, che acquista perciò un'importanza fondamentale in tutto l'apparato della meccanica quantistica. In perfetta corrispondenza con l'espressione classica, in meccanica quantistica \textbf{l'hamiltoniano di una particella sottoposta ad un campo esterno è}
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H= \frac{\vec{p}^{\ 2}}{2m}+V(\vec{x}),
 			}
 	\label{eq:cap8_5}
@@ -196,7 +196,7 @@ Quanto al contributo dell'energia potenziale si ha semplicemente:
 	\end{equation}
 dove $V(\vec{x'})$ non è più un operatore. Raccogliendo i vari termini otteniamo l'\textbf{equazione d'onda per una particella sottoposta ad un campo esterno}:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			i\hbar \frac{\partial \psi}{\partial t} = H\psi = -\frac{\hbar ^2}{2m}{\nabla '} ^2 \psi + V(\vec{x'}) \psi,
 			}
 \end{equation}
@@ -208,13 +208,13 @@ Nella rappresentazione delle coordinate, l'equazione agli autovalori che determi
 	\end{equation}
 indicando con
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\psi _n ({\vec{x}}^{\, \prime}) = \langle {\vec{x}}^{\, \prime} \vert n \rangle
 			}
 	\end{equation}
 le autofunzioni dell'operatore \textbf{hamiltoniano corrispondenti agli autovalori $E_n$}, ed assumendo per $H$ l'espressione (\ref{eq:cap8_5}) otteniamo:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H\psi _n = -\frac{\hbar ^ 2}{2m}{{\nabla '}^{\, 2}} \psi _n + V({\vec{x}}^{\, \prime})\psi _n = E_n \psi _n.
 			}
 	\end{equation}
@@ -238,7 +238,7 @@ per gli autostati dello spettro continuo, implica che \textbf{l'integrale}
 
 Consideriamo l'equazione di Schr\"{o}dinger indipendente del tempo per una \textbf{particella libera}:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			-\frac{\hbar ^2}{2m}\nabla ^2 \psi = E\psi.
 			}
 	\end{equation}
@@ -253,16 +253,16 @@ come si può stabilire per sostituzione diretta nell'equazione. Per la particell
 ed ammettono pertanto una base di autostati in comune.\\
 \textbf{Le f.d.o.~totali} (dipendenti dal tempo) degli stati stazionari della particella libera hanno la forma:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\psi (\vec{x'}, t) = c\ e^{-\frac{i}{\hbar} (Et - \vec{p}\cdot \vec{x'})},} \qquad E={\vec{p}}^{\ 2}/{2m}.
 	\label{eq:cap8_6}
 	\end{equation}
 Ogni funzione di questo tipo, descrivente un'\textbf{onda piana}, descrive uno stato in cui la particella ha energia $E$ e quantità di moto $\vec{p}$ determinate. La frequenza di quest'onda ed il suo vettore d'onda sono
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 		\omega = \frac{E}{\hbar},
 		} \quad 
-	\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+	\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 		\vec{k}= \frac{\vec{p}}{\hbar},
 		}
 	\end{equation}
@@ -272,7 +272,7 @@ Lo spettro energetico di una particella libera è \textbf{quindi continuo e si e
 \section[Densità di corrente ed equazione di continuità]{Densità di corrente ed equazione di continuità}
 L'integrale del modulo quadro della f.d.o. esteso ad un valore finito è la probabilità di trovare la particella in questo valore. Pertanto la quantità
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\rho (\vec{x}, t) = \vert \psi (\vec{x},t) \vert ^2 = \vert \langle \vec{x}\vert \alpha, t \rangle \vert ^2
 				}
 	\end{equation}
@@ -292,13 +292,13 @@ Si ottiene allora
 	\end{align}
 Ponendo
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\vec{j}=\frac{i\hbar}{2m} \left(\psi ^* \vec{\nabla} \psi - \psi \vec{\nabla} \psi ^* \right)= \frac{\hbar}{m}\ \textrm{Im}\left\{\psi ^* \vec{\nabla}\psi \right\},
 			}
 	\end{equation}
 troviamo che il vettore $\vec{j}$ e la densità di probabilità $\rho$ soddisfano l'equazione
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\frac{\partial \rho}{\partial t}+ \vec{\nabla}\cdot\vec{j}=0,
 				}
 	\end{equation}
@@ -314,13 +314,13 @@ L'interpretazione fisica dell'equazione di continuità può risultare più chiar
 
 Per la f.d.o.~della \textbf{particella libera}, normalizzata come:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\psi  =  e^{-\frac{i}{\hbar} (Et - \vec{p}\cdot \vec{x'})}
 			}
 	\end{equation}
 la densità di corrente risulta
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\vec{j}= \frac{\hbar}{m}\ \textrm{Im}\left\{\psi ^* \vec{\nabla}\psi \right\}= \frac{\vec{p}}{m},
 			}
 	\end{equation}
@@ -343,13 +343,13 @@ come si vede anche dalla figura.
 
 Un'altra possibile scelta per la normalizzazione dell'onda piana è
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{	
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{	
 			\psi  = \sqrt{\frac{m}{p}}\ e^{-\frac{i}{\hbar} (Et - \vec{p}\cdot \vec{x})},
 			}
 	\end{equation}
 che descrive la corrente di particelle con flusso unitario, ossia una particella attraversa in media l'unità di superficie nell'unità di tempo. In questo caso la densità di corrente è infatti
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\vec{j}=  \frac{\vec{p}}{p},
 			}
 	\end{equation}
