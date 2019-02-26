@@ -1,216 +1,287 @@
-\chapter[Composizione di momenti angolari]{Composizione di momenti angolari\footnote{S3.7, LL31}}
+\chapter[Composizione di momenti angolari]{Composizione di momenti angolari}
 Consideriamo un sistema composto da due parti. Il momento angolare totale di questo sistema, $\vec{J}$, può essere scritto come la somma dei momenti angolari $\vec{J_1}$ e $\vec{J_2}$ delle sue parti:
-\begin{align} \label{eq:cap19_01}
-\vec{J} = \vec{J_1} + \vec{J_2}.
-\end{align}
+	\begin{equation}
+		\label{eq:cap19_01}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\vec{J} = \vec{J_1} + \vec{J_2}.
+			}
+	\end{equation}\\
+	
 Se le due parti che costituiscono il sistema interagiscono tra loro, la legge di conservazione del momento angolare si applica soltanto al momento angolare totale $\vec{J}$, e non ai momenti angolari $\vec{J_1}$ e $\vec{J_2}$ presi separatamente.\\
+
 Considerazioni analoghe possono essere effettuate per un sistema con momento angolare di spin $\vec{S}$ diverso da zero. Per un tale sistema la legge di conservazione del momento angolare si applica (in generale) soltanto al momento angolare totale del sistema, composto dalla componente orbitale e dalla componente di spin:
-\begin{equation}
-\vec{J} = \vec{L} + \vec{S}.
-\end{equation}
-Nello studio di tali sistemi si pone il problema della legge di composizione dei momenti angolari. Quali sono i valori possibili di $j$ dati i valori di $j_1$ e $j_2$? \\
-Quanto alla legge di composizione delle proiezioni del momento angolare, essa è evidente: dal fatto che $J_z = J_{1z} + J_{2z}$ segue che 
-\begin{equation} \label{eq:cap19_02}
-m= m_1 + m_2.
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\vec{J} = \vec{L} + \vec{S}.
+			}
+	\end{equation}\\
+	
+Nello studio di tali sistemi si pone il problema della \textbf{legge di composizione dei momenti angolari}. Quali sono i valori possibili di $j$ dati i valori di $j_1$ e $j_2$? \\
+
+Quanto alla legge di composizione delle proiezioni del momento angolare, essa è evidente: dal fatto che $J_z = J_{1z} + J_{2z}$ segue anche che 
+	\begin{equation}
+		\label{eq:cap19_02}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			m= m_1 + m_2.
+			}
+	\end{equation}\\
+	
 Per dedurre la legge di composizione dei quadrati dei momenti angolari ragioniamo nel modo seguente: prendiamo come sistema completo di grandezze fisiche le grandezze
-\begin{equation}
-J_1^2 ,~ J_2^2 ,~ J_{1z} ,~ J_{2z} ,
-\end{equation}
-e una serie di altre grandezze che, con le quattro indicate, costituiscono un sistema completo. Poichè queste altre grandezze non intervengono nei ragionamenti successivi, per abbreviare le espressioni non le considereremo affatto.\\
-Ogni stato sarà determinato allora dai numeri $j_1 , ~ j_2 ,~ m_1 , ~ m_2$ e lo indicheremo pertanto con
-\begin{equation}
-| j_1 , ~ j_2 ,~ m_1 ,~ m_2 \rangle .
-\end{equation}
-Per $j_1$ e $j_2$, i numeri $m_1$ e $m_2$ assumono rispettivamente $(2 j_1 + 1)$ e $(2 j_2 + 1)$ 
-valori, cosicché si hanno in tutto
-\begin{equation} \label{eq:cap19_03}
-N= (2j_1 + 1) (2j_2 + 1) 
-\end{equation}
-stati diversi con gli stessi $j_1$ e $j_2$. \\
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			J_1^2 ,~ J_2^2 ,~ J_{1z} ,~ J_{2z} ,
+			}
+	\end{equation}
+e una serie di altre grandezze che, con le quattro indicate, costituiscono un sistema completo. Poiché queste altre grandezze non intervengono nei ragionamenti successivi, per abbreviare le espressioni non le considereremo affatto.\\
+
+Ogni stato sarà determinato allora dai numeri $j_1$, $j_2$, $m_1$, $ m_2$ e lo indicheremo pertanto con
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			| j_1 , ~ j_2 ,~ m_1 ,~ m_2 \rangle .
+			}
+	\end{equation}\\
+	
+Per $j_1$ e $j_2$ dati, i numeri $m_1$ e $m_2$ assumono rispettivamente $(2 j_1 + 1)$ e $(2 j_2 + 1)$ valori, cosicché \textbf{si hanno in tutto}
+	\begin{equation} \label{eq:cap19_03}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			N= (2j_1 + 1) (2j_2 + 1) 
+			}
+	\end{equation}
+\textbf{stati diversi con gli stessi $j_1$ e $j_2$}. \\
+
 In luogo delle quattro grandezze indicate si possono prendere anche. come sistema completo, le quattro grandezze:
-\begin{equation}
-J^2 ,~ J_z ,~ J_1^2 ,~ J_2^2 . 
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			J^2 ,~ J_z ,~ J_1^2 ,~ J_2^2 . 
+			}
+	\end{equation}
 Si trova infatti che, ad esempio, l'operatore $J_1^2$  commuta con $J_2^2$, come risulta evidente dall'espressione:
-\begin{align}
-J^2 = (\vec{J_1} + \vec{J_2})^2 = J_1^2 + J_2^2 + 2 (J_{1x} J_{2x} + J_{1y} J_{2y} + J_{1z} J_{2z}),
-\end{align}
+	\begin{align}
+		J^2 = (\vec{J_1} + \vec{J_2})^2 = J_1^2 + J_2^2 + 2 (J_{1x} J_{2x} + J_{1y} J_{2y} + J_{1z} J_{2z}),
+	\end{align}
 (sottolineiamo che gli operatori $\vec{J_1}$ e $\vec{J_2}$, agendo sui diversi sottospazi, commutano tra loro).\\
- In questo caso ogni stato sarà caratterizzato da valori dei numeri $j, ~  m, ~ j_1,~  j_2$ e lo indicheremo con
-\begin{center}
-$| j ,~ m,~j_1, ~ j_2 \rangle $ .
-\end{center}
+
+ In questo caso ogni stato sarà caratterizzato da valori dei numeri $j$, $m$, $j_1$, $j_2$ e lo indicheremo con
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			| j ,~ m,~j_1, ~ j_2 \rangle  .
+			}
+	\end{equation}\\
+	
 Dati $j_1$ e $j_2$ si debbono avere, ovviamente, come prima $N = (2j_1+1)(2j_2+1)$ stati diversi, cioè dati $j_1$ e $j_2$ la coppia di numeri $j$ ed $m$ può prendere $(2j_1+1)(2j_2+1)$ coppie di valori. Il ragionamento seguente permette di determinare questi valori.\\
-Il valore massimo possibile di $m$, in accordo con l'eq. \eqref{eq:cap19_02}, è $m = j_1 + j_2$ e a questo corrisponde un solo stato $| j_1 ,~ j_2,~m_1, ~ m_2 \rangle $ (coppia di valori $m_1$, $m_2$). Pertanto, il valore massimo possibile di m negli stati $\mid j ,~ m,~j_1, ~ j_2 > $  e, di conseguenza, il valore massimo di $j$ è $j_1 + j_2$. 
+
+Il valore massimo possibile di $m$, in accordo con l'eq.~\eqref{eq:cap19_02}, è $m = j_1 + j_2$ e a questo corrisponde un solo stato $| j_1 ,~ j_2,~m_1, ~ m_2 \rangle $ (coppia di valori $m_1$, $m_2$). Pertanto, il valore massimo possibile di m negli stati $\mid j ,~ m,~j_1, ~ j_2 \rangle $  e, di conseguenza, il valore massimo di $j$ è $j_1 + j_2$. 
 
 \begin{center}
-\begin{tabular}{c||c|c||c|c||c}
+\begin{tabular}{cc|c||c|cc}
 
 	& 	$m_1$&	$m_2$&	$m$&	$j$\\
 \cline{2-5}
 \cline{2-5}
-	1)&	$j_1$&	$j_2$&	$j_1+j_2$&	$j_1+j_2$&\\
+	1)&	$j_1$&	$j_2$&	$j_1+j_2$&	$j_1+j_2$&1)\\
 	
-\cdashline{2-5}
-\end{tabular}
+\cline{2-5}
+\end{tabular}\\
+\hspace*{0.5cm}
 \end{center}
+
 Esistono inoltre due stati i $| j_1 ,~ j_2,~m_1, ~ m_2 \rangle $ con $m= j_1 + j_2 -1$. Di conseguenza, ci debbomo essere ugualmente due stati $| j ,~ m,~j_1, ~ j_2 \rangle $ con questo valore di m. Uno di essi è lo stato con $j= j_1 + j_2$ (con $m=j-1$) e l'altro con $j= j_1+ j_2 -1$ (per $m=j$)
 \begin{center}
-\begin{tabular}{c||c|c||c|c||c}
+\begin{tabular}{cc|c||c|cc}
 
 	& 	$m_1$&	$m_2$&	$m$&	$j$\\
 \cline{2-5}
 \cline{2-5}
-	1)&	$j_1$&	$j_2-1$&	\multirow{2}{*}{$j_1+j_2-1$}&	$j_1+j_2$	&1)\\ \hhline{~--~-~}
+	1)&	$\begin{matrix}\makebox[\widthof{$j_1+j_2-1$}]{$j_1$}\end{matrix}$&	$\begin{matrix}\makebox[\widthof{$j_1+j_2-1$}]{$j_2-1$}\end{matrix}$&	\multirow{2}{*}{$j_1+j_2-1$}&	$j_1+j_2$	&1)\\ \hhline{~--~-~}
 	2)&	$j_1-1$&	$j_2$&	&$j_1+j_2-1$	&2)\\	
-\cdashline{2-5}
-\end{tabular}
-\captionof*{table}{\textit {~~Stati~$| j_1 ,~ j_2,~m_1, ~ m_2 \rangle $~~~~~~~~Stati~$| j ,~ m,~j_1, ~ j_2 \rangle $}}
+\cline{2-5}\\[-0.2cm]
+&\multicolumn{2}{c}{Stati $| j_1 ,  j_2, m_1,   m_2 \rangle $}&\multicolumn{2}{c}{Stati $| j ,  m, j_1,   j_2 \rangle $}&
+\end{tabular}\\
+\hspace*{0.5cm}
 \end{center}
-Per il valore $m= j_1 + j_2 -2$ esistono tre diversi stati $| j_1 ,~ j_2,~m_1, ~ m_2 \rangle $. Ciò significa che oltre ai valori $j= j_1 + j_2, j= j_1 + j_2 -1$ è possibile anche il valore $j= j_1 +j_2 -2$. \\
 
+Per il valore $m= j_1 + j_2 -2$ esistono tre diversi stati $| j_1 ,~ j_2,~m_1, ~ m_2 \rangle $. Ciò significa che oltre ai valori $j= j_1 + j_2, j= j_1 + j_2 -1$ è possibile anche il valore $j= j_1 +j_2 -2$.
 \begin{center}
-\begin{tabular}{c||c|c||c|c||c}
-
+\begin{tabular}{cc|c||c|cc}
 	& 	$m_1$&	$m_2$&	$m$&	$j$\\
 \cline{2-5}
 \cline{2-5}
-	1)&	$j_1$&	$j_2-2$&	\multirow{3}{*}{$j_1+j_2-2$}&	$j_1+j_2$	&1)\\ \hhline{~--~-~}
+	1)&	$\begin{matrix}\makebox[\widthof{$j_1+j_2-2$}]{$j_1$}\end{matrix}$&	$\begin{matrix}\makebox[\widthof{$j_1+j_2-1$}]{$j_1-2$}\end{matrix}$&	\multirow{3}{*}{$j_1+j_2-2$}&	$j_1+j_2$	&1)\\ \hhline{~--~-~}
 	2)&	$j_1-1$&	$j_2-1$&	&$j_1+j_2-1$	&2)\\	\hhline{~--~-~}
 	3)&	$j_1-2$&	$j_2$&	&$j_1+j_2-2$	&3)\\
-\cdashline{2-5}
-\end{tabular}
-\captionof*{table}{\textit {~~Stati~$| j_1 ,~ j_2,~m_1, ~ m_2 \rangle $~~~~~~~~Stati~$| j ,~ m,~j_1, ~ j_2 \rangle $~}}
+\cline{2-5}\\[-0.2cm]
+&\multicolumn{2}{c}{Stati $| j_1 ,  j_2, m_1,   m_2 \rangle $}&\multicolumn{2}{c}{Stati $| j ,  m, j_1,   j_2 \rangle $}&
+\end{tabular}\\
+\hspace*{0.5cm}
 \end{center}
-Questo ragionamento si può continuare nello stesso modo finché diminuendo m di 1 aumenta di 1 il numero di stati con il dato valore di m. E' facile capire che ciò si verifica finché, assumendo ad esempio $j_1 \geq j_2$,m non raggiunge il valore $j_1-j_2$. Diminuendo ulteriormente m, il numero di stati cessa di crescere, restando uguale a $2j_2+1$; il valore di $m_2$ infatti, non può essere minore di $-j_2$. Ciò significa che $j_1-j_2$, o in generale $|j_1-j_2|$, è il valore minimo possibile di $j$. \\
+
+Questo ragionamento si può continuare nello stesso modo finché diminuendo $m$ di 1 aumenta di 1 il numero di stati con il dato valore di $m$. È facile capire che ciò si verifica finché, assumendo ad esempio $j_1 \geq j_2$, $m$ non raggiunge il valore $j_1-j_2$. Diminuendo ulteriormente $m$, il numero di stati cessa di crescere, restando uguale a $2j_2+1$; il valore di $m_2$ infatti, non può essere minore di $-j_2$. Ciò significa che $j_1-j_2$, o in generale $|j_1-j_2|$, è il valore minimo possibile di $j$. \\
+
 Così siamo giunti al risultato che, dati $j_1$ e $j_2$, il numero $j$ può prendere i valori:  
-\begin{equation} \label{eq:cap19_04}
-j= |j_1-j_2|, |j_1-j_2|+1, ......, j_1+j_2-1, j_1+j_2,
-\end{equation}
+	\begin{equation}
+		\label{eq:cap19_04}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			j= |j_1-j_2|, |j_1-j_2|+1, ......, j_1+j_2-1, j_1+j_2,
+			}
+	\end{equation}
  cioè in totale $2j_2 + 1$ valori diversi (supponendo che $j_2 \leq j_1$).  \\
+ 
 Tenendo conto per ogni valore di $j$ esistono $(2j+1)$ stati $| j ,~ m,~j_1, ~ j_2 \rangle $  corrispondenti ai diversi possibili valori di $m$ possiamo verificare che il numero totale di stati è (per $j_2 \leq j_1$):
 \begin{align}
-N~ &= \sum_{j=j_1-j_2}^{j_1+j_2}{(2_j + 1)} = \nonumber \\
-&= \sum_{k=0}^{2j_2}{[2(k+j_1-j_2)+1]}= \nonumber \\
+N~ &= \sum_{j=j_1-j_2}^{j_1+j_2}{(2 j + 1)}=\underset{k=j-(j_1-j_2)}{\underbrace{   \sum_{k=0}^{2j_2}{[2(k+j_1-j_2)+1]}}}= \nonumber \\
 &= 2 \sum_{k=0}^{2j_2}{k} + [2(j_1-j_2)+1](2j_2+1) =\nonumber \\
-&= 2j_2(2j_2+1)+[2(j_1-j_2)+1](2j_2+1) = \nonumber \\ \nonumber \\
-&= (2j_1+1)(2j_2+1)
+&= 2j_2(2j_2+1)+[2(j_1-j_2)+1](2j_2+1) =  (2j_1+1)(2j_2+1)
 \end{align}
 in accordo con il risultato (\ref{eq:cap19_03}).\\
-Il risultato ottenuto per i possibili valori di $j$ (eq.(\ref{eq:cap19_04})) può essere illustrato mediante il cosiddetto \emph{modello vettoriale}. Se introduciamo due vettori $\vec{J_1}$ e $\vec{J_2}$ con moduli $j_1$ e $j_2$, i valori di $j$ saranno rappresentati come moduli interi dei vettori $\vec{J}$, ottenuti componendo vettorialmente i $\vec{J_1}$ e $\vec{J_2}$. Il valore massimo $(j_1+j_2)$ di $j$ si ottiene allorché $\vec{J_1}$ e  $\vec{J_2}$ sono paralleli, e il valore minimo $(|j_1-j_2|)$ allorché essi sono antiparalleli.
+
+Il risultato ottenuto per i possibili valori di $j$ (eq.~(\ref{eq:cap19_04})) può essere illustrato mediante il cosiddetto \textbf{modello vettoriale}. Se introduciamo due vettori $\vec{J_1}$ e $\vec{J_2}$ con moduli $j_1$ e $j_2$, i valori di $j$ saranno rappresentati come moduli interi dei vettori $\vec{J}$, ottenuti componendo vettorialmente i $\vec{J_1}$ e $\vec{J_2}$. Il valore massimo $(j_1+j_2)$ di $j$ si ottiene allorché $\vec{J_1}$ e  $\vec{J_2}$ sono paralleli, e il valore minimo $(|j_1-j_2|)$ allorché essi sono antiparalleli.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\section[Coefficienti di Clebsh-Gordan]{Coefficienti di Clebsh-Gordan\footnote{S3.7}}
-Consideriamo la trasformazione unitaria che connette la base degli autostati di $J_1^2 ,~ J_2^2 ,~ J_{1z} ,~ J_{2z}$ alla base degli autostati di  $J^2 ,~ J_z ,~ J_1^2 ,~ J_2^2$.
-\begin{align} \label{eq:cap19_05}
-| j ,~ m,~j_1, ~ j_2 \rangle  = \sum_{m_1, m_2} {| j_1 ,~ j_2,~m_1, ~ m_2 \rangle \langle j_1 ,~ j_2,~m_1, ~ m_2 |  j ,~ m,~j_1, ~ j_2 \rangle }.
-\end{align}
+\section[Coefficienti di Clebsh-Gordan]{Coefficienti di Clebsh-Gordan}
+Consideriamo \textbf{la trasformazione unitaria che connette la base degli autostati di $J_1^2$, $J_2^2$, $J_{1z}$, $J_{2z}$ alla base degli autostati di  $J^2$, $J_z$, $J_1^2$, $J_2^2$}.
+	\begin{align}
+		\label{eq:cap19_05}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			| j ,~ m,~j_1, ~ j_2 \rangle  = \sum_{m_1, m_2} {| j_1 ,~ j_2,~m_1, ~ m_2 \rangle \langle j_1 ,~ j_2,~m_1, ~ m_2 |  j ,~ m,~j_1, ~ j_2 \rangle }.
+			}
+	\end{align}\\
+	
 Per scrivere questa relazione abbiamo utilizzato la relazione di completezza
-\begin{align}
-\sum_{m_1, m_2} {| j_1 ,~ j_2,~m_1, ~ m_2 \rangle \langle j_1 ,~ j_2,~m_1, ~ m_2 | = 1 },
-\end{align}
+	\begin{align}
+		\sum_{m_1, m_2} {| j_1 ,~ j_2,~m_1, ~ m_2 \rangle \langle j_1 ,~ j_2,~m_1, ~ m_2 | = 1 },
+	\end{align}
 dove il secondo membro è l'operatore di identità nello spazio dei vettori di stato con $j_1$ e $j_2$ assegnati. \\
+
 Gli elementi di matrice unitaria che effettua il cambiamento di base, ossia la grandezza
-\begin{equation}
-\langle j_1 ,~ j_2,~m_1, ~ m_2 ~|~ j ,~ m,~j_1, ~ j_2 \rangle ,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\langle j_1 ,~ j_2,~m_1, ~ m_2 ~|~ j ,~ m,~j_1, ~ j_2 \rangle ,
+			}
+	\end{equation}
 sono detti \textbf{coefficienti di Clebsh-Gordan}.\\
-Dalle leggi di composizione del momento angolare totale e della sua componente $z$ segue ovviamente che i coefficienti di C.G. sono zero a meno che
-\begin{equation}
-m=m_1+m_2\quad \textrm{e}\quad |j_1-j_2| \leq j \leq j_1+j_2.
-\end{equation}
-Per convenzione, i coefficienti di C.G. sono definiti reali:
-\begin{align}
-\langle j_1 ,~ j_2,~m_1, ~ m_2~ |~ j ,~ m,~j_1, ~ j_2 \rangle  = \langle j ,~ m,~j_1, ~ j_2~ |~ j_1 ,~ j_2,~m_1, ~ m_2 \rangle .
-\end{align}
-La condizione di ortogonalità degli autostati $\mid j ,~ m,~j_1, ~ j_2 >$ applicata all'eq. (\ref{eq:cap19_05}), unitamente alla condizione di realtà dei coefficienti di C.G., fornisce:
-\begin{align}
- \sum_{m_1, m_2} {\langle j_1 , j_2, m_1, m_2 | j' , m', j_1, j_2 \rangle  \langle j_1 , j_2, m_1, m_2  | j , m, j_1, j_2 \rangle } = \delta_{j j'} \delta{m m'},
-\end{align}
+
+Dalle leggi di composizione del momento angolare totale e della sua componente $z$ segue ovviamente che \textbf{i coefficienti di C.G. sono zero a meno che}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			m=m_1+m_2
+			}\quad \textrm{e}\quad 
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			|j_1-j_2| \leq j \leq j_1+j_2.
+			}
+	\end{equation}\\
+	
+\textbf{Per convenzione, i coefficienti di C.G. sono definiti reali}:
+	\begin{align}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			\langle j_1 ,~ j_2,~m_1, ~ m_2~ |~ j ,~ m,~j_1, ~ j_2 \rangle  = \langle j ,~ m,~j_1, ~ j_2~ |~ j_1 ,~ j_2,~m_1, ~ m_2 \rangle .
+			}
+	\end{align}\\
+	
+La condizione di ortogonalità degli autostati $\mid j ,~ m,~j_1, ~ j_2 \rangle $ applicata all'eq. (\ref{eq:cap19_05}), unitamente alla condizione di realtà dei coefficienti di C.G., fornisce:
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			\sum_{m_1, m_2} {\langle j_1 , j_2, m_1, m_2 | j' , m', j_1, j_2 \rangle  \langle j_1 , j_2, m_1, m_2  | j , m, j_1, j_2 \rangle } = \delta_{j j'} \delta{m m'},
+			}
+	\end{equation}
 che coincide con la condizione di unitarietà della matrice dei coefficienti di C.G.. In particolare, per $j=j'$ ed $m=m'$ si ottiene:
-\begin{align}
- \sum_{m_1, m_2} {|\langle j_1 ,~ j_2,~m_1, ~ m_2 ~|~ j ,~ m,~j_1, ~ j_2 \rangle|^2} =1 , 
-\end{align}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			\sum_{m_1, m_2} {|\langle j_1 ,~ j_2,~m_1, ~ m_2 ~|~ j ,~ m,~j_1, ~ j_2 \rangle|^2} =1 ,
+			}
+	\end{equation}
 che non è altro che la condizione di normalizzazione degli stati $| j ,~ m,~j_1, ~ j_2 \rangle $. \\
-Un metodo conveniente per determinare i coefficienti di C.G. consiste nell'utilizzare gli operatori a scala secondo la seguente procedura. \\
-Nella composizione di due momenti angolari $\vec{J_1}$ e  $\vec{J_2}$ lo stato corrispondente al valore massimo della componente $z$ del momento angolare, ossia $m= j_1+j_2$ e dunque $j=j_1+j_2$ coincide necessariamente, a mo' di un fattore di fase, con lo stato avente $m_1=j_1$ ed $m_2=j_2$. Il fattore di fase è posto per convenzione uguale ad 1. Allora
-\begin{align}
-| j= j_1 + j_2 ,~m= m_1 +m_2  \rangle ~= ~| j_1 ,~j_2,  m_1=j_1, ~m_2= j_2 \rangle .
-\end{align}
-Applicando ad entrambi i membri di questa equazione l'operatore $J=J_1+J_2$ si può determinare lo stato con $j=j_1+j_2$ ed $m=j_1+j_2-1$ in termini degli stati con $(m_1=j_1-1 , m_2=j_2)$ e $(m_1=j_1, m_2=j_2-1)$. Lo stato con lo stesso valore di $m$ ma $j=j_1+j_2-1$ è poi costruito imponendo l'ortogonalità con il precedente. In questo modo si possono determinare tutti i coefficienti di C.G. del sistema considerato. \\
-Consideriamo questa procedura discutendo un esempio specifico importante.
+
+Un \textbf{metodo} conveniente \textbf{per determinare i coefficienti di C.G.} consiste nell'utilizzare gli operatori a scala secondo la seguente procedura. Nella composizione di due momenti angolari $\vec{J_1}$ e  $\vec{J_2}$ lo stato corrispondente al valore massimo della componente $z$ del momento angolare, ossia $m= j_1+j_2$ e dunque $j=j_1+j_2$ coincide necessariamente, a meno di un fattore di fase, con lo stato avente $m_1=j_1$ ed $m_2=j_2$. Il fattore di fase è posto per convenzione uguale ad 1. Allora
+	\begin{align}
+		| j= j_1 + j_2 ,~m= m_1 +m_2  \rangle ~= ~| j_1 ,~j_2,  m_1=j_1, ~m_2= j_2 \rangle .
+	\end{align}
+Applicando ad entrambi i membri di questa equazione l'operatore $J=J_1+J_2$ si può determinare lo stato con $j=j_1+j_2$ ed $m=j_1+j_2-1$ in termini degli stati con $(m_1=j_1-1 , m_2=j_2)$ e $(m_1=j_1, m_2=j_2-1)$. Lo stato con lo stesso valore di $m$ ma $j=j_1+j_2-1$ è poi costruito imponendo l'ortogonalità con il precedente. In questo modo si possono determinare tutti i coefficienti di C.G. del sistema considerato. Consideriamo questa procedura discutendo un esempio specifico importante.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Composizione di due momenti angolari di spin 1/2. Stati di tripletto e di singoletto]{Composizione di due momenti angolari di spin 1/2. Stati di tripletto e di singoletto\footnote{S3.7}}
+\section[Composizione di due momenti angolari di spin 1/2. Stati di tripletto e di singoletto]{Composizione di due momenti angolari di spin 1/2. Stati di tripletto e di singoletto}
 Consideriamo la composizione angolare di sin per due particelle di spin 1/2. Il momento angolare di spin totale delle due particelle,
-\begin{equation}
-\vec{S} = \vec{S_1} + \vec{S_2} ,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			\vec{S} = \vec{S_1} + \vec{S_2} ,
+			}
+	\end{equation}
 può assumere in questo caso solo due valori, corrispondenti ad:
-\begin{equation}
-S~= ~0, ~1 ,
-\end{equation}
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			S= 0, 1 ,
+			}
+	\end{equation}
 in accordo con la legge di composizione (\ref{eq:cap19_04}).\\
-Nella base degli autostati comuni degli operatori $S_1^2 ,~ S_2^2, ~ S_{1z}, ~ S_{2z}$ esistono quattro vettori di stato che possiamo indicare con \\ 
-\begin{equation}
-|++\rangle ,~ |+-\rangle,~ |-+\rangle , ~|--\rangle  ,
-\end{equation}
-dove, ad esempio, \\
-\begin{equation}
-|++\rangle~ \equiv ~|s_1=1/2, ~s_2=1/2,~\sigma_1 = 1/2, ~\sigma_2 = 1/2\rangle ,
-\end{equation}
+
+Nella base degli autostati comuni degli operatori $S_1^2$, $S_2^2$, $ S_{1z}$, $S_{2z}$ esistono quattro vettori di stato che possiamo indicare con  
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			|++\rangle ,~ |+-\rangle,~ |-+\rangle , ~|--\rangle  ,
+			}
+	\end{equation}
+dove, ad esempio,
+	\begin{equation}
+		|++\rangle~ \equiv ~|s_1=1/2, ~s_2=1/2,~\sigma_1 = 1/2, ~\sigma_2 = 1/2\rangle ,
+	\end{equation}
 e analoghe. \\
-Corrispondentemente esistono quattro stati di base corrispondenti agli operatori $S^2 ,~ S_z, ~ S_1^2, ~ S_2^2$. Possiamo indicare questi stati con \\
-\begin{equation}
-|1,1\rangle, ~|1,0\rangle, ~|1,-1\rangle, ~|0,0\rangle ,
-\end{equation}dove \\
-\begin{equation}
-|1,1\rangle ~\equiv~ |s=1, ~ \sigma=1, ~s_1=1/2, ~s_2=1/2\rangle ,
-\end{equation}
-ecc... \\
-Gli stati corrispondenti a momento angolare di spin $S=1$ sono detti \emph{stati di tripletto}. Lo stato corrispondente a momento angolare di spin $S=0$ \emph{stato di singoletto}. \\
-Calcoliamo i coefficienti di C.G. che consentono di esprimere gli autostati di $S^2$ ed $S_z$ in termini degli autostati di $S_1^2 ,~ S_{1z}, ~ S_2^2, ~ S_{2z}$. \\
-Lo stato $\sigma=1$ si può ottenere solo per $\sigma_1=\sigma_2=1/2$. \\
-Pertanto:\\
-\begin{equation}
-|1,1\rangle = |++\rangle  .\\
-\end{equation}
-Applichiamo ora ad entrambi i membri di questa equazione l'operatore a scala $S_-$:
-\begin{align}
- S_1 |1,1\rangle & = \sqrt{s(s+1) - \sigma(\sigma -1)}  |1,0\rangle =\sqrt{2}  |1,0\rangle= \nonumber \\
-&= (S_1+S_2)  |+,+\rangle = \nonumber \\
-&= \sqrt{1/2 (1/2+1) -1/2 (1/2-1)} ( |+,-\rangle + |-,+\rangle)= \nonumber \\
-&= |+,-\rangle   +   |-,+\rangle ,
-\end{align}
+
+Corrispondentemente esistono quattro stati di base corrispondenti agli operatori $S^2$, $S_z$, $S_1^2$, $S_2^2$. Possiamo indicare questi stati con 
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			|1,1\rangle, ~|1,0\rangle, ~|1,-1\rangle, ~|0,0\rangle ,
+			}
+	\end{equation}
+dove
+	\begin{equation}
+		|1,1\rangle ~\equiv~ |s=1, ~ \sigma=1, ~s_1=1/2, ~s_2=1/2\rangle ,
+	\end{equation}
+eccetera. \\
+
+Gli stati corrispondenti a momento angolare di spin $S=1$ sono detti \textbf{stati di tripletto}. Lo stato corrispondente a momento angolare di spin $S=0$ \textbf{stato di singoletto}. \\
+
+Calcoliamo i coefficienti di C.G. che consentono di esprimere gli autostati di $S^2$ ed $S_z$ in termini degli autostati di $S_1^2 ,~ S_{1z}, ~ S_2^2, ~ S_{2z}$. Lo stato $\sigma=1$ si può ottenere solo per $\sigma_1=\sigma_2=1/2$. Pertanto:
+	\begin{equation}
+		|1,1\rangle = |++\rangle  .
+	\end{equation}\\
+
+Applichiamo ora ad entrambi i membri di questa equazione l'operatore a scala $\hat{S}_-=S_- /\hbar$:
+	\begin{align}
+		 \hat{S}_- |1,1\rangle & = \sqrt{s(s+1) - \sigma(\sigma -1)}  |1,0\rangle =\nonumber \\
+		&=\sqrt{2} |1,0\rangle=  (S_{1-}+S_{2-})  |+,+\rangle =  \nonumber \\
+		&= \sqrt{1/2 (1/2+1) -1/2 (1/2-1)} \left( |+,-\rangle + |-,+\rangle \right)= \nonumber \\
+		&= |+,-\rangle   +   |-,+\rangle ,
+	\end{align}
 ossia
-\begin{equation}
-|1,0\rangle = \frac{1}{\sqrt{2}} (|+-\rangle + |-+\rangle) .
-\end{equation}
+	\begin{equation}
+		|1,0\rangle = \frac{1}{\sqrt{2}} (|+-\rangle + |-+\rangle) .
+	\end{equation}\\
+	
 Lo stato $|1,-1\rangle$ si può ottenere mediamente una seconda applicazione dell'operatore a scala. Ma in questo caso si ottiene evidentemente:
-\begin{equation}
-|1,-1\rangle = |--\rangle .
-\end{equation}
+	\begin{equation}
+		|1,-1\rangle = |--\rangle .
+	\end{equation}\\
+	
 Infine, lo stato $|0,0\rangle$ si può ottenere imponendo l'ortogonalità con lo stato $|1,0\rangle$. S trova allora:
-\begin{equation}
-|0,0\rangle = \frac{1}{\sqrt{2}} (|+-\rangle - |-+\rangle). \\
-\end{equation}
+	\begin{equation}
+		|0,0\rangle = \frac{1}{\sqrt{2}} (|+-\rangle - |-+\rangle). \\
+	\end{equation}\\
+	
 In definitiva, abbiamo trovato:
-
-\begin{align}
-\begin{cases} 
-|1,1\rangle = |++\rangle \nonumber \\
-|1,0\rangle = \frac{1}{\sqrt{2}} (~|+-\rangle + |-+\rangle ~)  \nonumber  & \mbox{\textrm{\textbf{Tripletto}}} \\
-|1,-1\rangle = |--\rangle  \nonumber \\
+	\begin{align}
+		&\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+		\begin{cases} 
+			|1,1\rangle = |++\rangle  \\
+			|1,0\rangle = \frac{1}{\sqrt{2}} (~|+-\rangle + |-+\rangle ~)    & \mbox{\textrm{\textbf{Tripletto~}}} \\
+			|1,-1\rangle = |--\rangle   \\
 \end{cases}
-\end{align}
-
-\begin{align}
-\begin{cases} 
-|0,0\rangle = \frac{1}{\sqrt{2}} (~|+-\rangle - |-+\rangle~) \nonumber  & \mbox{\textrm{\textbf{Singoletto}}}\\
-\end{cases}
-\end{align}
+		}\\[0.3cm]
+		&\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+		\begin{cases} 
+			|0,0\rangle = \frac{1}{\sqrt{2}} (~|+-\rangle - |-+\rangle~)    & \mbox{\textrm{\textbf{Singoletto}}}\\
+		\end{cases}
+		}
+	\end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\iffalse %SEZIONE RIMOSSA
 \section[Composizione dei momenti angolari orbitale e di spin per una particella di spin 1/2]{Composizione dei momenti angolari orbitale e di spin per una particella di spin 1/2\footnote{S3.7}}
 
 Consideriamo la composizione del momento angolare orbitale e del momento angolare di spin per una particella di spin 1/2.\\
@@ -300,3 +371,4 @@ da cui risulta:
 \mathcal{Y}_{j=l-1/2,~ j_z=m+1/2} = -\sqrt{\frac{l-m}{2l+1}}~Y_{l,m}~\chi_+ + \sqrt{\frac{l+m+1}{2l+1}}~Y_{l, m+1}~\chi_-. 
 \end{align}
 \`E immediato verificare come queste autofunzioni siano ortogonali tra loro e correttamente normalizzate.
+\fi
