@@ -1,3 +1,97 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[T1]{fontenc}                                      
+\usepackage[utf8]{inputenc}                               
+\usepackage[italian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{braket}
+\usepackage{blindtext}
+\usepackage{calc}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{epsfig}
+\usepackage{eucal}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{
+			colorlinks=true,
+			linkcolor=black,
+			anchorcolor=black,
+			citecolor=black,
+			urlcolor=black,
+			pdftitle={Appunti di Meccanica Quantistica},
+			pdfauthor={Vittorio Lubicz}
+}
+
+\usepackage{latexsym}
+\usepackage{listings} 
+\usepackage{longtable}
+\usepackage{makeidx}
+\usepackage{mathrsfs}
+\usepackage{mathdots}
+\usepackage{multirow}
+\usepackage{nicefrac}
+\usepackage{pdfpages}
+\usepackage{physics}
+\usepackage{setspace}
+\usepackage[many]{tcolorbox}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{textcomp}
+\usepackage{titlesec,color}
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{35mm}{30mm}{35mm}{30mm}%
+             {0mm}{10mm}{0mm}{10mm}
+
+
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\chapter}[hang]{\huge\bfseries}{\myfont{\textit{\large{\chaptername\hspace{1pt} \thechapter\hspace{3pt}}}}\textcolor{gray75}{$\mid$}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\titleformat{\section}[hang]{\large\bfseries}{\myfont{\textit{\normalsize{\thesection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\Huge\bfseries}}
+
+\titleformat{\subsection}[hang]{\large\bfseries}{\myfont{\textit{\small{\thesubsection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\newcommand*{\myfont}{\fontfamily{ppl}\selectfont}
+
+\begin{document}
+
+%*****************LAYOUT PAGINE**************************
+\fancypagestyle{plain}{%
+\fancyhf{} % cancella tutti i campi di  intestazione e pi\`e di pagina
+\fancyfoot[C]{\bfseries \myfont{\thepage}} % tranne il centro
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{VS}{
+\headheight = 15pt
+\lhead[\myfont{\textit{\textbf{\thechapter\nouppercase{\leftmark}}}}]{\myfont{\textit{\textbf{\nouppercase{\leftmark}}}}}
+\chead[]{}
+\rhead[\myfont{\textbf{\thepage}}]{\myfont{\textbf{\thepage}}}
+
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+}
+%*******************************************************
+
+
+
+\pagestyle{VS}
+\setcounter{chapter}{11}
+\setcounter{page}{137}
 \chapter[Simmetrie e Leggi di Conservazione]{Simmetrie e Leggi di\\ Conservazione} 
 \section{Derivata di un operatore rispetto al tempo} 
 
@@ -7,7 +101,7 @@ Dunque, il concetto di derivata rispetto al tempo deve essere definito in meccan
 \textbf{\'E naturale definire la derivata $\mathbf{{dA}/{dt}}$ di A come grandezza il cui valore medio è uguale alla derivata rispetto al tempo del valor medio $\mathbf{\langle A \rangle} $.
 Si ha dunque, per definizione}:
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 		\left\langle \frac{dA}{dt} \right\rangle = \frac{d}{dt} \langle A \rangle .
 		}
 	\end{equation}\\
@@ -35,21 +129,21 @@ otteniamo dall'eq. (\ref{eq:cap12_1})
 Per definizione di valore medio, l'espressione tra parentesi rappresenta l'operatore cercato $dA/dt$ :
 	\begin{equation}
 	\label{eq:cap12_2}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\frac{dA}{dt}= \frac{\partial A}{\partial{t}}+ \frac{i}{\hbar}[H,A].
 			}
 	\end{equation}\\
 
 È istruttivo confrontare questo risultato con l'equazione del moto classico nella forma di parentesi di Poisson. \textbf{In meccanica classica}, per la derivata totale rispetto al tempo di una grandezza $f$, che è funzione delle coordinate e dei momenti generalizzati $q_i$ e $p_i$ del sistema, si ha:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\frac{df}{dt}= \frac{\partial f}{\partial{t}} + \sum_{i}^{}{(\frac{\partial H}{\partial{p_i}}\frac{\partial f}{\partial{q_i}} - \frac{\partial H}{\partial{q_i}}\frac{\partial f}{\partial{p_i}}} )=
 \frac{\partial f}{\partial{t}}+ \{H,f\}.
 			}
 	\end{equation}
 Nuovamente riscontriamo che la regola di corrispondenza di Dirac 
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\{ \quad,\quad   \}_{classica}  \leftrightarrow \frac{i}{\hbar} [ \quad, \quad]
 			}
 	\end{equation}
@@ -57,7 +151,7 @@ porta all'equazione corretta in meccanica quantistica. È bene sottolineare, tut
 
 Una classe molto importante di grandezze fisiche è costituita da \textbf{quelle grandezze i cui operatori non dipendono esplicitamente dal tempo e che, inoltre, commutano con l'hamiltoniano} in modo tale che 
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\frac{dA}{dt}= \frac{\partial A}{\partial{t}} + \frac{i}{\hbar}[H,A]=0.
 			}
 	\end{equation}
@@ -65,13 +159,13 @@ tali grandezze si chiamano \textbf{conservative};\\
 
 Per le grandezze conservative 
 	\begin{equation} 
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\left\langle \frac{dA}{dt}\right\rangle= \frac{d}{dt}\langle A \rangle =0,
 			}
 	\end{equation}
 cioè 
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\langle A \rangle= costante.
 			}
 	\end{equation}
@@ -79,13 +173,13 @@ In altri termini \textbf{il valore medio della grandezza resta costante nel temp
 
 \textbf{L'hamiltoniano di un sistema isolato (nonchè di un sistema che si trova in un campo esteso costante e non variabile) non può contenere il tempo esplicitamente.} Ciò risulta dal fatto che tutti gli istanti sono equivalenti relativamente a tale sistema fisico. Pertanto, per un tale sistema  
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\frac{\partial H}{\partial{t}}=0;
 			}
 	\end{equation}
 d'altra parte, poiché ogni operatore, come è ovvio, commuta con se stesso possiamo concludere che \textbf{l'energia di un sistema che non si trova in un campo esteso variabile si conserva}:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\frac{dH}{dt}=0.
 			}
 	\end{equation}
@@ -100,7 +194,7 @@ La legge di conservazione dell'energia, discussa nel paragrafo precedente, rappr
 Per discutere questa connessione consideriamo una generica trasformazione che è rappresentata, in meccanica quantistica, da un operatore unitario agente sui vettori di stato:
 	\begin{equation}
 	\label{eq:cap12_3}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			|\alpha \rangle \rightarrow {U}|\alpha \rangle.
 			}
 	\end{equation}
@@ -108,7 +202,7 @@ Possiamo pensare che ${U}$ rappresenti l'operatore di traslazione spaziale $T(d\
 
 Consideriamo come cambia, per effetto della trasformazione, un generico elemento di matrice di un operatore ${X}$ tra due stati $|\alpha \rangle$ e $|\beta\rangle$ :
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\langle \beta|{X}|\alpha \rangle   \rightarrow    \langle \beta |{U}^+{X}{U}|\alpha \rangle.
 			}
 	\end{equation}\\
@@ -116,7 +210,7 @@ Consideriamo come cambia, per effetto della trasformazione, un generico elemento
 Vediamo allora che la trasformazione può essere pensata o come una trasformazione (\ref{eq:cap12_3})  sui vettori di stato, che lascia gli operatori invariati, o come trasformazione sugli operatori:
 	\begin{equation}
 	\label{eq:cap12_4}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 		{X}\rightarrow {U}^+ {X}{U},}
 	\end{equation}
 lasciando invariati i vettori di stato. Formalmente i due approcci sono completamente equivalenti.\\
@@ -140,33 +234,33 @@ tuttavia possiamo considerare la trasformazione come una trasformazione degli op
 
 Nel discutere la connessione tra simmetrie e leggi di conservazione è conveniente considerare le trasformazioni come agenti sugli operatori. \textbf{Consideriamo allora una generica trasformazione operata dall'operatore unitario ${U}$ e supponiamo che il sistema fisico considerato sia invariate rispetto a tale trasformazione, ossia che la trasformazione rappresenti una simmetria del sistema. In particolare, allora, dovrà risultare invariate per tale trasformazione l'hamiltoniano H del sistema, che ne descrive la dinamica}. Per quanto discusso questo comporta
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			{U}^+H{U}= H,
 			}
 	\end{equation}
 o, equivalentemente 
 	\begin{equation}
 	\label{eq:cap12_5}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			[H,{U}]=0.
 			}
 	\end{equation}\\
 
 Se consideriamo una \textbf{trasformazione infinitesima}, sappiamo che l'operatore unitario ${U}$ può essere scritto nella forma 
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			{U}= 1- \frac{i\varepsilon}{\hbar}G,
 			}
 	\end{equation}
 dove G è il generatore hamiltoniano della trasformazione considerata. In questo caso l'equazione (\ref{eq:cap12_5}) equivale a 
 	\begin{equation} 
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			[H,G]=0.
 			}
 	\end{equation}
 Per l'eq. (\ref{eq:cap12_4}) si ha allora
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\frac{dG}{dt}=0,
 			}
 	\end{equation}
@@ -174,13 +268,13 @@ e quindi \textbf{G è una costante del moto}. Questo risultato stabilisce la con
 
 Consideriamo ad esempio un \textbf{sistema isolato soggetto a campi esterni}. Poiché tutte le posizioni di tale sistema in blocco sono equivalenti nello spazio, si può affermare che l'hamiltoniano del sistema non cambia in uno spostamento arbitrario del sistema. In altri termini l'hamiltoniano commuta con l'operazione di traslazione
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			[H,T (d\vec{x}^{\, \prime})]=0.
 			}
 \end{equation}
 Ma questo equivale a dire che \textbf{l'hamiltoniano commuta con l'operatore impulso $\vec{p}$} del sistema è una quantità conservata:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			\frac{d\vec{p}}{dt}=0.
 			}
 	\end{equation}
@@ -196,7 +290,7 @@ Esistono tuttavia trasformazioni che non godono di questa proprietà, e che sono
 \section[Teorema di Ehrenfest]{Teorema di Ehrenfest}
 Consideriamo l'operatore di Hamilton per una particella:
 	\begin{equation}
-		\tcboxmath[sharp corners=downhill, colback=white, colframe=red!75!black]{
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
 			H= \frac{\vec{p}^2}{2m} + {V}(\vec{x}).
 			}
 	\end{equation}
@@ -213,7 +307,7 @@ L'unico operatore tra i componenti di H che non commuta con l'operatore di posiz
 ossia
 	\begin{equation}
    	\label{eq:cap12_6}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\frac{d\vec{x}}{dt}=\frac{\vec{p}}{m}.
 			}
 	\end{equation}\\
@@ -226,15 +320,103 @@ Calcoliamo ora l'operatore ${d\vec{p}}/{dt}$. Otteniamo facilmente il risultato 
 ossia:
 	\begin{equation}
 	\label{eq:cap12_7}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\frac{d\vec{p}}{dt}=-\vec{\nabla}V(\vec{x}).
 			}
 	\end{equation}\\
 	
 Le due equazioni, (\ref{eq:cap12_6}) e (\ref{eq:cap12_7}), possono essere combinate insieme per ottenere:\\
 	\begin{equation}
-		\tcboxmath[enhanced, sharp corners=downhill, colback=yellow!50!white, colframe=red!75!black, borderline={2pt}{-3pt}{red!50!black}]{
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			m\frac{d^2\vec{x}}{dt^2}=\frac{d\vec{p}}{dt}=-\vec{\nabla}V(\vec{x}),
 			}
 	\end{equation}
-che esprimono, in forma operatoriale, la legge di Newton. Questo risultato è noto come \textbf{Teorema di Ehrenfest}.
+che esprimono, in forma operatoriale, la legge di Newton. Questo risultato è noto come \textbf{Teorema di Ehrenfest}. 
+
+\section[Rappresentazioni di Schrödinger e di Heisenberg]{Rappresentazioni di Schrödinger e di Heisenberg; equazioni  del moto di Heisenberg}
+
+Nel discutere la dinamica in meccanica quantistica, abbiamo considerato come i vettori di stato evolvono nel tempo secondo l'equazione di Schrödinger. Questo significa che abbiamo considerato la trasformazione di evoluzione temporale come una trasformazione applicata ai vettori di stato, che lascia invariati gli operatori. Questo approccio è noto come \textbf{rappresentazione~di~Schr\"{o}dinger}.\\
+
+In accordo con la precedente discussione generale, possiamo considerare la trasformazione di evoluzione temporale nell'approccio alternativo, e completamente equivalente, secondo cui la trasformazione è applicata agli operatori, mentre i vettori di stato restano invariati nel tempo. Questo approccio è noto come $\textbf{rappresentazione~di~Heisenberg}$.\\
+
+Consideriamo allora l'operatore di evoluzione temporale $U(t, t_0)$ e poniamo per semplicità $t_0 = 0$ :
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			U(t) \equiv U(t,t_0 = 0) = e^{-\frac{i}{\hbar}Ht}.
+			}
+	\end{equation}
+	Nella rappresentazione di Schrödinger gli stati evolvono nel tempo e gli operatori restano invariati:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+		\begin{aligned}
+			&\ket{\alpha, t_0 = 0}_S \rightarrow \ket{\alpha, t}_S = U(t) \ket{\alpha, t=0}_S ,\\
+			&A^{(S)} \rightarrow A^{(S)}.
+		\end{aligned}
+		}
+	\end{equation}
+Nella rappresentazione di Heisenberg, viceversa, gli stati restano invariati e gli operatori evolvono nel tempo:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+		\begin{aligned}
+			&\ket{\alpha}_H \rightarrow \ket{\alpha}_H, \\
+&A^{(H)}(t_0 = 0) \rightarrow A^{(H)}(t) = U^\textbf{+}(t)A^{(H)}(t_0 = 0)U(t).
+		\end{aligned}
+		}
+	\end{equation} \\
+
+Per definizione i vettori di stato e gli operatori coincidono nelle rappresentazioni di Schrödinger e di Heisenberg al tempo $t_0 = 0$ :
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{	
+		\begin{aligned}
+			\ket{\alpha}_H = \ket{\alpha, t_0 = 0}_S, \\
+			A^{(H)}(t_0 = 0) = A^{(S)}.
+		\end{aligned}
+		}
+	\end{equation}\\
+
+Il valore di aspettazione di un generico operatore $A$ su qualunque stato $\ket{\alpha}$ è ovviamente identico nelle due rappresentazioni:
+	\begin{equation}
+	{}_S\langle \alpha , t \vert A^{(S)} \vert \alpha , t \rangle _S = {}_S\langle \alpha, t_0=0\vert U^\textbf{+}(t) A^{(S)}U(t)\vert\alpha,t_0=0\rangle _S ={}_H\langle \alpha\vert A^{(H)}(t)\vert \alpha\rangle _H.
+	\end{equation} \\
+
+Così come nella rappresentazione di Schrödinger l'evoluzione temporale degli stati è definita dall'equazione di Schrödinger, in modo analogo è possibile derivare, nella rappresentazione di Heisenberg, un'equazione fondamentale che definisce l'evoluzione temporale degli operatori. Questa equazione può essere derivata derivando rispetto al tempo l'operatore $A^{(H)}(t)$ nella rappresentazione di Heisenberg:
+	\begin{align}
+		& \frac{dA^{(H)}(t)}{dt} = \frac{d}{dt}\left[U^\textbf{+}(t)\  A^{(H)}(t_0=0)\ U(t)\right] = \nonumber \\
+		&= \frac{\partial U^\textbf{+}(t)}{dt} A^{(H)}(t_0=0)\ U(t) + U^\textbf{+}(t)\  A^{(H)}(t_0=0)\ \frac{\partial U(t)}{dt} = \nonumber \\
+		&= \frac{i}{\hbar} H\ U^\textbf{+}(t)\ A^{(H)}(t_0=0)\ U(t) + U^\textbf{+}(t)\ A^{(H)}(t_0=0) \left(-\frac{i}{h}\right) H\ U(t) = \nonumber \\
+		&= \frac{i}{\hbar} H\ A^{(H)}(t) - \frac{i}{h} A^{(H)}(t)\ H,
+	\end{align}
+dove si è supposto che l'operatore $A$, così come l'hamiltoniana $H$, non dipendano esplicitamente (ossia parametricamente) dal tempo. Dunque:
+	\begin{equation}
+	\label{eq:cap13_1}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\frac{d A^{(H)}(t)}{dt} = \frac{i}{h} \left[H, A^{(H)}(t) \right];
+			}
+	\end{equation}
+questa equazione è nota come $\textbf{equazione del moto di Heisenberg}$.\\
+ 
+Osserviamo come l'equazione del moto di Heisenberg sia formalmente analoga all'equazione (\ref{eq:cap12_2}), ma il suo significato è alquanto differente: l'eq.~(\ref{eq:cap12_2}) rappresenta la definizione dell'operatore $dA/dt$ della grandezza fisica corrispondente $dA/dt$, mentre il primo membro dell'equazione del moto di Heisenberg contiene la derivata rispetto al tempo dell'operatore della grandezza stessa $A$. Osserviamo anche che l'operatore hamiltoniano coincide nelle rappresentazioni di Schrödinger e di Heisenberg: $U^\textbf{+} H U = H$. Per questa ragione nell'eq.~(\ref{eq:cap13_1}) non abbiamo specificato la rappresentazione.
+\section{Teorema del viriale in Meccanica Quantistica}
+	\begin{equation}
+	\label{eq:cap_13_2}
+		\frac{d}{dt}\left( \sum _i x_i p_i \right) = \sum _i\dot{x}_i p_i + \sum _i	x_i \dot{p}_i = \sum _i \frac{p_i ^2}{m}- \sum _i \frac{\partial V}{\partial x_i} = 2T - \sum _i x_i \frac{\partial V}{\partial x_i}-
+	\end{equation}
+Se $V$ è una funzione omogenea delle coordinate allora:
+	\begin{equation}
+		\sum _ i x_i \frac{\partial V}{\partial x_i} = KV.
+	\end{equation}
+Prendendo dall'eq.~(\ref{eq:cap_13_2}) il valore medio su un autostato $\vert n \rangle$ di $H$ e considerando che per qualunque operatore $A$
+	\begin{equation}
+		\left\langle \frac{dA}{dt} \right\rangle _n = \langle n \vert \frac{dA}{dt}\vert n \rangle = \frac{d}{dt}\langle n \vert A \vert n \rangle = 0, 
+	\end{equation}
+si ottiene
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+		\langle T \rangle _n = \frac{1}{2} K \langle V \rangle _n.
+		}
+	\end{equation}
+Esempi:\begin{itemize}
+\item Oscillatore armonico ($K=2$);
+\item Potenziale coulombiano ($K=-1$).
+\end{itemize}
+\end{document}
