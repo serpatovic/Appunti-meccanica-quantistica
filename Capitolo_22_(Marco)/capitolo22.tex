@@ -1,76 +1,124 @@
 \chapter[Particella in campo elettromagnetico]{Hamiltoniana di una particella in un campo elettromagnetico esterno}
 Nella \textbf{teoria classica} l'hamiltoniana di una particella di carica elettrica e (e<0 per l'elettrone) ha la forma:
-\begin{equation}
-H=\frac{1}{2m}(\vec{p}-\frac{e}{c}\vec{A}\;)^{2}+e\Phi ,
-\label{22.1}
-\end{equation}
-dove $\Phi$ è il potenziale scalare ed $\vec{A}$ è il potenziale vettoriale del campo, $\vec{p}$ la quantità di moto generalizzata della particella.
-L'espressione (\ref{22.1}) per l'hamiltoniana può essere ottenuta, a partire dall'hamiltoniana H=$\vec{p}^{\;2}/2m$ per la particella libera, effettuando la \textbf{sostituzione minimale}:
-\begin{equation}
-E\rightarrow E-e\Phi,\; \vec{p}\rightarrow \vec{p}-\frac{e}{c}\vec{A} .
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			H=\frac{1}{2m}(\vec{p}-\frac{e}{c}\vec{A}\;)^{2}+e\Phi ,
+			}
+	\label{22.1}
+	\end{equation}
+dove $\Phi$ è il potenziale scalare ed $\vec{A}$ è il potenziale vettoriale del campo, $\vec{p}$ la quantità di moto generalizzata della particella. \\
+
+L'espressione (\ref{22.1}) per l'hamiltoniana può essere ottenuta, a partire dall'hamiltoniana H=$\vec{p}^{\,2}/2m$ per la particella libera, effettuando la \textbf{sostituzione minimale}:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			E\rightarrow E-e\Phi,\quad \vec{p}\rightarrow \vec{p}-\frac{e}{c}\vec{A} .
+			}
+	\end{equation}\\
+	
 \textbf{Se la particella non ha spin il passaggio alla meccanica quantistica avviene nel modo solito: la quantità di moto generalizzata $\vec{p}$ va sostituita con l'operatore:}
-\begin{equation}
-\vec{p}=-i\hbar \vec{\nabla} .
-\end{equation}
+	\begin{equation}
+		\vec{p}=-i\hbar \vec{\nabla} .
+	\end{equation}\\
+
 Sviluppando il quadrato ($\vec{p}-\frac{e}{c}\vec{A}$)$^{2}$ occorre tener presente che l'operatore $\vec{p}$ non commuta in generale, con il vettore $\vec{A}$ che è funzione delle coordinate. Si deve quindi scrivere:
-\begin{equation}
-H= \frac{\vec{p}^{\;2}}{2m}-\frac{e}{2mc}(\vec{p}\cdot\vec{A}+\vec{A}\cdot\vec{p}\;)+\frac{e^{2}}{2mc^{2}}\vec{A}^{\;2}+e\Phi .
-\label{22.4}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			H= \frac{\vec{p}^{\;2}}{2m}-\frac{e}{2mc}(\vec{p}\cdot\vec{A}+\vec{A}\cdot\vec{p}\;)+\frac{e^{2}}{2mc^{2}}\vec{A}^{\;2}+e\Phi .
+			}
+	\label{22.4}
+	\end{equation}\\
+	
 Calcoliamo il commutatore tra $\vec{p}$ ed $\vec{A}$. Si ha:
-\begin{eqnarray}
-\vec{p}\cdot\vec{A}&=&-i\hbar \vec{\nabla}\cdot\vec{A}=-i\hbar\partial_{j}A_{j}= \nonumber \\
-&=&-i\hbar(\partial_{j}A_{j})-i\hbar A_{j}\partial_{j}= \nonumber \\
-&=& -i\hbar(\vec{\nabla}\cdot\vec{A})-i\hbar\vec{A}\cdot\vec{\nabla} ,
-\end{eqnarray}
-ossia $\vec{p}\cdot\vec{A}-\vec{A}\cdot\vec{p}=-i\hbar\vec{\nabla}\cdot\vec{A}$.\\ Così \textbf{$\vec{p}$ ed $\vec{A}$ commutano se $\vec{\nabla}\cdot\vec{A}$ è uguale a zero}.\\ La divergenza di $\vec{A}$ si annulla, in particolare, per un \textbf{campo omogeneo} se definiamo il suo potenziale vettore nel modo seguente:
-\begin{equation}
-\vec{A}=\frac{1}{2}\vec{B}\wedge\vec{r} .
-\label{22.6}
-\end{equation}
+	\begin{equation}
+		\vec{p}\cdot\vec{A}=-i\hbar \vec{\nabla}\cdot\vec{A}=-i\hbar\partial_{j}A_{j}= -i\hbar(\partial_{j}A_{j})-i\hbar A_{j}\partial_{j}= -i\hbar(\vec{\nabla}\cdot\vec{A})-i\hbar\vec{A}\cdot\vec{\nabla} ,
+	\end{equation}
+ossia
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\vec{p}\cdot\vec{A}-\vec{A}\cdot\vec{p}=-i\hbar\vec{\nabla}\cdot\vec{A}.
+			}
+	\end{equation}
+Così \textbf{$\vec{p}$ ed $\vec{A}$ commutano se $\vec{\nabla}\cdot\vec{A}$ è uguale a zero}.\\
+
+La divergenza di $\vec{A}$ si annulla, in particolare, per un \textbf{campo omogeneo} se definiamo il suo potenziale vettore nel modo seguente:
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\vec{A}=\frac{1}{2}\vec{B}\wedge\vec{r} .
+			}
+	\label{22.6}
+	\end{equation}
 Questa definizione è consistente giacché conduce a:
-\begin{eqnarray}
-(\vec{\nabla}\times\vec{A})_{i}&=&\varepsilon_{ijk}\partial_{j}A_{k}=\frac{1}{2}\varepsilon_{ijk}\varepsilon_{klm}\partial_{j}B_{l}r_{m}= \nonumber \\
-&\overset{\partial_{j}B_{l}=0}{=}&  \frac{1}{2}\varepsilon_{ijk}\varepsilon_{klm}B_{l}=\frac{1}{2}\varepsilon_{ijk}\varepsilon_{ljk}B_{l}=B_{i} ,
-\end{eqnarray}
-ossia $\vec{B}=\vec{\nabla}\wedge\vec{A}$.\\
-Inoltre calcolando la divergenza del potenziale vettore definito dall'equazione (\ref{22.6}) otteniamo:
-\begin{equation}
-\vec{\nabla}\cdot\vec{A}=\partial_{i}A_{i}=\frac{1}{2}\varepsilon_{ijk}\partial_{i}B_{j}r_{k}=0 ,
+	\begin{align}
+		(\vec{\nabla}\wedge\vec{A})_{i}&= \varepsilon_{ijk}\,\partial_{j}A_{k}=\frac{1}{2}\varepsilon_{ijk}\,\varepsilon_{klm}\,\partial_{j}B_{l}r_{m} \overset{\partial_{j}B_{l}=0}{=}  \frac{1}{2}\varepsilon_{ijk}\,\varepsilon_{klm}\,B_{l} \nonumber \\
+		&=\frac{1}{2}\varepsilon_{ijk}\,\varepsilon_{ljk}\,B_{l}=B_{i} ,
+	\end{align}
+ossia
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			\vec{B}=\vec{\nabla}\wedge\vec{A};
+			}
 \end{equation}
-ossia $\vec{\nabla}\cdot\vec{A}=0$\\
-Sostituendo il potenziale vettore $\vec{A}$ dato dalla (\ref{22.6})nell'espressione (\ref{22.4})dell'hamiltoniana, ed osservando che vale la relazione
+inoltre, calcolando la divergenza del potenziale vettore definito dall'equazione (\ref{22.6}) otteniamo:
+	\begin{equation}
+		\vec{\nabla}\cdot\vec{A}=\partial_{i}A_{i}=\frac{1}{2}\varepsilon_{ijk}\, \partial_{i}\, B_{j}\, r_{k}=0 ,
+	\end{equation}
+ossia 
+	\begin{equation}
+		\tcboxmath[sharp corners=downhill, colback=white, colframe=black]{
+			\vec{\nabla}\cdot\vec{A}=0.
+			}
+	\end{equation}\\
+	
+Sostituendo il potenziale vettore $\vec{A}$ dato dalla (\ref{22.6})nell'espressione (\ref{22.4}) dell'hamiltoniana, ed osservando che vale la relazione
 \begin{equation}
-\vec{A}\cdot\vec{p}=\frac{1}{2}\varepsilon_{ijk}B_{j}r_{k}p_{i}=\frac{1}{2}\vec{B}\cdot(\vec{r}\wedge\vec{p}\;)=\frac{1}{2}\vec{B}\cdot\vec{L} ,
+\vec{A}\cdot\vec{p}=\frac{1}{2}\varepsilon_{ijk}B_{j}\, r_{k}\, p_{i}=\frac{1}{2}\vec{B}\cdot(\vec{r}\wedge\vec{p}\;)=\frac{1}{2}\vec{B}\cdot\vec{L} ,
 \end{equation}
 dove $\vec{L}$ è il momento angolare orbitale della particella, otteniamo:
-\begin{equation}
-H=\frac{\vec{p}^{\;2}}{2m}-\frac{e}{2mc}\vec{L}\cdot\vec{B}+\frac{e^{2}}{8mc^{2}}(\vec{B}\wedge\vec{r}\;)+e\Phi .
-\label{22.10}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			H=\frac{\vec{p}^{\;2}}{2m}-\frac{e}{2mc}\vec{L}\cdot\vec{B}+\frac{e^{2}}{8mc^{2}}(\vec{B}\wedge\vec{r}\;)+e\Phi .
+			}
+	\label{22.10}
+	\end{equation}\\
+	
 Nella fisica atomica il termine quadratico nel campo magnetico esterno $\vec{B}$ risulta tipicamente trascurabile rispetto al termine lineare nel campo.\\
+
 Quanto al termine lineare nel campo, questo mostra che \textbf{una particella carica priva di spin, in moto in un campo magnetico esterno, possiede un momento magnetico $\vec{\mu}$, proporzionale al suo momento angolare orbitale, dato da}:
-\begin{equation}
-\vec{\mu}=\frac{e}{2mc}\vec{L} .
-\label{22.11}
-\end{equation} 
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\vec{\mu}=\frac{e}{2mc}\vec{L} .
+			}
+	\label{22.11}
+	\end{equation}\\
+	
 Il rapporto tra il momento magnetico $\vec{\mu}$ e il momento angolare orbitale $\vec{L}$ è pari ad $e/2mc$, risultato identico a quello che si ottiene in meccanica classica. Per l'elettrone il valore di questo rapporto, moltiplicato per la costante di Planck $\hbar$, definisce una grandezza chiamata \textbf{magnetone di Bohr}.
-\begin{equation}
-\mu_{B}=\frac{|e|\hbar}{2m_{e}c}=0.927\cdot10^{-20}\frac{erg}{gauss} .
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\mu_{B}=\frac{|e|\hbar}{2m_{e}c}=0.927\cdot10^{-20}\frac{\textrm{erg}}{\textrm{gauss}} .
+			}
+	\end{equation}\\
+	
 La teoria sin qui considerata resta tuttavia incompleta se non si tiene conto del fatto che le particelle possiedono, in generale, oltre ad un momento angolare orbitale, anche un momento angolare intrinseco, lo \textbf{spin}. È dimostrato sperimentalmente che, in conseguenza di ciò, gli elettroni, ad esempio, possiedono anche un \textbf{momento magnetico intrinseco}, legato allo spin $\vec{S}$ dalla relazione:
-\begin{equation}
-\vec{\mu}=\frac{|e|}{m_{e}c}\vec{S} .
-\label{22.13}
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			\vec{\mu}=\frac{|e|}{m_{e}c}\vec{S} .
+			}
+	\label{22.13}
+	\end{equation}
 Tale risultato trova una spiegazione solo nell'ambito della \textbf{teoria relativistica}. Si osservi in particolare come questa relazione differisca dall'analoga relazione (\ref{22.11}) per il \textbf{fattore 2} al denominatore.\\
+
 Il coefficiente di proporzionalità tra il momento magnetico intrinseco e lo spin di una particella varia, in generale, da particella a particella. Per il protone, ad esempio, questo coefficiente vale circa 2.79($e/m_{p}c$), dove $m_{p}$ è la massa del protone, mentre per il neutrone vale -1.91($e/m_{p}c$).\\
+
 L'esistenza di un momento magnetico intrinseco, per le particelle dotate di spin, richiede l'aggiunta all'hamiltoniano (\ref{22.10}), di un termine che descrive \textbf{l'interazione della particella con il campo magnetico esterno}. Per l'elettrone, tale termine è dato, in accordo con l'equazione(\ref{22.13}), da:
-\begin{equation}
-H=-\vec{\mu}\cdot\vec{B}=\frac{|e|}{m_{e}c}\vec{S}\cdot\vec{B} .
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			H=-\vec{\mu}\cdot\vec{B}=\frac{|e|}{m_{e}c}\vec{S}\cdot\vec{B} .
+			}
+	\end{equation}\\
+	
 L'hamiltoniano completo che descrive l'elettrone in un campo elettromagnetico esterno omogeneo ha dunque la forma:
-\begin{equation}
-H=\frac{\vec{p^{\;2}}}{2m}+\frac{|e|}{2m_{e}c}(\vec{L}+2\vec{S})+\frac{e^{2}}{8m_{e}c}(\vec{B}\wedge\vec{r}\;)^{2}-|e|\Phi .
-\end{equation}
+	\begin{equation}
+		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
+			H=\frac{\vec{p^{\;2}}}{2m}+\frac{|e|}{2m_{e}c}(\vec{L}+2\vec{S})+\frac{e^{2}}{8m_{e}c}(\vec{B}\wedge\vec{r}\;)^{2}-|e|\Phi .
+			}
+	\end{equation}
