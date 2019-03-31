@@ -1,0 +1,127 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[T1]{fontenc}                                      
+\usepackage[utf8]{inputenc}                               
+\usepackage[italian]{babel}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+			colorlinks=true,
+			linkcolor=black,
+			anchorcolor=black,
+			citecolor=black,
+			urlcolor=black,
+			pdftitle={Appunti di Meccanica Quantistica},
+			pdfauthor={Vittorio Lubicz}
+}
+\usepackage{titlesec}
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{35mm}{30mm}{35mm}{30mm}%
+             {0mm}{10mm}{0mm}{10mm}
+
+
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\chapter}[hang]{\huge\bfseries}{\myfont{\textit{\large{\chaptername\hspace{1pt} \thechapter\hspace{3pt}}}}\textcolor{gray75}{$\mid$}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\titleformat{\section}[hang]{\large\bfseries}{\myfont{\textit{\normalsize{\thesection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\Huge\bfseries}}
+
+\titleformat{\subsection}[hang]{\large\bfseries}{\myfont{\textit{\small{\thesubsection\hspace{2pt}}}}\hspace{0.4cm}}{0pt}{\myfont{\huge\bfseries}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\newcommand*{\myfont}{\fontfamily{ppl}\selectfont}
+
+\begin{document}
+
+%*****************LAYOUT PAGINE**************************
+\fancypagestyle{plain}{%
+\fancyhf{} % cancella tutti i campi di  intestazione e pi\`e di pagina
+\fancyfoot[C]{\bfseries \myfont{\thepage}} % tranne il centro
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{VS}{
+\headheight = 15pt
+\lhead[\myfont{\textit{\textbf{\thechapter\nouppercase{\leftmark}}}}]{\myfont{\textit{\textbf{\nouppercase{\leftmark}}}}}
+\chead[]{}
+\rhead[\myfont{\textbf{\thepage}}]{\myfont{\textbf{\thepage}}}
+
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+}
+%*******************************************************
+
+
+
+\pagestyle{VS}
+\chapter*{Elenco degli argomenti trattati}
+\begin{small}
+\textbf{Nota}: all'interno del'elenco degli argomenti trattati viene citata la seguente bibliografia:
+\begin{itemize}
+\item[ ] J.J. Sakurai, Jim Napolitano, \textit{Meccanica Quantistica Moderna}, Seconda edizione, Zanichelli.
+\item[ ] R.P. Feynman et al., \textit{La Fisica di Feynman}, Volume III, Masson;
+\item[ ] L. Landau e E. Lifschitz, \textit{Meccanica Quantistica}, Editori Riuniti;
+\item[ ] S. Gasiorowicz, \textit{Quantum Physics}, J.Wiley \& Sons.
+\end{itemize}
+Nell'elenco si fa esplicito riferimento ai testi indicando, ad esempio, con S1.6 il paragrafo
+1.6 del libro di Sakurai, con F1.1 il paragrafo 1.1 del libro di Feynman, eccetera.
+\end{small}\\
+
+\begin{itemize}
+\item \textbf{Crisi della fisica classica} (G1). Spettro del corpo nero. Effetto fotoelettrico. Effetto Compton. Diffrazione degli elettroni e relazione di de Broglie. Esperimento di Rutherford, spettri atomici. Modello di Bohr dell'atomo di idrogeno.
+
+\item \textbf{Onde e particelle} (F1.1-1.8; LL1). Principi fondamentali della meccanica quantistica. Esperimenti di interferenza con pallottole, onde ed elettroni. Probabilità ed ampiezze di probabilità. Principio di indeterminazione
+
+\item \textbf{Vettori di stato ed operatori} (F5.1-5.8,3.1-3.2; S1.1-1.3, 1.5). Formalismo generale della meccanica quantistica Esperimento di Stern e Gerlach ed esperimenti di Stern e Gerlach ripetuti. Stati di base. Vettori di stato bra e ket. Principio di sovrapposizione. Operatori lineari. Rappresentazioni matriciali. Relazione di completezza. Prodotto di operatori. Cambiamenti di base e trasformazioni unitarie.
+
+\item \textbf{Misure, osservabili e relazione di indeterminazione} (S1.4). Valori di aspettazione di osservabili fisiche. Autovalori ed autovettori di osservabili. Autovettori di osservabili come vettori di base. Osservabili compatibili e incompatibili. Relazione di indeterminazione.
+
+\item \textbf{Operatore di posizione} (S1.6-1.7). Autostati dell'operatore di posizione. Funzioni d'onda. Normalizzazione degli autostati della posizione e funzione $\delta$ di Dirac (S1.6-1.7; LL5). Operatori nella rappresentazione delle coordinate. Regole di commutazione per gli operatori di posizione. 
+
+\item \textbf{Richiami di meccanica classica}. Parentesi di Poisson. Trasformazioni canoniche. Trasformazioni canoniche infinitesime. Impulso, energia e momento angolare come generatori delle traslazioni spaziali, traslazioni temporali e rotazioni in meccanica classica.
+
+\item \textbf{Traslazioni e impulso} (S1.6; LL15). Operatore impulso in meccanica quantistica come generatore delle traslazioni. Regole di commutazione canoniche (S1.6; LL16). Operatore impulso nella rappresentazione delle coordinate, autofunzioni dell'impulso (S1.7; LL15). Funzione d'onda nella rappresentazione degli impulsi (S1.7; LL5). Operatore posizione nella rappresentazione degli impulsi. Pacchetti d'onda gaussiani (S1.7).
+
+\item \textbf{Evoluzione temporale ed equazione di Schr\"{o}dinger} (S2.1; LL8). Dinamica quantistica. Evoluzione temporale degli stati. Operatore hamiltoniano. Stati stazionari. Equazione d'onda di Schr\"{o}dinger (S2.4; LL17). La particella libera. Densità di corrente ed equazione di continuità (S2.4).
+
+\item \textbf{Parità} (G4; S4.2). Autovalori ed autostati dell'operatore di parità. Simmetria per inversione spaziale e conservazione della parità.
+
+\item \textbf{Problemi unidimensionali} (LL18). Proprietà generali dell'equazione di Schr\"{o}dinger. Buca di potenziale infinita e buca di potenziale finita (G4-5; LL22). Gradino di potenziale (G5; LL27). Coefficienti di trasmissione e riflessione. Barriera di potenziale. Effetto tunnel (G5; LL25).
+
+\item \textbf{Oscillatore armonico} (S2.3; LL23; G5). Metodo operatoriale di Dirac. Autovalori e autofunzioni dell'energia. 
+
+\item \textbf{Simmetrie e leggi di conservazione} (S2.2, 4.1). Derivata di un operatore rispetto al tempo. Grandezze conservative. Teorema di Ehrenfest (S2.2; LL19).
+
+\item \textbf{Rappresentazioni di Schr\"{o}dinger e di Heisenberg} (S2.2; LL13). Forma di Heisenberg per le equazioni del moto.
+
+\item \textbf{Teoria delle perturbazioni indipendenti dal tempo} (S5.1-5.2; LL38-39, G16). Caso non degenere e caso degenere.
+
+\item \textbf{Teoria delle perturbazioni dipendenti dal tempo} (S5.5-5.6; LL40,42-44, G21). Probabilità di transizione al primo ordine. Transizioni per effetto di una perturbazione costante. Relazione di indeterminazione tempo-energia. Regola d'oro di Fermi. Transizioni per effetto di una perturbazione periodica. Assorbimento ed emissione stimolata.
+
+\item \textbf{Rotazioni e momento angolare} (S3.1; LL26). Regole di commutazione per gli operatori del momento angolare. Autovalori ed elementi di matrice degli operatori di momento angolare (S3.5, LL27).
+
+\item \textbf{Momento angolare orbitale} (S3.6; L26; G11). Autovalori del momento angolare e armoniche sferiche (S3.6; LL27-28; G11). 
+
+\item \textbf{Spin} (S3.2; LL54-55). Operatori di spin e formalismo di Pauli per spin 1/2.
+
+\item \textbf{Composizione di momenti angolari} (S3.7, LL31). Coefficienti di Clebsch-Gordan (S3.7). Stati di tripletto e singoletto per due particelle di spin 1/2 (S3.7). Composizione dei momenti angolari orbitale e di spin per una particella di spin 1/2.
+
+\item \textbf{Particelle identiche} (S6.1-6.3; LL61-62; G8). Principio di indistinguibilità delle particelle identiche. Operatore di scambio. Bosoni e fermioni. Sistemi composti da due particelle identiche. Interazione di scambio.
+
+\item \textbf{Atomo di idrogeno}. Problema dei due corpi, moto in un campo centrale (LL32; G10). Campo coulombiano (LL36; G12). Autovalori ed autofunzioni dello spettro discreto.
+
+\item \textbf{Hamiltoniana di una particella in campo elettromagnetico esterno}. Momento magnetico orbitale ed intrinseco.
+
+\item \textbf{Atomo in un campo elettrico} (LL11,113; S2.6, 5.3). Effetto Stark quadratico e lineare (S5.1-5.2; G16).
+
+\item \textbf{Atomo in un campo magnetico} (S5.3; LL113; G17). Effetto Zeeman ed effetto Paschen-Back.
+
+\item \textbf{Correzioni relativistiche all'Hamiltoniano dell'atomo di idrogeno} (S5.3; G17). Termine cinetico e accoppiamento spin-orbita. Calcolo perturbativo delle correzioni.
+\end{itemize}
+\end{document}
