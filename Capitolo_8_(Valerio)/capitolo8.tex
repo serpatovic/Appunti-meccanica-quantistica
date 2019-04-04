@@ -52,7 +52,7 @@ ottenibile dalla funzione generatrice:
 \Phi = \sum _i q_iP_i+ Hdt.
 \label{eq:cap8_2}
 \end{equation}
-Ricordando che $\sum _i q_iP_i$ è la funzione generatrice della trasformazione identità, dal confronto delle eq. (\ref{eq:cap8_1}) e (\ref{eq:cap8_2}) siamo indotti a formulare l'ipotesi che l'operatore hermitiano $\Omega$ concida, a meno di un fattore di proporzionalità, con l'\textbf{operatore hamiltoniano} del sistema. L'inverso della costante di proporzionalità ha le dimensioni di un'azione e risulta essere uguale alla constante di Planck, $\hbar$. Dunque:
+Ricordando che $\sum _i q_iP_i$ è la funzione generatrice della trasformazione identità, dal confronto delle eq. (\ref{eq:cap8_1}) e (\ref{eq:cap8_2}) siamo indotti a formulare l'ipotesi che l'operatore hermitiano $\Omega$ concida, a meno di un fattore di proporzionalità, con l'\textbf{operatore Hamiltoniano} del sistema. L'inverso della costante di proporzionalità ha le dimensioni di un'azione e risulta essere uguale alla constante di Planck, $\hbar$. Dunque:
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 		\Omega = \frac{H}{\hbar},
@@ -77,7 +77,7 @@ Dividendo entrambi i membri di questa equazione per $dt$ e considerando il limit
 			}
 	\label{eq:cap8_3}
 	\end{equation}
-Questa equazione definisce completamente l'operatore di evoluzione temporale in termini dell'operatore hamiltoniano del sistema (con la condizione $U(t_0,t_0)=1).$\\
+Questa equazione definisce completamente l'operatore di evoluzione temporale in termini dell'operatore Hamiltoniano del sistema (con la condizione $U(t_0,t_0)=1).$\\
 
 Ad un'analoga equazione pet i vettori di stato di giunge applicando entrambi i membri della (\ref{eq:cap8_3}) al ket $\vert \alpha, t_0\rangle$:
 	\begin{equation}
@@ -89,9 +89,9 @@ Poiché $\vert \alpha, t_0\rangle$ non dipende dal tempo t, possiamo espreimere 
 		i\hbar \frac{\partial}{\partial t} \vert \alpha, t \rangle = H \vert \alpha, t \rangle.
 		}
 	\end{equation}
-Questa equazione fondamentale della meccanica quantistica è detta \textbf{equazione di Schr\"{o}dinger. Se si conosce la forma dell'operatore hamiltoniano, allora l'equazione di Schr\"{o}dinger consente di determinare i vettori di stato del sistema fisico dato.}
+Questa equazione fondamentale della meccanica quantistica è detta \textbf{equazione di Schr\"{o}dinger. Se si conosce la forma dell'operatore Hamiltoniano, allora l'equazione di Schr\"{o}dinger consente di determinare i vettori di stato del sistema fisico dato.}
 \section[Stati stazionari]{Stati stazionari}
-\textbf{L'hamiltoniano di un sistema isolato, o di un sistema che si trova in un campo esterno costante e non variabile non può contenere il tempo esplicitamente.} Ciò risulta dal fatto che tutti gli istanti di tempo sono equivalenti rispetto a tale sistema fisico. \textbf{Per tali sistemi, la soluzione dell'equazione di Schr\"{o}dinger assume una forma particolarmente semplice}. L'operatore di evoluzione temporale è infatti:
+\textbf{L'Hamiltoniano di un sistema isolato, o di un sistema che si trova in un campo esterno costante e non variabile non può contenere il tempo esplicitamente.} Ciò risulta dal fatto che tutti gli istanti di tempo sono equivalenti rispetto a tale sistema fisico. \textbf{Per tali sistemi, la soluzione dell'equazione di Schr\"{o}dinger assume una forma particolarmente semplice}. L'operatore di evoluzione temporale è infatti:
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 		U(t,t_0)= e^{-i\frac{i}{\hbar}H(t-t_0)},
@@ -105,7 +105,7 @@ ed i vettori di stato si scrivono nella forma:
 	\end{equation}
 Queste conclusioni possono essere verificate per sostituzione diretta nell'equazione di Schr\"{o}dinger.\\
 
-Se l'hamiltoniano di un sistema fisico non dipende esplicitamente dal tempo, risulta possibile considerare, per tale sistema, \textbf{gli stati in cui l'energia assume un valore determinato}. Questi stato sono detti \textbf{stati stazionari} e corrispondono agli autostati dell'operatore hamiltoniano, soddisfano cioè l'equazione agli autovalori:
+Se l'Hamiltoniano di un sistema fisico non dipende esplicitamente dal tempo, risulta possibile considerare, per tale sistema, \textbf{gli stati in cui l'energia assume un valore determinato}. Questi stato sono detti \textbf{stati stazionari} e corrispondono agli autostati dell'operatore Hamiltoniano, soddisfano cioè l'equazione agli autovalori:
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H|n\rangle = E_n |n \rangle.
@@ -130,7 +130,7 @@ dove si è considerato, per semplicità $t_0=0$. Allo stesso risultato si giunge
 		\vert n, t \rangle = U(t,0) \vert n, 0 \rangle = e^{-\frac{i}{\hbar}H t}\vert n, 0\rangle= e^{-\frac{i}{\hbar}E_n t}\vert n, 0\rangle.
 	\end{equation}\\
 
-L'equazione (\ref{eq:cap8_4}) determina la dipendenza dal tempo dei vettori di stato corrispondenti agli stati stazionari. Essa indica, in particolare, che \textbf{se il sistema si trova in un determinato istante in un autostato dell'hamiltoniana, esso resta in tale autostato per tutti gli istanti seguenti. Equivalentemente, possiamo affermare che se, nello stato dato, l'energia ha un valore determinato, questo valore resterà costante nel tempo.} Questo risultato esprime in meccanica quantistica la \textbf{legge di conservazione dell'energia per i sistemi isolati, o sistemi che si trovano in campi esterni non dipendenti dal tempo}.\\
+L'equazione (\ref{eq:cap8_4}) determina la dipendenza dal tempo dei vettori di stato corrispondenti agli stati stazionari. Essa indica, in particolare, che \textbf{se il sistema si trova in un determinato istante in un autostato dell'Hamiltoniano, esso resta in tale autostato per tutti gli istanti seguenti. Equivalentemente, possiamo affermare che se, nello stato dato, l'energia ha un valore determinato, questo valore resterà costante nel tempo.} Questo risultato esprime in meccanica quantistica la \textbf{legge di conservazione dell'energia per i sistemi isolati, o sistemi che si trovano in campi esterni non dipendenti dal tempo}.\\
 
 Calcoliamo il valore di aspettazione di un generico osservabile $A$ in uno stato stazionario, come funzione del tempo. Utilizzando l'eq.(\ref{eq:cap8_4}) troviamo:
 	\begin{equation}
@@ -169,7 +169,7 @@ Esaminiamo l'\textbf{evoluzione temporale dei vettori di stato nella rappresenta
 	\end{equation}
 come funzione del tempo.\\
 
-La forma specifica dell'equazione di Schr\"{o}dinger di un sistema fisico è determinata dal suo hamiltoniano, che acquista perciò un'importanza fondamentale in tutto l'apparato della meccanica quantistica. In perfetta corrispondenza con l'espressione classica, in meccanica quantistica \textbf{l'hamiltoniano di una particella sottoposta ad un campo esterno è}
+La forma specifica dell'equazione di Schr\"{o}dinger di un sistema fisico è determinata dal suo Hamiltoniano, che acquista perciò un'importanza fondamentale in tutto l'apparato della meccanica quantistica. In perfetta corrispondenza con l'espressione classica, in meccanica quantistica \textbf{l'Hamiltoniano di una particella sottoposta ad un campo esterno è}
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H= \frac{\vec{p}^{\ 2}}{2m}+V(\vec{x}),
@@ -212,7 +212,7 @@ indicando con
 			\psi _n ({\vec{x}}^{\, \prime}) = \langle {\vec{x}}^{\, \prime} \vert n \rangle
 			}
 	\end{equation}
-le autofunzioni dell'operatore \textbf{hamiltoniano corrispondenti agli autovalori $E_n$}, ed assumendo per $H$ l'espressione (\ref{eq:cap8_5}) otteniamo:
+le autofunzioni dell'operatore \textbf{Hamiltoniano corrispondenti agli autovalori $E_n$}, ed assumendo per $H$ l'espressione (\ref{eq:cap8_5}) otteniamo:
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H\psi _n = -\frac{\hbar ^ 2}{2m}{{\nabla '}^{\, 2}} \psi _n + V({\vec{x}}^{\, \prime})\psi _n = E_n \psi _n.
@@ -246,7 +246,7 @@ Questa equazione \textbf{ha soluzioni finite in tutto lo spazio per qualunque va
 	\begin{equation}
 		\psi (\vec{x'}) \propto e ^{\frac{i}{\hbar}\vec{p}\cdot {\vec{x}}^{\, \prime}},
 	\end{equation}
-come si può stabilire per sostituzione diretta nell'equazione. Per la particella liber, l'operatore hamiltoniano e l'operatore impulso commutano tra loro
+come si può stabilire per sostituzione diretta nell'equazione. Per la particella liber, l'operatore Hamiltoniano e l'operatore impulso commutano tra loro
 	\begin{equation}
 		\left[ H, \vec{p}\ \right] = \left[ \frac{ {\vec{p}}^{\ 2}}{2m}, \vec{p}\ \right] =\vec{0},
 	\end{equation}
