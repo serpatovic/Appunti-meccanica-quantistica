@@ -595,23 +595,69 @@ Uguagliando questa energia all'energia di riposo dell'elettrone, $E=m_e c^2$, ri
 a=\frac{1}{2}\frac{e^2}{mc^2}=\frac{1}{2} r_0,
 \end{equation}
 dove $r_0$ è il raggio classico dell'elettrone. Il fattore $\frac{1}{2}$, ottenuto nella precedente espressione, è una conseguenza dei dettagli del modello e segue in particolare dall'aver scelto la carica distribuita solo sulla superficie della sfera (e non, ad esempio, all'interno della sfera stessa). Notiamo anche che l'energia associata ad una carica puntiforme ($a=0$) risulta infinita.
-\begin{figure}[!htbp]
+\newpage
+\begin{tcolorbox}[sharp corners=downhill,colframe=black, colback=gray!50!white]
 \begin{center}
-\includegraphics[width= \textwidth]{immagini/cap_21/fig_21_2.png}\\
+\huge{\textbf{\myfont{F.d.o.~Radiali e Polinomi di Laguerre}}}
 \end{center}
-\end{figure}
-\begin{figure}[!htbp]
-\begin{center}
-\includegraphics[width= \textwidth]{immagini/cap_21/fig_21_3.png}\\
-\end{center}
-\end{figure}
-\begin{figure}[!htbp]
-\begin{center}
-\includegraphics[width= \textwidth]{immagini/cap_21/fig_21_4.png}\\
-\end{center}
-\end{figure}
-\begin{figure}[!htbp]
-\begin{center}
-\includegraphics[width= \textwidth]{immagini/cap_21/fig_21_5.png}
-\end{center}
-\end{figure}
+\end{tcolorbox}
+$\blacksquare$ \textbf{\large{\myfont{Funzioni d'onda radiali R[n,l]}}}\\
+
+\noindent\texttt{LaguerreL[n,x] gives the Laguerre polynomial} $\mathtt{L_n (x)}$\\
+\texttt{Laguerre[n,a,x] gives the generalized Laguerre polynomial} $\mathtt{L_ n ^a(x)}$\\
+\\
+\noindent \texttt{The Laguerre polynomials are othogonal with weight function} $\mathtt{x^a e^{-x}}$\\
+\texttt{They satisfy the differential equation}
+\[ \mathtt{xy'' +(a+1-x)y'+ny=0.}\]
+
+$\blacksquare$ $\mathtt{ R[n\_, l\_, r\_]:= 2/n^2Sqrt[ (n-l-1)!/(n+l)!]*}$\\
+\hspace*{1cm} $\qquad\mathtt{Exp[-r/n]((2r/n)^{\wedge}l)LaguerreL[n-l-1,2l+1,r/n]}$\\
+
+$\blacksquare$ \textbf{\myfont{n=1}}\\
+
+\noindent$\pmb{\mathtt{n=1;\quad Do[Print[''R['',n,'','',l,'']=",R[n,l,r]],\{l,0,n-1\}]}}$\\
+$\mathtt{R[1,0]=2 E^{\wedge}-r}$\\
+
+$\blacksquare$ \textbf{\myfont{n = 2}}\\
+
+\noindent $\pmb{\mathtt{n=2;\quad Do[Print[''R['',n,'','',l,'']='',R[n,l,r]],{l,0,n-1}]}}$\\
+$\mathtt{\displaystyle{R[2,0]=\frac{E^{-r/2} (2-r/2)}{2\sqrt{2}}}}$\\
+$\mathtt{\displaystyle{R[2,1]=\frac{E^{-r/2} r}{2 \sqrt{6}}}}$\\
+
+$\blacksquare$ \textbf{\myfont{n = 3}}\\
+\noindent $\pmb{\mathtt{n=3; \quad 
+Do[Print[''R['',n,'','',l,'']='',R[n,l,r]],{l,0,n-1}]}}$\\
+$\mathtt{\displaystyle{R[3,0]=\frac{E^{-r/3} (54-18 r+r^2)}{81 \sqrt{3}}}}$\\
+$\mathtt{\displaystyle{R[3,1]=\frac{1}{27} \sqrt{\frac{2}{3}}\ E^{-r/3} \left(4-\frac{r}{3}\right) r}}$\\
+$\mathtt{\displaystyle{R[3,2]=\frac{2}{81} \sqrt{2/15}\ E^{-r/3} r^2}}$\\
+\newpage
+$\blacksquare$ \textbf{\large{\myfont{Grafici}}}\\
+
+$\blacksquare$ \textbf{\myfont{n = 1}}\\
+$\pmb{\mathtt{n=1;l=0;}}$\\
+$\pmb{\mathtt{Plot[\{r R[n,l,r], r^{\wedge}2\ R[n,l,r]^{\wedge}2\},{r,0,10},}}$\\
+\hspace*{1cm}$\pmb{\mathtt{PlotStyle\rightarrow \{ RGBColor[1,0,0],RGBColor[0,0,1]\}]}}$\\
+\includegraphics[scale=0.9]{immagini/cap_21/fig_21_2.png}\\
+
+$\blacksquare$ \textbf{\myfont{n = 2}}\\
+$\pmb{\mathtt{n=2;l=1;}}$\\
+$\pmb{\mathtt{Plot[\{r R[n,l,r], r^{\wedge}2\ R[n,l,r]^{\wedge}2\},{r,0,30},}}$\\
+\hspace*{1cm}$\pmb{\mathtt{PlotStyle\rightarrow \{ RGBColor[1,0,0],RGBColor[0,0,1]\}]}}$\\
+\includegraphics[scale=0.9]{immagini/cap_21/fig_21_3.png}\\
+\noindent$\pmb{\mathtt{n=2;l=0;}}$\\
+$\pmb{\mathtt{Plot[\{r R[n,l,r], r^{\wedge}2\ R[n,l,r]^{\wedge}2\},{r,0,30},PlotRange \rightarrow {-0.12, 0.35},}}$\\
+\hspace*{1cm}$\pmb{\mathtt{PlotStyle\rightarrow \{ RGBColor[1,0,0],RGBColor[0,0,1]\}]}}$\\
+\includegraphics[scale=0.9]{immagini/cap_21/fig_21_4.png}\\
+$\blacksquare$ \textbf{\myfont{n = 3}}\\
+$\pmb{\mathtt{n=3;l=2;}}$\\
+$\pmb{\mathtt{Plot[\{r R[n,l,r], r^{\wedge}2\ R[n,l,r]^{\wedge}2\},{r,0,50},}}$\\
+\hspace*{1cm}$\pmb{\mathtt{PlotStyle\rightarrow \{ RGBColor[1,0,0],RGBColor[0,0,1]\}]}}$\\
+\includegraphics[scale=0.9]{immagini/cap_21/fig_21_5.png}\\
+\noindent$\pmb{\mathtt{n=3;l=1;}}$\\
+$\pmb{\mathtt{Plot[\{r R[n,l,r], r^{\wedge}2\ R[n,l,r]^{\wedge}2\},{r,0,30},PlotRange\rightarrow\{-0.06, 0.4\},}}$\\
+\hspace*{1cm}$\pmb{\mathtt{PlotStyle\rightarrow \{ RGBColor[1,0,0],RGBColor[0,0,1]\}]}}$\\
+\includegraphics[scale=0.9]{immagini/cap_21/fig_21_6.png}\\
+\noindent$\pmb{\mathtt{n=3;l=1;}}$\\
+$\pmb{\mathtt{Plot[\{r R[n,l,r], r^{\wedge}2\ R[n,l,r]^{\wedge}2\},{r,0,30},PlotRange\rightarrow\{-0.15, 0.2\},}}$\\
+\hspace*{1cm}$\pmb{\mathtt{PlotStyle\rightarrow \{ RGBColor[1,0,0],RGBColor[0,0,1]\}]}}$\\
+\includegraphics[scale=0.9]{immagini/cap_21/fig_21_7.png}
