@@ -1,11 +1,11 @@
 \chapter[T.d.P. dipendenti dal tempo]{Teoria delle perturbazioni dipendenti dal tempo}
-Consideriamo qui le \textbf{perturbazioni dipendenti esplicitamente dal tempo}, in presenza delle quali, cioè, l'hamiltoniano completo ha la forma
+Consideriamo qui le \textbf{perturbazioni dipendenti esplicitamente dal tempo}, in presenza delle quali, cioè, l'Hamiltoniano completo ha la forma
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H=H_0+V(t),
 		}
 	\end{equation}
-dove $H_0$ non contiene il tempo esplicitamente. Si assume inoltre risolta l'equazione di Schr\"{o}dinger per $V(t)=0$, nel senso che gli autostati dell'hamiltoniano $H_0$ ed i suoi autovalori, definiti dall'equazione
+dove $H_0$ non contiene il tempo esplicitamente. Si assume inoltre risolta l'equazione di Schr\"{o}dinger per $V(t)=0$, nel senso che gli autostati dell'Hamiltoniano $H_0$ ed i suoi autovalori, definiti dall'equazione
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H_0 \vert n ^{(0)} \rangle = E_n ^{(0)} \vert n ^{(0)} \rangle 
@@ -13,7 +13,7 @@ dove $H_0$ non contiene il tempo esplicitamente. Si assume inoltre risolta l'equ
 	\end{equation}
 sono noti completamente.\\
 
-Notiamo che, essendo l'hamiltoniano $H$ dipendente dal tempo, non si può più parlare di correzioni agli autovalori dell'energia. \textbf{L'energia non si conserva}, e gli stati stazionari non esistono. Il problema consiste qui nel calcolo approssimato degli stati del sistema nella base degli stati stazionari del sistema imperturbato.\\
+Notiamo che, essendo l'Hamiltoniano $H$ dipendente dal tempo, non si può più parlare di correzioni agli autovalori dell'energia. \textbf{L'energia non si conserva}, e gli stati stazionari non esistono. Il problema consiste qui nel calcolo approssimato degli stati del sistema nella base degli stati stazionari del sistema imperturbato.\\
 
 Scriviamo lo stato del sistema fisico al tempo $t=0$ come combinaizone lineare di autostati di $H_0$:
 	\begin{equation}
@@ -29,7 +29,7 @@ Lo \textbf{stato del sistema al tempo} $t>0$ potrà allora essere espresso come
 			}
 	\label{eq:cap15_2}
 	\end{equation}
-dove la disposizione temporale degli stati stazionari $\vert k ^{(0)} \rangle$, dovuta all'hamiltoniano imperturbato $H_0$, è stata esplicitamente separata dai coefficienti $c_k {(t)}$. In questo modo, l'evoluzione temporale dei coefficienti è dovuta esplicitamente alla presenza della perturbazione $V(t)$  (si dice che i coefficienti $c_k (t)$ definiscono lo sviluppo del vettore di stato $\vert \alpha , t \rangle $ nella ``rappresentazione di interazione'').\\
+dove la disposizione temporale degli stati stazionari $\vert k ^{(0)} \rangle$, dovuta all'Hamiltoniano imperturbato $H_0$, è stata esplicitamente separata dai coefficienti $c_k {(t)}$. In questo modo, l'evoluzione temporale dei coefficienti è dovuta esplicitamente alla presenza della perturbazione $V(t)$  (si dice che i coefficienti $c_k (t)$ definiscono lo sviluppo del vettore di stato $\vert \alpha , t \rangle $ nella ``rappresentazione di interazione'').\\
 
 I coefficienti $c_k (t)$ soddisfano un insieme di equazioni che può essere ottenuto applicando al vettore di stato $\vert \alpha , t \rangle $ l'equazione di Schr\"{o}dinger dipendente dal tempo:
 	\begin{align}
@@ -100,7 +100,7 @@ avendo sostituito $c_k ^{(0)} (t)$ con $c_k (0)$, in accordo con l'eq.~(\ref{eq:
 	\end{equation}
 che determina lo stato del sistema al primo ordine dello sviluppo perturbativo. In molti casi pratici questa approssimazione risulta sufficiente e non ci soffermeremo qui a descrivere i termini di ordine più elevato.\\
 
-Nel seguito considereremo sempre il caso in cui all'istante $t=0$ il sistema si trova in un autostato dell'hamiltoniana imperturbata $H_0$, ossia
+Nel seguito considereremo sempre il caso in cui all'istante $t=0$ il sistema si trova in un autostato dell'Hamiltoniana imperturbata $H_0$, ossia
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\vert \alpha , t=0\rangle = \vert i ^{(0)} \rangle
@@ -132,7 +132,7 @@ Il metodo sviluppato è ancora valido quando l'energia di perturbazione $V$ non 
 	\end{equation}
 dove l'operatore $V$ è in generale funzione degli operatori impulso, posizione e spin.\\
 
-Assumendo anche, come discusso in precedenza, che al tempo $t=0$ il sistema si trovi nello stato stazionario $\vert i^{(0)}\rangle $ dell'hamiltoniano imperturbato $H_0$, troviamo dall'eq.~(\ref{eq:cap15_5}) l'espressione al primo ordine per il coefficiente $c_n (t)$:
+Assumendo anche, come discusso in precedenza, che al tempo $t=0$ il sistema si trovi nello stato stazionario $\vert i^{(0)}\rangle $ dell'Hamiltoniano imperturbato $H_0$, troviamo dall'eq.~(\ref{eq:cap15_5}) l'espressione al primo ordine per il coefficiente $c_n (t)$:
 	\begin{align}
 		c_n ^{(1)} (t) & =  -\frac{i}{\hbar} \int _0 ^t dt'\ V_{ni}\, e^{i \omega _{ni} t'} = \nonumber \\
 		&= -\frac{i}{\hbar} V_{ni} \frac{e^{i \omega _{ni} t}-1}{i \omega _{ni}}= -\frac{2i}{\hbar} V_{ni}\ e^{i \omega _{ni} \frac{t}{2}}\ \frac{\sin{\left(\omega _{ni} \frac{t}{2}\right)}}{\omega _{ni}} .
@@ -165,7 +165,7 @@ In altri termini, se indichiamo con $\Delta t$ l'intervallo di tempo durante il 
 	\end{equation}
 Questa relazione è anche detta \textbf{relazione di indeterminazione tempo-energia}.\\
 
-L'espressione (\ref{eq:cap15_6}) per la probabilità di transizione $i\rightarrow n$ e la condizione (\ref{eq:cap15_7}) che ne segue esprimono il seguente risultato: se $E_n ^{(0)}$ differisce apprezzabilmente da   $E_i ^{(0)}$, la probabilità di transizione $i \rightarrow n$ è piccola e tale rimane per tutti i valori di $t$. Questo risultato è richiesto dalla  \textbf{legge di conservazione dell'energia}. L'energia totale $E$ è costante, perché l'hamiltoniana $H$ non dipende esplicitamente dal tempo, pertanto l'energia propria $E^{(0)}$ (cioè l'energia che si ottiene trascurando la parte $V$ dovuta alla perturbazione), essendo approssimativamente uguale ad $E$, deve essere approssimativamente costante. Ciò significa che se $E^{(0)}$ ha inizialmente il valore $E _i ^{(0)}$, in qualsiasi istante successivo ci deve essere solo una probabilità piccola che esso abbia un valore considerevolmente diverso da $E _i ^{(0)}$.\\
+L'espressione (\ref{eq:cap15_6}) per la probabilità di transizione $i\rightarrow n$ e la condizione (\ref{eq:cap15_7}) che ne segue esprimono il seguente risultato: se $E_n ^{(0)}$ differisce apprezzabilmente da   $E_i ^{(0)}$, la probabilità di transizione $i \rightarrow n$ è piccola e tale rimane per tutti i valori di $t$. Questo risultato è richiesto dalla  \textbf{legge di conservazione dell'energia}. L'energia totale $E$ è costante, perché l'Hamiltoniano $H$ non dipende esplicitamente dal tempo, pertanto l'energia propria $E^{(0)}$ (cioè l'energia che si ottiene trascurando la parte $V$ dovuta alla perturbazione), essendo approssimativamente uguale ad $E$, deve essere approssimativamente costante. Ciò significa che se $E^{(0)}$ ha inizialmente il valore $E _i ^{(0)}$, in qualsiasi istante successivo ci deve essere solo una probabilità piccola che esso abbia un valore considerevolmente diverso da $E _i ^{(0)}$.\\
 
 La relazione (\ref{eq:cap15_7}) ci dice anche che un'interazione, sia pure arbitrariamente debole, che agisce per un tempo $\Delta t$, può variare l'energia propria del sistema di una quantità $\Delta E \sim \hbar /\Delta t$. Questo risultato, puramente quantistico, ha un significato fisico profondo. Esso prova che \textbf{nella meccanica quantistica la legge di conservazione dell'energia può essere verificata mediante una misura soltanto a meno di una grandezza dell'ordine di} $\hbar /\Delta t$, \textbf{dove } $\Delta t$ \textbf{è la durata del processo di misura}. Infatti, una sia pur debole interazione tra lo strumento di misura ed il sistema in esame, che agisce per un tempo $\Delta t $, può sempre variare l'energia del sistema di una quantità $\Delta E \sim \hbar /\Delta t$.\\
 
@@ -357,7 +357,7 @@ Consideriamo ora le transizioni indotte da una \textbf{perturbazione periodica},
 	\end{equation}
 dove $F$ è un operatore non dipendente dal tempo (funzione in generale degli operatori impulso, posizione e spin). Osserviamo che $V(t)$ è un operatore hermitiano, come deve essere.	\\
 
-Assumendo ancora che al tempo $t=0$ il sistema si trovi nell'autostato $\vert i ^{(0)}\rangle$ dell'hamiltoniano imperturbato $H_0$ (per cui $c_k (0) = \delta _{ik}$) e sostituendo il potenziale (\ref{eq:cap15_11}) nella (\ref{eq:cap15_5}), si ricava:
+Assumendo ancora che al tempo $t=0$ il sistema si trovi nell'autostato $\vert i ^{(0)}\rangle$ dell'Hamiltoniano imperturbato $H_0$ (per cui $c_k (0) = \delta _{ik}$) e sostituendo il potenziale (\ref{eq:cap15_11}) nella (\ref{eq:cap15_5}), si ricava:
 	\begin{align}
 		c_n ^{(1)}(t) & =  -\frac{i}{\hbar}\int _0 ^t dt'\ V_{ni} (t') \ e^{i\omega _{ni}t'} = \nonumber \\
 		&= -\frac{i}{\hbar}\int _0 ^t dt'\left[ F_{ni}\ e^{i(\omega _{ni}-\omega) t'} + F_{ni} ^+\ e ^{i(\omega _{ni} +\omega) t}\right] = \nonumber \\
