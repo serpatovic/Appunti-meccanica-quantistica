@@ -462,13 +462,51 @@ o, equivalentemente:
 			}
 	\end{equation}
 \newpage
-\begin{figure}[!htbp]
+\begin{tcolorbox}[sharp corners=downhill,colframe=black, colback=gray!50!white]
 \begin{center}
-\includegraphics[width=\textwidth]{immagini/cap_17/fig_17_1.png}\\
+\huge{\textbf{\myfont{Armoniche sferiche e Polinomi di Legendre}}} 
 \end{center}
-\end{figure}
-\begin{figure}[!htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{immagini/cap_17/fig_17_2.png}\\
-\end{center}
-\end{figure}
+\end{tcolorbox}
+$\blacksquare$ \textbf{\large{\myfont{Armoniche Sferiche}}}\\
+\texttt{SphericalHarmonic}$\mathtt{Y[l,m,\theta,\phi]}$ \texttt{gives the spherical harmonic} $\mathtt{Y_l ^m (\theta,\phi)}$.\\
+\\
+\noindent \texttt{The spherical harmonics are orthogonal with respect to integration over the surface unit sphere.}\\
+$\blacksquare$ \texttt{For} $\mathtt{l\geq 0}$, $\mathtt{\displaystyle{Y_l ^m (\theta,\phi)=\sqrt{(2l+1/4\pi)}\sqrt{(l-m)!/(l+n)!}\ P_l ^m (cos(\theta))e^{im\theta}}}$\\
+$\blacksquare$ \texttt{For} $\mathtt{l\leq -1}$, $\mathtt{\displaystyle{Y_l ^m (\theta,\phi)=Y_{-(l+1)} ^m (\theta,\phi)}}$ .\\
+\\
+\noindent $\blacksquare$ $\mathtt{l=0};$\\
+$\pmb{\mathtt{Print[{''}Y[0,0]={''}, \quad SphericalHarmonicY[0, 0, \theta, \phi ]]}}$\\
+$\displaystyle{\mathtt{Y[0,0]=\frac{1}{2\sqrt{\pi}}}}$ \\
+\\
+\noindent $\blacksquare$ $\mathtt{l=1};$\\
+$\pmb{\mathtt{Do[Print[{''}Y[l,'', m, '']={''}, \quad SphericalHarmonicY[l, m, \theta, \phi ]], \{m,l,-1,-1\}]}}$\\[0.3cm]
+$\displaystyle{\mathtt{Y[1,1]=\frac{-1}{2}E^{I\phi} \sqrt{\frac{3}{2\pi}}\ Sin[\theta]}}$\\[0.3cm] 
+$\displaystyle{\mathtt{Y[1,0]=\frac{-1}{2}\sqrt{\frac{3}{\pi}}\ Cos[\theta]}}$\\[0.3cm]
+$\displaystyle{\mathtt{Y[1,1]=\frac{1}{2}E^{-I\phi} \sqrt{\frac{3}{2\pi}}\ Sin[\theta]}}$\\
+
+$\blacksquare$ \textbf{\large{\myfont{Polinomi associati di Legendre}}}\\
+\texttt{LegendreP[n,x] gives the Legendre polynomial} $\mathtt{P_n (x)}$\\
+\texttt{LegendreP[n,m,x] gives the associated Legendre polynomial} $\mathtt{P_n ^m(x)}$\\
+
+\noindent \texttt{The Legendre polynomials satisfy the differential equation}
+\[\mathtt{(1-x^2)(d^2 y/dx^2)-2x(dy/dx)+n(n+1)y=0.} \]
+
+\noindent \texttt{The Legendre polynomials are orthogonal with unit weight function.}\\
+
+\noindent \texttt{The associated Legendre Polynomials are defined by}
+\[\mathtt{P_n ^m(x)=(-1)^m (1-x^2)^{m/2}(d^m/dx^m)P_n (x)} \]\\
+\\
+\noindent $\blacksquare$ $\mathtt{l=0};$\\
+$\pmb{\mathtt{Print[{''}P[0,0]={''}, \quad LegendreP[0, 0, x]]}}$\\
+$\displaystyle{\mathtt{P[0,0]=1}}$ \\
+\\
+\noindent $\blacksquare$ $\mathtt{l=1};$\\
+$\pmb{\mathtt{Do[Print[{''}P[1,'', m, '']={''}, \quad LegendreP[1, m, x]], \{m,1,0,-1\}]}}$\\[0.3cm]
+$\displaystyle{\mathtt{P[1,1]=-\sqrt{1-x^2}}}$\\[0.3cm] 
+$\displaystyle{\mathtt{P[1,0]=x}}$ \\
+\\
+\noindent $\blacksquare$ $\mathtt{l=2};$\\
+$\pmb{\mathtt{Do[Print[{''}P[2,'', m, '']={''}, \quad LegendreP[2, m, x]], \{m,2,0,-1\}]}}$\\[0.3cm]
+$\displaystyle{\mathtt{P[2,2]=-3-(1+x^2)}}$\\[0.3cm] 
+$\displaystyle{\mathtt{P[2,1]=-3x\sqrt{1-x^2}}}$\\[0.3cm]
+$\displaystyle{\mathtt{P[2,0]=\frac{-1}{2}+\frac{3x^2}{2}}}$
