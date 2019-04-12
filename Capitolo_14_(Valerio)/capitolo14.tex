@@ -5,7 +5,7 @@ Tuttavia, nelle condizioni del problema figurano spesso \textbf{grandezze piccol
 
 Il metodo generale che permette di calcolare queste correzioni prende il nome di \textbf{teoria delle perturbazioni}.\\
 
-Supponiamo che l'hamiltoniano del sistema fisico considerato abbia la forma
+Supponiamo che l'Hamiltoniano del sistema fisico considerato abbia la forma
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			H= H_0+ V,
@@ -13,7 +13,7 @@ Supponiamo che l'hamiltoniano del sistema fisico considerato abbia la forma
 	\end{equation}
 dove V è una piccola correzione (\textbf{perturbazione}) dell'operatore ``\textbf{imperturbato}'' $H_0$. Le condizioni necessarie perché l'operatore $V$ possa essere considerato come ``piccolo'' rispetto all'operatore $H_0$ saranno dedotte più avanti.\\
 
-La risoluzione del problema mediante la teoria delle perturbazioni dipende in maniera essenziale dalla degenerazione o meno dei livelli di energia del sistema imperturbato, descritto dall'hamiltoniano $H_0$. I due casi devono dunque essere trattati separatamente.
+La risoluzione del problema mediante la teoria delle perturbazioni dipende in maniera essenziale dalla degenerazione o meno dei livelli di energia del sistema imperturbato, descritto dall'Hamiltoniano $H_0$. I due casi devono dunque essere trattati separatamente.
 \section{Caso non degenere}
 Supponiamo che siano noti gli autostati $\vert n^{(0)} \rangle$ e gli autovalori $E_n ^{(0)}$ dell'operatore imperturbato $H_0$, cioè che siano note le soluzioni esatte dell'equazione
 	\begin{equation}
@@ -68,7 +68,7 @@ L'eq. (\ref{eq:cap14_4}) si scrive allora nella forma:
 		}
 	\label{eq:cap14_5}
 	\end{equation}
-Osserviamo che questa equazione, le cui incognite sono rappresentate dai coefficienti $c_m$ dello sviluppo (\ref{eq:cap14_3}) e dagli autovalori $E_n$ dell'hamiltoniano imperturbato, è un'equazione esatta.\\
+Osserviamo che questa equazione, le cui incognite sono rappresentate dai coefficienti $c_m$ dello sviluppo (\ref{eq:cap14_3}) e dagli autovalori $E_n$ dell'Hamiltoniano imperturbato, è un'equazione esatta.\\
 
 \textbf{Cerchiamo ora i valori dei coefficienti} $c_m$ \textbf{e dell'energia} $E_n$ \textbf{sotto forma di serie}:
 	\begin{equation}
@@ -140,7 +140,7 @@ ossia
 	\label{eq:cap14_10}
 	\end{equation}\\
 	
-La formula (\ref{eq:cap14_9}) dà la correzione in prima approssimazione agli autostati dell'hamiltoniano. Da essa, tra l'altro, si vede quali sono le \textbf{condizioni di applicabilità del metodo considerato}. Precisamente, dovendo risultare i coefficienti al primo ordine molto minori del coefficiente di ordine zero ($c_n ^{(0)} =1$) deve valere la diseguaglianza
+La formula (\ref{eq:cap14_9}) dà la correzione in prima approssimazione agli autostati dell'Hamiltoniano. Da essa, tra l'altro, si vede quali sono le \textbf{condizioni di applicabilità del metodo considerato}. Precisamente, dovendo risultare i coefficienti al primo ordine molto minori del coefficiente di ordine zero ($c_n ^{(0)} =1$) deve valere la diseguaglianza
 	\begin{equation}
 		\tcboxmath[enhanced, sharp corners=downhill, colframe=black, colback=white, borderline={2pt}{-3pt}{black}]{
 			\vert V_{kn} \vert \ll E_ n ^{(0)}-E_ k ^{(0)},
@@ -171,7 +171,7 @@ Possiamo allora riassumere i risultati ottenuti mediante le formule
  			\vert n \rangle = \vert n^{(0)} \rangle +\sum _{m \neq n } \frac{V_{mn} }{E_n ^{(0)}-E_m ^{(0)}}\, \vert m^{(0)}\rangle+ \dots 
 			 }
 	\end{align}
-che esprimono gli \textbf{autovalori ed autovettori dell'hamiltoniano completo} $H$ \textbf{rispettivamente al secondo ed al primo ordine nella perturbazione}. le approssimazioni successive si possono calcolare in modo analogo.\\
+che esprimono gli \textbf{autovalori ed autovettori dell'Hamiltoniano completo} $H$ \textbf{rispettivamente al secondo ed al primo ordine nella perturbazione}. le approssimazioni successive si possono calcolare in modo analogo.\\
 
 I risultati ottenuti si generalizzano direttamente al \textbf{caso in cui l'operatore} $H_0$ \textbf{ha anche uno spettro continuo (si tratta però sempre di una perturbazione dello spettro discreto)}. A tale scopo occorre solamente aggiungere alle somme sullo spettro discreto gli integrali corrispondenti allo spettro continuo. Così, ad esempio l'eq. (\ref{eq:cap14_12}) si scrive:
 	\begin{equation}
@@ -239,4 +239,4 @@ Sostituendo successivamente le radici dell'equazione secolare nel sistema (\ref{
 
 Per effetto della perturbazione, il livello energetico inizialmente degenere cessa di essere tale; le radici dell'equazione secolare sono infatti generalmente distinte. Si dice che \textbf{la perturbazione ``rimuove'' la degenerazione}. Questa rimozione della degenerazione puà essere completa o parziale.\\
 
-Per il calcolo delle \textbf{correzioni di ordine superiore} agli autovalori ed agli autostati dell'hamiltoniano $H$ si procede in modo analogo al caso della teoria perturbativa non degenere. Si ottengono allora per queste correzioni, le stesse espressioni ottenute nel caso non degenere, con la sola differenza che, nella sommatoria, vengono esclusi tutti gli stati dell'hamiltoniano imperturbato che appartengono al sottospazio degenere.
+Per il calcolo delle \textbf{correzioni di ordine superiore} agli autovalori ed agli autostati dell'Hamiltoniano $H$ si procede in modo analogo al caso della teoria perturbativa non degenere. Si ottengono allora per queste correzioni, le stesse espressioni ottenute nel caso non degenere, con la sola differenza che, nella sommatoria, vengono esclusi tutti gli stati dell'Hamiltoniano imperturbato che appartengono al sottospazio degenere.
